@@ -25,6 +25,7 @@ end
 
 group :test do
   gem "shoulda-matchers"
+gem 'nyan-cat-formatter'
 end
 
 gem 'jquery-rails'

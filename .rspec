@@ -1,1 +1,3 @@
 --color
+--format NyanCatFormatter
+--format NyanCatMusicFormatter
