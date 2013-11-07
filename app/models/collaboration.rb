@@ -1,3 +1,6 @@
 class Collaboration < ActiveRecord::Base
-  attr_accessible :developer_id, :developer_role, :project_id
+
+  belongs_to :project
+  belongs_to :developer
+  belongs_to :role
 end
