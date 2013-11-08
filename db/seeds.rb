@@ -47,6 +47,21 @@ idea_owner_counter = 0
 end
 
 
+creator_id_counter = 0
+10.times do
+creator_id_counter += 1
+  Project.create  title: Faker::Lorem.sentence,
+                  creator_id: creator_id_counter,
+                  description: Faker::Lorem.paragraph,
+                  category_id: rand(1..4),
+                  status_id: rand(1..3)
+end
+
+Status.create name: "yet to be assigned"
+Status.create name: "assigned"
+Status.create name: "complete"
+
+
 # Seed feedbacks
 projects = Project.all
 projects.each do |project|
