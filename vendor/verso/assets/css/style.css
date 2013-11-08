@@ -2934,7 +2934,7 @@ margin-left: 5%;
 	top: auto;
 	width: 100%
 }
-* Remove any padding from the body */
+/** Remove any padding from the body */
 body {
 	padding-top: 0;
 }
