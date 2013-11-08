@@ -1,0 +1,187 @@
+
+.pricing-table {
+    float: left;
+    width: 100%;
+    margin: 50px 0px 30px 0px;
+   background: #fff;
+    /*-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;*/
+    -moz-box-shadow: 0 2px 15px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.2);
+	-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+text-align: center;
+    border:1px solid #ccc;
+}
+.pricing-table p{
+text-align: center;
+}
+.pricing-table:hover {
+    
+    
+    background: #fff;
+   /* -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;*/
+    -moz-box-shadow: 0 2px 15px 0 rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0,0,0,.4);
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.4);
+    
+}
+.pricing-table-header h3 span.mo{
+
+display:inline-block;
+font-size:90%;
+text-align:center;
+margin:3px;
+}
+.pricing-table strong { font-weight: 700; color: #3d3d3d; }
+
+.pricing-table-header-no-gr {
+    
+    background: #3d3d3d;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    
+	-webkit-box-shadow: 0px 0px 31px rgba(50, 50, 50, 0.85) inset;
+-moz-box-shadow:    0px 0px 31px rgba(50, 50, 50, 0.85) inset;
+box-shadow:         0px 0px 31px rgba(50, 50, 50, 0.85) inset;
+}
+
+.pricing-table-header {
+    
+    background: #333;
+   /* -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;*/
+  /*-webkit-box-shadow: 0px 0px 31px rgba(50, 50, 50, 0.55) inset;
+-moz-box-shadow:    0px 0px 31px rgba(50, 50, 50, 0.55) inset;
+box-shadow:         0px 0px 31px rgba(50, 50, 50, 0.55) inset;*/
+padding:0 20px;
+}
+/* Highlighted table */
+
+.pricing-table-highlighted {
+    margin-top: 10px;
+}
+
+
+.pricing-table-highlighted .pricing-table-header {
+    background: #666;
+}
+
+.free-price{
+background:#8BBD1E;
+}
+
+.pricing-table-header  h3 span.free{
+font-size:300%;
+}
+
+.reflex{
+width: 100%;
+height: 100%;
+min-height: 100%;
+min-width: 100%;
+/*background: url(../../assets/img/header-shine.png) top left no-repeat;*/
+background-size:100% 100%;
+padding:20px 0px;
+display:block;
+margin:0px;
+}
+
+.pricing-table-header h2 { 
+	font-size: 160%; 
+	font-weight: 700; 
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.8); /*text-shadow: 0 2px 0 rgba(0,0,0,.25);*/ 
+	color:#fff; 
+	width:100%; 
+	line-height:28px; 
+	margin-right:5px; 
+	display:block; 
+	height:auto; 
+	margin-bottom:7px; 
+	display:block;
+
+}
+.pricing-table-header h3 {
+	margin-bottom:7px; 
+	margin-top: 20px; 
+	font-size: 24px; 
+	font-weight: 400; 
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, 1);/* text-shadow: 0 2px 0 rgba(0,0,0,.55);*/ 
+	color:#fff;
+	display:block;
+}
+
+.pricing-table-header h3 span{
+	font-size:400%;
+}
+
+.pricing-table-space { height: 10px; 
+width:100%;
+/*background: url(../../assets/img/shadow-header.png) top center no-repeat;
+background-size:100% 100%;*/
+
+
+}
+
+.pricing-table-text {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    line-height: 30px;
+    font-size: 16px;
+    color: #888;
+}
+
+.pricing-table-features {
+    margin: 15px 30px 0 30px;
+    padding: 0 10px 15px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    line-height: 30px;
+    font-size: 16px;
+    color: #888;
+}
+
+.pricing-table-sign-up {
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 979px) and (min-width: 768px){
+
+.pricing-table-header h3 span.free{
+font-size:120%;
+}
+
+.pricing-table-header h3 span {
+font-size:140%;
+}
+.pricing-table .btn-action{
+font-size:115%;
+}
+
+}
+
+
+
+
+
+
+
+

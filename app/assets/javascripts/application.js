@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree ../../../vendor/verso/assets/
 //= require_tree .
