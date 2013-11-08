@@ -18,6 +18,12 @@ FactoryGirl.define do
     account
   end
 
+  factory :project do
+    title "Homeless street survey"
+    description "Mobile app to facilitate a survey of the homeless in Chicago"
+    status "assigned"
+  end
+
 end
 
 

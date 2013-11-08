@@ -6,7 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+if Rails.env.development?
+  require "database_cleaner"
+  puts "Cleaning db..."
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.clean
+end
+
+puts "Seeding..."
+
 require 'faker'
+
 
 30.times do
   Account.create  first_name: Faker::Name.first_name,
@@ -60,25 +70,21 @@ creator_id_counter += 1
                   creator_id: creator_id_counter,
                   description: Faker::Lorem.paragraph,
                   category_id: rand(1..4),
-                  status_id: rand(1..3)
+                  status: Project::STATUSES.values.sample
 end
-
-Status.create name: 'yet to be assigned'
-Status.create name: 'assigned'
-Status.create name: 'complete'
 
 
 # Seed feedbacks
 projects = Project.all
 projects.each do |project|
-  if project.status.name == 'complete'
+  if project.complete?
     idea_owner = IdeaOwner.find(project.creator_id)
     idea_owners_project = idea_owner.project
     feedback_receiver = idea_owners_project.developers.first
     Feedback.create author_id: idea_owner.id,
-                    author_type: 'idea owner',
+                    author_type: 'IdeaOwner',
                     receiver_id: feedback_receiver.id,
-                    receiver_type: 'developer',
+                    receiver_type: 'Developer',
                     comment: Faker::Lorem.sentences(sentence_count = 3, supplemental = false)
   end
 end
