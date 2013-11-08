@@ -76,9 +76,9 @@ projects.each do |project|
     idea_owners_project = idea_owner.project
     feedback_receiver = idea_owners_project.developers.first
     Feedback.create author_id: idea_owner.id,
-                    author_type: 'idea owner',
+                    author_type: 'IdeaOwner',
                     receiver_id: feedback_receiver.id,
-                    receiver_type: 'developer',
+                    receiver_type: 'Developer',
                     comment: Faker::Lorem.sentences(sentence_count = 3, supplemental = false)
   end
 end
