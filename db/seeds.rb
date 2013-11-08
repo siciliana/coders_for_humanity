@@ -18,10 +18,10 @@ require 'faker'
 end
 
 
-Category.create name: "not for profit"
-Category.create name: "small business"
-Category.create name: "social enterprise"
-Category.create name: "special interest group"
+Category.create name: 'not for profit'
+Category.create name: 'small business'
+Category.create name: 'social enterprise'
+Category.create name: 'special interest group'
 
 
 30.times do
@@ -31,9 +31,9 @@ Category.create name: "special interest group"
 end
 
 
-Role.create description: "lead developer"
-Role.create description: "collaborating developer"
-Role.create description: "designer"
+Role.create description: 'lead developer'
+Role.create description: 'collaborating developer'
+Role.create description: 'designer'
 
 
 developer_counter = 10
@@ -48,7 +48,8 @@ end
 idea_owner_counter = 0
 10.times do
   idea_owner_counter += 1
-  IdeaOwner.create account_id: idear_owner_counter
+  IdeaOwner.create  password: 'password',
+                    account_id: idea_owner_counter
 end
 
 
@@ -62,22 +63,22 @@ creator_id_counter += 1
                   status_id: rand(1..3)
 end
 
-Status.create name: "yet to be assigned"
-Status.create name: "assigned"
-Status.create name: "complete"
+Status.create name: 'yet to be assigned'
+Status.create name: 'assigned'
+Status.create name: 'complete'
 
 
 # Seed feedbacks
 projects = Project.all
 projects.each do |project|
-  if project.status == "complete"
+  if project.status.name == 'complete'
     idea_owner = IdeaOwner.find(project.creator_id)
     idea_owners_project = idea_owner.project
     feedback_receiver = idea_owners_project.developers.first
     Feedback.create author_id: idea_owner.id,
-                    author_type: "idea owner",
+                    author_type: 'idea owner',
                     receiver_id: feedback_receiver.id,
-                    receiver_type: "developer",
+                    receiver_type: 'developer',
                     comment: Faker::Lorem.sentences(sentence_count = 3, supplemental = false)
   end
 end

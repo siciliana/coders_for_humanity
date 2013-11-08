@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   attr_accessible  :category_id, :creator_id, :description, :status_id, :story, :title
 
-  has_one :status
+  belongs_to :status
 
   has_many :collaborations
   has_many :developers, :through => :collaborations
@@ -10,5 +10,4 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :title
   validates_presence_of :description
-  validates_presence_of :story
 end
