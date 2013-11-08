@@ -1,0 +1,121 @@
+/* =================================================================== */
+/* Styles Switcher
+====================================================================== */
+
+	#style-switcher h3 {
+		color:#000;
+		font-size:12px;
+		margin: 0px 0 -3px 3px;
+		border-bottom:0px;
+              
+	}
+	
+	#style-switcher {
+		background: #fff;
+		width:300px;
+		position:fixed;
+		right:0px;
+		z-index:9999;
+        top: 100px;
+		border-radius: 0 0 0px 10px;
+                margin-top:0px;
+				-webkit-box-shadow: -4px 4px 8px rgba(50, 50, 50, 0.34);
+				-moz-box-shadow:    -4px 4px 8px rgba(50, 50, 50, 0.34);
+				box-shadow:         -4px 4px 8px rgba(50, 50, 50, 0.34);
+	}
+	
+	#style-switcher div {
+		padding:5px 10px;
+	}
+	
+	#style-switcher h2 {
+		background: #333;
+		color: #FFFFFF;
+		font-weight: bold;
+		padding: 0;
+		font-size: 14px;
+		padding: 6px 0 5px 10px;
+                text-align : center;
+                margin-top:0px;
+				width:100%;
+	}
+	
+	#style-switcher h2 a {
+		
+		display: block;
+		height: 41px;
+		position: absolute;
+		left: -81px;
+                top:60%;
+		width: 81px;
+		border-radius: 0px;
+        background: #333;
+		font-weight: bold;
+		padding: 0;
+		font-size: 14px;
+		color:#fff;
+		text-decoration:none;
+	}
+	
+	.colors { list-style:none; margin:0px 0px 10px 0px; overflow: hidden}
+	.colors li { float:left; margin:2px; }
+	.colors li a { display: block; width:15px; height:15px; cursor: pointer;
+        /*border-radius: 12px;
+        -moz-border-radius: 12px;
+        -webkig-border-radius: 12px;*/
+        } 
+	
+	.layout-style select {
+		width: 100%;
+		padding: 5px;
+		
+		margin:0 0 0 -5px;
+		color: #666;
+		cursor: pointer;
+	}
+	
+	#reset {margin: 0 0 15px 2px;}
+	
+	
+	.green, .green-bg { background: #72b626; }
+	.blue, .blue-bg { background: #2790B0; }
+	.orange, .orange-bg {background: #FF8830; }
+	.citynight, .citynight-bg { background: #696758; }
+	.saffron, .saffron-bg { background: #A73324; }
+	.warhols_green, .warhols_green-bg { background: #77CC62; }
+	.peach, .peach-bg { background :#fcab55; }
+	.red, .red-bg { background: #F23A3A; }
+	.helio, .helio-bg { background: #817A94; }
+	.beige, .beige-bg { background: #bfa980; }
+	.pink, .pink-bg { background: #c71c77; }
+	.cyan, .cyan-bg { background: #37b6bd;}
+	.celadon, .celadon-bg { background: #74aea1;}
+	.brown, .brown-bg { background: #784e3d; }
+	.cherry, .cherry-bg { background: #911938;}
+	.gray, .gray-bg { background: #666666;}
+	.purple, .purple-bg { background: #9D2053; }
+	.olive, .olive-bg { background: #b3c211; }
+	.dark, .dark-bg { background: #404040; }
+	.dirty-green, .dirty-green-bg { background: #3b6e40; }
+
+	.bg1 { background-image: url("../images/bg/noise.png"); }
+	.bg2 { background-image: url("../images/bg/retina_dust.png"); }
+	.bg3 { background-image: url("../images/bg/brushed_alu.png"); }
+	.bg4 { background-image: url("../images/bg/crisp_paper_ruffles.png"); }
+	.bg5 { background-image: url("../images/bg/dark_wall.png"); }
+	.bg6 { background-image: url("../images/bg/darkdenim3.png"); }
+	.bg7 { background-image: url("../images/bg/diamond_upholstery.png"); }
+	.bg8 { background-image: url("../images/bg/egg_shell.png"); }
+	.bg9 { background-image: url("../images/bg/light_toast.png"); }
+	.bg10 { background-image: url("../images/bg/noise_pattern_with_crosslines.png"); }
+	.bg11 { background-image: url("../images/bg/purty_wood.png"); }
+	.bg12 { background-image: url("../images/bg/subtle_stripes.png"); }
+	.bg13 { background-image: url("../images/bg/textured_stripes.png"); }
+	.bg14 { background-image: url("../images/bg/tileable_wood_texture.png"); }
+	.bg15 { background-image: url("../images/bg/scribble_light.png"); }
+	.bg16 { background-image: url("../images/bg/vertical_cloth.png"); }
+	.bg17 { background-image: url("../images/bg/vichy.png"); }
+	.bg18 { background-image: url("../images/bg/washi.png"); }
+	.colors li a.active { box-shadow:0 0 0 2px #404040 inset }
+	
+	@media only screen and (max-width: 1029px) {#style-switcher {display: none;}}

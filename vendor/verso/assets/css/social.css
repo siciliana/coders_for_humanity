@@ -1,0 +1,166 @@
+/* #Content Social icons
+================================================== */
+
+
+.widget_nav_menu{
+	margin-left:0px;
+	margin-bottom:30px;
+	display:inline-block;
+	min-height:100%;
+	height:100%;
+	
+}
+.socialIcons {
+min-width:100%;
+width:100%;
+padding:0px;
+margin:0px;
+}
+.socialIcons li{
+    position: relative;
+    display: inline;
+	list-style: none;
+	text-indent: -999px;
+    float: left;
+    width: 32px;
+	height: 32px;
+	overflow: hidden;
+    margin-right: 4px;
+	margin-bottom: 4px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.socialIcons li a{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	height: 32px;
+	width: 32px;
+}
+
+.socialIcons li a:hover, .socialIcons li a:focus {
+  background-color: transparent;
+}
+
+
+.socialIcons li:hover {
+  background-position: 0 -32px;
+}
+
+.vimeo.normal {background: url(../../assets/img/social_icons/main_content/vimeo.png) no-repeat;}
+.facebook.normal {background: url(../../assets/img/social_icons/main_content/facebook.png) no-repeat;}
+.linkedin.normal {background: url(../../assets/img/social_icons/main_content/linkedin.png) no-repeat;}
+.twitter.normal {background: url(../../assets/img/social_icons/main_content/twitter1.png) no-repeat;}
+.twitter2.normal{background: url(../../assets/img/social_icons/main_content/twitter2.png) no-repeat;}
+.pinterest.normal {background: url(../../assets/img/social_icons/main_content/pinterest.png) no-repeat;}
+.flickr.normal {background: url(../../assets/img/social_icons/main_content/flickr.png) no-repeat;}
+.digg.normal {background: url(../../assets/img/social_icons/main_content/digg.png) no-repeat;}
+.yahoo1.normal {background: url(../../assets/img/social_icons/main_content/yahoo1.png) no-repeat;}
+.yahoo2.normal {background: url(../../assets/img/social_icons/main_content/yahoo2.png) no-repeat;}
+.reddit.normal {background: url(../../assets/img/social_icons/main_content/reddit.png) no-repeat;}
+.googleplus.normal{background: url(../../assets/img/social_icons/main_content/googleplus.png) no-repeat;}
+.stumbleupon.normal {background: url(../../assets/img/social_icons/main_content/stumbleupon.png) no-repeat;}
+.skype.normal {background: url(../../assets/img/social_icons/main_content/skype.png) no-repeat;}
+.deviantart.normal {background: url(../../assets/img/social_icons/main_content/deviantart.png) no-repeat;}
+.delicious.normal {background: url(../../assets/img/social_icons/main_content/delicious.png) no-repeat;}
+.tumblr.normal {background: url(../../assets/img/social_icons/main_content/tumblr.png) no-repeat;}
+.lastfm.normal {background: url(../../assets/img/social_icons/main_content/lastfm.png) no-repeat;}
+.youtube.normal{background: url(../../assets/img/social_icons/main_content/youtube.png) no-repeat;}
+.friendfeed.normal {background: url(../../assets/img/social_icons/main_content/friendfeed.png) no-repeat;}
+.myspace.normal {background: url(../../assets/img/social_icons/main_content/myspace.png) no-repeat;}
+.rss.normal {background: url(../../assets/img/social_icons/main_content/rss.png) no-repeat;}
+.badoo.normal {background: url(../../assets/img/social_icons/main_content/badoo.png) no-repeat;}
+.dribble.normal {background: url(../../assets/img/social_icons/main_content/dribble.png) no-repeat;}
+.blogger.normal {background: url(../../assets/img/social_icons/main_content/blogger.png) no-repeat;}
+.homeicon.normal{background: url(../../assets/img/social_icons/main_content/home.png) no-repeat;}
+.phone.normal {background: url(../../assets/img/social_icons/main_content/phone.png) no-repeat;}
+.email.normal {background: url(../../assets/img/social_icons/main_content/email.png) no-repeat;}
+.picassa.normal {background: url(../../assets/img/social_icons/main_content/picassa.png) no-repeat;}
+.livejournal.normal {background: url(../../assets/img/social_icons/main_content/livejournal.png) no-repeat;}
+.bebo.normal {background: url(../../assets/img/social_icons/main_content/bebo.png) no-repeat;}
+.technorati.normal {background: url(../../assets/img/social_icons/main_content/technorati.png) no-repeat;}
+.newsvine.normal{background: url(../../assets/img/social_icons/main_content/newsvine.png) no-repeat;}
+.wordpress.normal {background: url(../../assets/img/social_icons/main_content/wordpress.png) no-repeat;}
+.yelp.normal {background: url(../../assets/img/social_icons/main_content/yelp.png) no-repeat;}
+
+
+/* #Footer Social icons
+================================================== */
+footer .socialIcons{
+margin-left:0px;
+}
+footer .socialIcons li{
+    position: relative;
+    display: inline;
+	list-style: none;
+	text-indent: -999px;
+    float: left;
+    width: 32px;
+	height: 32px;
+	overflow: hidden;
+    margin-right: 2px;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+footer .socialIcons li a{
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	height: 32px;
+	width: 32px;
+}
+
+footer .socialIcons li a:hover, footer .socialIcons li a:focus {
+  background-color: transparent;
+}
+
+
+footer .socialIcons li:hover {
+  background-position: 0 -32px;
+}
+
+.vimeo {background: url(../../assets/img/social_icons/footer/vimeo.png) no-repeat;}
+.facebook {background: url(../../assets/img/social_icons/footer/facebook.png) no-repeat;}
+.linkedin {background: url(../../assets/img/social_icons/footer/linkedin.png) no-repeat;}
+.twitter{background: url(../../assets/img/social_icons/footer/twitter1.png) no-repeat;}
+.twitter2{background: url(../../assets/img/social_icons/footer/twitter2.png) no-repeat;}
+.pinterest {background: url(../../assets/img/social_icons/footer/pinterest.png) no-repeat;}
+.flickr {background: url(../../assets/img/social_icons/footer/flickr.png) no-repeat;}
+
+.digg {background: url(../../assets/img/social_icons/footer/digg.png) no-repeat;}
+.yahoo1 {background: url(../../assets/img/social_icons/footer/yahoo1.png) no-repeat;}
+.yahoo2 {background: url(../../assets/img/social_icons/footer/yahoo2.png) no-repeat;}
+.reddit {background: url(../../assets/img/social_icons/footer/reddit.png) no-repeat;}
+.googleplus{background: url(../../assets/img/social_icons/footer/googleplus.png) no-repeat;}
+.stumbleupon {background: url(../../assets/img/social_icons/footer/stumbleupon.png) no-repeat;}
+.skype {background: url(../../assets/img/social_icons/footer/skype.png) no-repeat;}
+.deviantart {background: url(../../assets/img/social_icons/footer/deviantart.png) no-repeat;}
+.delicious {background: url(../../assets/img/social_icons/footer/delicious.png) no-repeat;}
+.tumblr {background: url(../../assets/img/social_icons/footer/tumblr.png) no-repeat;}
+.lastfm {background: url(../../assets/img/social_icons/footer/lastfm.png) no-repeat;}
+.youtube{background: url(../../assets/img/social_icons/footer/youtube.png) no-repeat;}
+.friendfeed {background: url(../../assets/img/social_icons/footer/friendfeed.png) no-repeat;}
+.myspace {background: url(../../assets/img/social_icons/footer/myspace.png) no-repeat;}
+.rss {background: url(../../assets/img/social_icons/footer/rss.png) no-repeat;}
+.badoo {background: url(../../assets/img/social_icons/footer/badoo.png) no-repeat;}
+.dribble {background: url(../../assets/img/social_icons/footer/dribble.png) no-repeat;}
+.blogger {background: url(../../assets/img/social_icons/footer/blogger.png) no-repeat;}
+.homeicon{background: url(../../assets/img/social_icons/footer/home.png) no-repeat;}
+.phone {background: url(../../assets/img/social_icons/footer/phone.png) no-repeat;}
+.email {background: url(../../assets/img/social_icons/footer/email.png) no-repeat;}
+.picassa {background: url(../../assets/img/social_icons/footer/picassa.png) no-repeat;}
+.livejournal {background: url(../../assets/img/social_icons/footer/livejournal.png) no-repeat;}
+.bebo {background: url(../../assets/img/social_icons/footer/bebo.png) no-repeat;}
+.technorati {background: url(../../assets/img/social_icons/footer/technorati.png) no-repeat;}
+.newsvine{background: url(../../assets/img/social_icons/footer/newsvine.png) no-repeat;}
+.wordpress {background: url(../../assets/img/social_icons/footer/wordpress.png) no-repeat;}
+.yelp {background: url(../../assets/img/social_icons/footer/yelp.png) no-repeat;}
