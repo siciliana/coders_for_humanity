@@ -39,7 +39,7 @@ Role.create description: 'designer'
 developer_counter = 10
 20.times do
   developer_counter += 1
-  Developer.create  github_url: Faker::Internet.url,
+  Developer.create  github_url: "https://github.com/" + Faker::Internet.user_name(specifier = nil, separators = %w()),
                     github_id: "#"+Faker::Number.number(7),
                     account_id: developer_counter
 end
