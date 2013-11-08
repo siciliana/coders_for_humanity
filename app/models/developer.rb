@@ -1,7 +1,7 @@
 class Developer < ActiveRecord::Base
   attr_accessible :github_url
 
-  has_one :account, :as => :user
+  belongs_to :account
   has_many :collaborations
   has_many :projects, :through => :collaborations
   has_many :received_feedbacks, :as => :receiver, :class_name => "Feedback"

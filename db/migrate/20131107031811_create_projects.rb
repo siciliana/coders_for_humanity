@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :creator_id
       t.text :description
       t.text :story
+      t.integer :category_id
 
       t.timestamps
     end

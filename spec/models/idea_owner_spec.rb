@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe Client do
+describe IdeaOwner do
 
-  subject(:client) { create(:client) }
+  subject(:idea_owner) { create(:idea_owner) }
 
   it { should have_one(:project) }
-  it { should have_one(:account) }
   it { should have_many(:given_feedbacks) }
   it { should have_many(:received_feedbacks) }
   it { should have_secure_password }
   it { should_not allow_mass_assignment_of(:password_digest) }
+  it { should belong_to(:account) }
 
   its(:password_digest) { should_not be_nil }
   its(:name) { should eq "John Doe" }

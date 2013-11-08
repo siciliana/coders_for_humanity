@@ -7,8 +7,6 @@ class CreateAccounts < ActiveRecord::Migration
       t.string :organization
       t.string :city
       t.string :country
-      t.integer :user_id
-      t.string :user_type
 
       t.timestamps
     end
