@@ -31,6 +31,11 @@ Category.create name: "special interest group"
 end
 
 
+Role.create description: "lead developer"
+Role.create description: "collaborating developer"
+Role.create description: "designer"
+
+
 developer_counter = 10
 20.times do
   developer_counter += 1
