@@ -1,5 +1,5 @@
 class IdeaOwner < ActiveRecord::Base
-  attr_accessible :password
+  attr_accessible :account_id, :password
 
   has_secure_password
 
