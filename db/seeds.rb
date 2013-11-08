@@ -18,10 +18,10 @@ require 'faker'
 end
 
 
-Category.create name: "Not for profit"
-Category.create name: "Small business"
-Category.create name: "Social enterprise"
-Category.create name: "Special interest group"
+Category.create name: "not for profit"
+Category.create name: "small business"
+Category.create name: "social enterprise"
+Category.create name: "special interest group"
 
 
 30.times do
@@ -40,8 +40,17 @@ end
 
 
 # Seed feedbacks
-# projects = Project.all
-# projects.each do |project|
-#   if
-# end
+projects = Project.all
+projects.each do |project|
+  if project.status == "complete"
+    idea_owner = IdeaOwner.find(project.creator_id)
+    idea_owners_project = idea_owner.project
+    feedback_receiver = idea_owners_project.developers.first
+    Feedback.create author_id: idea_owner.id,
+                    author_type: "idea owner",
+                    receiver_id: feedback_receiver.id,
+                    receiver_type: "developer",
+                    comment: Faker::Lorem.sentences(sentence_count = 3, supplemental = false)
+  end
+end
 
