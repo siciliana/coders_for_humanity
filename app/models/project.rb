@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
-  attr_accessible  :description, :story, :title
+  attr_accessible  :category_id, :creator_id, :description, :status_id, :story, :title
+
+  has_one :status
 
   has_many :collaborations
   has_many :developers, :through => :collaborations

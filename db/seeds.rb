@@ -34,14 +34,14 @@ counter = 10
 20.times do
   counter += 1
   Developer.create  github_url: Faker::Internet.url,
-                    github_id: "#"+Faker::Number.number(7)
+                    github_id: "#"+Faker::Number.number(7),
                     account_id: counter
 end
 
 
 # Seed feedbacks
-projects = Project.all
-projects.each do |project|
-  if
-end
+# projects = Project.all
+# projects.each do |project|
+#   if
+# end
 

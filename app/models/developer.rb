@@ -1,5 +1,5 @@
 class Developer < ActiveRecord::Base
-  attr_accessible :github_url
+  attr_accessible :account_id, :github_id, :github_url
 
   belongs_to :account
   has_many :collaborations

@@ -15,6 +15,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'faker'
 end
 
 group :development, :test do
@@ -25,7 +26,7 @@ end
 
 group :test do
   gem "shoulda-matchers"
-gem 'nyan-cat-formatter'
+  gem 'nyan-cat-formatter'
 end
 
 gem 'jquery-rails'
