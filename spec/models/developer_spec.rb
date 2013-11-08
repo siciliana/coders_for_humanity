@@ -8,7 +8,7 @@ describe Developer do
   it { should have_many(:given_feedbacks) }
   it { should have_many(:received_feedbacks) }
   it { should validate_presence_of(:github_url)}
-  it { should have_one(:account) }
+  it { should belong_to(:account) }
 
   its(:github_url) { should eq "www.github.com" }
   its(:name) { should eq "John Doe" }

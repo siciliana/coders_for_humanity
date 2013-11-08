@@ -32,7 +32,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="959" y="202" name="Clients">
+</datatypes><table x="959" y="202" name="idea_owners">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -84,7 +84,7 @@
 <default>NULL</default></row>
 <row name="creator_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Clients" row="id" />
+<default>NULL</default><relation table="idea_owners" row="id" />
 </row>
 <row name="description" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>

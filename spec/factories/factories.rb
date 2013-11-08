@@ -23,9 +23,16 @@ end
 
 FactoryGirl.define do
   
-  factory :client do
+  factory :idea_owner do
     password "password"
     account
   end
 
 end
+
+FactoryGirl.define do
+  factory :category do
+    name "nonprofit"
+  end
+end
+

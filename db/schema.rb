@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131107032153) do
+ActiveRecord::Schema.define(:version => 20131107232849) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -20,16 +20,14 @@ ActiveRecord::Schema.define(:version => 20131107032153) do
     t.string   "organization"
     t.string   "city"
     t.string   "country"
-    t.integer  "user_id"
-    t.string   "user_type"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "clients", :force => true do |t|
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "collaborations", :force => true do |t|
@@ -42,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20131107032153) do
 
   create_table "developers", :force => true do |t|
     t.string   "github_url"
+    t.integer  "github_id"
+    t.integer  "account_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -56,11 +56,19 @@ ActiveRecord::Schema.define(:version => 20131107032153) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "idea_owners", :force => true do |t|
+    t.string   "password_digest"
+    t.integer  "account_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.integer  "creator_id"
     t.text     "description"
     t.text     "story"
+    t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

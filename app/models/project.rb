@@ -3,7 +3,8 @@ class Project < ActiveRecord::Base
 
   has_many :collaborations
   has_many :developers, :through => :collaborations
-  belongs_to :creator, :class_name => "Client"
+  belongs_to :creator, :class_name => "IdeaOwner"
+  belongs_to :category
 
   validates_presence_of :title
   validates_presence_of :description
