@@ -30,12 +30,20 @@ Category.create name: "special interest group"
                         role_id: rand(1..3)
 end
 
-counter = 10
+
+developer_counter = 10
 20.times do
-  counter += 1
+  developer_counter += 1
   Developer.create  github_url: Faker::Internet.url,
                     github_id: "#"+Faker::Number.number(7),
-                    account_id: counter
+                    account_id: developer_counter
+end
+
+
+idea_owner_counter = 0
+10.times do
+  idea_owner_counter += 1
+  IdeaOwner.create account_id: idear_owner_counter
 end
 
 
