@@ -25,8 +25,23 @@ Category.create name: "Special interest group"
 
 
 30.times do
-  Collaboration.created developer_id: rand(1..20),
+  Collaboration.create  developer_id: rand(1..20),
                         project_id: rand(1..10),
                         role_id: rand(1..3)
+end
+
+counter = 10
+20.times do
+  counter += 1
+  Developer.create  github_url: Faker::Internet.url,
+                    github_id: "#"+Faker::Number.number(7)
+                    account_id: counter
+end
+
+
+# Seed feedbacks
+projects = Project.all
+projects.each do |project|
+  if
 end
 
