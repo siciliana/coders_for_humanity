@@ -23,18 +23,18 @@
             <!--<img src="assets/img/Logo.png" alt="Logo">--></a>
             <div id="main-nav">
               <div class="nav-collapse collapse">
+                    <div class='center' style='color: red'><%= flash[:error] %></div>
                 <ul class="nav">
 
                   <li class="dropdown"><a href="#about_us">About Us</a> </li>
                   <li><a href="#projects_home">Projects</a></li>
                   <li><a href="#wizard">Get Started</a></li>
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in</a>
-
                     <ul class="dropdown-menu">
                       <li>
                         <div style="padding: 15px; padding-bottom: 0px;">
                           <form method="post" action="login" accept-charset="UTF-8">
-                            <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                            <input style="margin-bottom: 15px;" type="text" placeholder="Email" id="email" name="email">
                             <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
                             <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
                             <label class="string optional" for="sign-in"> Remember me</label>
