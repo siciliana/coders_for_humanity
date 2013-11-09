@@ -8,9 +8,17 @@
   <meta name="description" content="Displays a user's project">
   <meta name="author" content="Coders for Humanity Team">
   <!-- Le styles -->
-  <link href="assets/stylesheets/users.css" rel="stylesheet">
-  <link href="assets/stylesheets/style.css" rel="stylesheet"><!-- !important THIS STYLE CSS ON BOTTOM OF STYLEs LIST-->
-  <link href="assets/stylesheets/prettify.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/switcher.css" rel="stylesheet">
+  <link href="assets/css/pricing.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/social.css" rel="stylesheet">
+  <link href="assets/css/faq.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet" id="colors"><!-- !important THIS STYLE CSS ON BOTTOM OF STYLEs LIST-->
+  <link href="assets/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+  <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  <link href="users.css">
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,7 +37,7 @@
         <!-- navbar-fixed-top -->
         <div class="navbar-inner">
           <div class="container">
-            <a class="brand" href="index.html"><span>CODERS FH</span><!--<img src="assets/img/Logo.png" alt="Logo">--></a>
+            <a class="brand" href="index.html"><span>Coders for Humanity</span><!--<img src="assets/img/Logo.png" alt="Logo">--></a>
             <div id="main-nav">
               <div class="nav-collapse collapse">
                 <ul class="nav">
@@ -54,7 +62,7 @@
             <div class="span12">
               <div class="row-fluid">
                 <div class="span12">
-                  <h1>Welcome to your dashboard</h1>
+                  <h1 class="welcome_to_dashboard">Welcome to your dashboard</h1>
                 </div>
               </div>
             </div>
@@ -73,111 +81,243 @@
       <!-- ASIDE -->
         <div class="span4">
           <div class="well">
-            <h2 class="standart-h2title line2">About us</h2>
-              <p class="">
-                Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company.
-              </p>
-              <p class="">
-                Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company. Some useful information about your company.
+            <h2 class="standart-h2title line2">Your Profile</h2>
+            <p class="idea_owners_name">
+              Bernadine Anderson
+            </p><br>
+            <p class="idea_owners_organization">
+              Beata Gardens
+            </p>
+          </div>
+        </div>
+        <!-- END:  ASIDE -->
+        <!-- PROJECT SHOW AREA -->
+        <div class="span8">
+          <div class="blog-post">
+            <div class="">
+              <span class="label label-info label-xl span2 center">
+                <span class="date-blog">
+                  30
+                </span><br>
+                January
+              </span>
+
+              <div class="span10">
+                <h2 class="standart-h2title">
+                  <div class="project_title">
+                    <a href="#">
+                      Your project:<br>
+                      Find and schedule network opportunities in my area
+                    </a>
+                  </div>
+                </h2>
+              </div>
+
+              <p class="meta-blog clearfix">
+                <i class="icon-comment"></i>
+                <a id="discussion_thread" href="#">
+                  3 Discussion comments
+                </a>
+                |
+                <i class="icon-share"></i>
+                <a id="feedback_thread" href="#">
+                  2 Feedback comments
+                </a>
+                |
+                <a href="#"><span class="label label-info">Join Discussion</span></a>
+                <a href="#"><span class="label label-info">Give Feedback</span></a>
               </p>
             </div>
+
+            <p id="project_description">
+              Build me an app that tells me about the network opportunities in my area, allows me to select the ones I am interested in and adds the events to my diary.
+            </p>
           </div>
-          <!--END:  ASIDE -->
-          <!-- START ACCORDION FAQ -->
-          <div class="span8">
 
-              <div class="wrapper">
-                  <div id="st-accordion" class="st-accordion">
-                      <ul>
-                          <li>
-                              <a href="#">Photography<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                                  <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          <div class="row-fluid">
+            <div class="line2 center">
+              <h5 class="standart-h3title">
+                <span class="idea_owners_feedback">
+                  Feedback
+                </span>
+              </h5>
+            </div>
 
-
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Web Design<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Illustrations<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
-                                  <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                                  <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Miscancellous<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?"</p>
-                                  <p>He thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">References<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
-                                  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Internship<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
-                                  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Jobs<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>O my friend - but it is too much for my strength - I sink under the weight of the splendour of these visions!</p>
-                                  <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                                  <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Events<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
-                                  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Newsletter<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
-                                  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">Contact<span class="st-arrow">Open or Close</span></a>
-                              <div class="st-content">
-                                  <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-                                  <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
-                              </div>
-                          </li>
-
-                      </ul>
+            <ul class="media-list">
+              <li class="media">
+                <div class="media-body">
+                  <div class="media-heading comment-info">
+                    Posted by
+                    <i class="fa-icon-user"></i>
+                    <a href="#">
+                      Anna Smith
+                    </a>
+                    <span>|</span>
+                    25 apr 2019
                   </div>
-              </div>
-          </div>
-          <!-- END: ACCORDION FAQ -->
+                  <p></p>
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-body">
+                  <div class="media-heading comment-info">
+                    Posted by
+                    <i class="fa-icon-user"></i>
+                    <a href="#">
+                      Anna Smith
+                    </a>
+                    <span>|</span>
+                    25 apr 2019
+                  </div>
+                  <p>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+
+      </div>
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>Post your comment</span></h5>
+      </div>
+      <!-- COMMENTS FORM -->
+       <div class="well">
+
+                      <form accept-charset="UTF-8"  method="POST" class="comments-form">
+
+                       <p class="span3">
+                      <label for="comment-name"><strong>Name</strong> <span class="label">required</span></label>
+                      <input class="span12" type="text" name="name" placeholder="Name" value="" >
+                      </p>
+
+                      <p class="span3">
+                      <label for="comment-name"><strong>Email</strong> <span class="label">required</span></label>
+                      <input class="span12" type="text" name="name" placeholder="Email" value=""  required="" >
+                      </p>
+
+                      <p class="span3">
+                      <label for="comment-name"><strong>Website</strong></label>
+                      <input class="span12" type="text" name="name" placeholder="Website" value="" id="comment-name" required="" >
+                      </p>
+
+
+                    <textarea class="span12" id="new_message" name="new_message" placeholder="Type in your comment" rows="5" ></textarea>
+
+                    <button class="btn btn-info btn-large" type="submit">Post</button>
+                </form>
+            </div>
+      <!-- END COMMENTS FORM -->
+      <hr class="soften">
 
 
     </div>
-  </div>
+  <!-- END CONTENT SIDE -->
+
+
+      </div>
+    </div>
     <!-- ################ -->
-      <!--END: CONTENT CONTAINER-->
-      <!-- ################ -->
+    <!--END: CONTENT CONTAINER-->
+    <!-- ################ -->
+
+
+  <!-- SIDEBAR-->
+    <div class="span4 side_bar">
+
+    <div class="row-fluid">
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>Categories</span></h5>
+        </div>
+        <ul class="l_tinynav2 widget-archive" id="nav2">
+                    <li><a href="#" style="margin-left:0px;"> news</a></li>
+                    <li><a href="# " style="margin-left:0px;">Category</a></li>
+                    <li><a href="#" style="margin-left:0px;">Blog</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
+                    <li><a href="#" style="margin-left:0px;">One more category </a></li>
+
+
+                  </ul>
+        </div>
+    <div class="row-fluid">
+    <hr class="half" />
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>Tags</span></h5>
+      </div>
+
+      <div class="span12">
+                <a href="#"><span class="label label-info">Snipp</span></a>
+                <a href="#"><span class="label label-info">Bootstrap</span></a>
+                <a href="#"><span class="label label-info">UI</span></a>
+                <a href="#"><span class="label label-info">growth</span></a>
+                <a href="#"><span class="label label-info">Snipp</span></a>
+                <a href="#"><span class="label label-info">Bootstrap</span></a>
+                <a href="#"><span class="label label-info">UI</span></a>
+                <a href="#"><span class="label label-info">Snipp</span></a>
+                <a href="#"><span class="label label-info">Bootstrap</span></a>
+                <a href="#"><span class="label label-info">UI</span></a>
+                <a href="#"><span class="label label-info">growth</span></a>
+                <a href="#"><span class="label label-info">growth</span></a>
+                <a href="#"><span class="label label-info">Snipp</span></a>
+                <a href="#"><span class="label label-info">Bootstrap</span></a>
+                <a href="#"><span class="label label-info">UI</span></a>
+                <a href="#"><span class="label label-info">growth</span></a>
+                </div>
+    </div>
+
+    <div class="row-fluid">
+    <hr class="half" />
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>Tabs</span></h5>
+        </div>
+          <div class="tabbable">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#1" data-toggle="tab">News</a></li>
+              <li><a href="#2" data-toggle="tab">Freebies</a></li>
+              <li><a href="#2" data-toggle="tab">WordPress</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="1">
+                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+              <div class="tab-pane" id="2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl orci, condimentum ultrices consequat eu. Aenean nisl orci, cosequat eu.</p>
+              </div>
+              <div class="tab-pane" id="3">
+                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        <div class="row-fluid">
+    <hr class="half" />
+        <div class="line2 center">
+        <h5 class="standart-h3title"><span>Video widget</span></h5>
+        </div>
+        <div class="vendor">
+          <div class="container-video">
+          <iframe src="http://player.vimeo.com/video/29309724?title=0&amp;color=FF5050" frameborder="0"></iframe>
+          </div>
+        </div>
+        </div>
+
+    </div>
+  <!-- END SIDEBAR-->
+  </div>
+  <!-- END INNER ROW-FLUID -->
+</div>
+<!-- END CONTENT CONTAINER-->
+
+
 
   <!-- Footer
       ================================================== -->
