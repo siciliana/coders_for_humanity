@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by_id(params[:id])
+    @category = Project.find_by_id(1).category.name
   end
 
 end
