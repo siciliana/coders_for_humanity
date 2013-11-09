@@ -97,27 +97,26 @@
   <!-- END ABOUT US -->
 
   <!-- FEATURED PROJECTS -->
-  <hr class='half'>
-  <a name="projects_home"></a>
+<a name="projects_home"></a>
+<div class="row-fluid">
+  <hr class="half">
+  <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Featured</span> Projects</span>
+  </h2>
+  <hr class="half">
+</div>
   <div class="row-fluid">
-    <hr class='half'>
-    <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Featured</span> Projects</span>
-    </h2>
-    <br><br>
-  </div>
-  <div class="row-fluid">
-    <div class="span6"> 
-      <img src='http://www.businessmarketingpress.com/wp-content/uploads/2013/06/Conversations-and-interactions-using-social-media.jpg'>
+    <div class="span4 offset2"> 
       <i class="main-color"></i>
-      <h3 class="features-title"> <span class="firstword">Project</span> Awesome</h3>
-      <p class="features"> Inspired Thinking. Ask smarter questions, push for innovative solutions and believe in the power of creativity. Be consistently open and honest. Be true to ourselves and our values. Find, stimulate and maintain the best minds.</p>
+      <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project1) %></span> <%= @featured_project1.title %></h3>
+      <p class="features"><%= @featured_project1.description %></p>
+      
       <br>
     </div>
-    <div class="span6"> 
-      <img src='https://devcentral.f5.com/weblogs/images/devcentral_f5_com/weblogs/macvittie/WindowsLiveWriter/HowEnterpriseCodingStandardsImpairApplic_5627/code%20small_2.jpg'>
+    <div class="span4"> 
+
       <i class="main-color"></i>
-      <h3 class="features-title"> <span class="firstword">Project</span> Awesome</h3>
-      <p class="features"> Inspired Thinking. Ask smarter questions, push for innovative solutions and believe in the power of creativity. Be consistently open and honest. Be true to ourselves and our values. Find, stimulate and maintain the best minds.</p>
+      <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project2) %> </span> <%= @featured_project2.title %></h3>
+      <p class="features"> <%= @featured_project1.description %></p>
       <br>
     </div>
     <div class="span12">
