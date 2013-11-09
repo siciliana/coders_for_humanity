@@ -1,0 +1,44 @@
+.large-text .span10 {
+  padding-top: 30px;
+}
+
+.header_list {
+  list-style-type: none;
+}
+
+.span6 .pull-right {
+  padding-top: 300px;
+  padding-right: 40px;
+}
+
+.minspace{
+  padding-bottom: 50px;
+}
+
+.space {
+  padding: 60px;
+}
+
+.xspace{
+  margin-top: 160px;
+}
+
+#homepage_header{
+  font-size:40px;
+}
+
+.homepage_container {
+  margin-left: 10px;
+}
+
+.large-text.span6 h2 {
+  text-align: center;
+  line-height: 60px;
+  font-size: 60px;
+  padding-left:100px;
+}
+
+.buttons {
+  padding-left: 100px;
+  margin-left: 65px;
+}
