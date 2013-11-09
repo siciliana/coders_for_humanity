@@ -62,7 +62,7 @@
             <div class="span12">
               <div class="row-fluid">
                 <div class="span12">
-                  <h1 class="welcome_to_dashboard">Welcome to your dashboard</h1>
+                  <h1 class="welcome_to_dashboard">Dashboard</h1>
                 </div>
               </div>
             </div>
@@ -76,14 +76,13 @@
     <!-- CONTENT CONTAINER-->
     <!-- ################ -->
     <div class="container">
-
       <div class="row-fluid">
-      <!-- ASIDE -->
+        <!-- ASIDE -->
         <div class="span4">
           <div class="well">
-            <h2 class="standart-h2title line2">Your Profile</h2>
+            <h2 class="standart-h2title line2">Profile</h2>
             <p class="idea_owners_name">
-              Bernadine Anderson
+              Nadine Anderson
             </p><br>
             <p class="idea_owners_organization">
               Beata Gardens
@@ -97,16 +96,17 @@
             <div class="">
               <span class="label label-info label-xl span2 center">
                 <span class="date-blog">
-                  30
-                </span><br>
-                January
+                  <p class="project_flag">
+                    Project
+                  </p>
+                </span>
               </span>
 
               <div class="span10">
                 <h2 class="standart-h2title">
                   <div class="project_title">
+                    TITLE<br>
                     <a href="#">
-                      Your project:<br>
                       Find and schedule network opportunities in my area
                     </a>
                   </div>
@@ -129,9 +129,23 @@
               </p>
             </div>
 
-            <p id="project_description">
-              Build me an app that tells me about the network opportunities in my area, allows me to select the ones I am interested in and adds the events to my diary.
+            <p>
+              DESCRIPTION<br>
+              Build me an app that tells me about the network opportunities in my area, allows me to select the ones I am interested in, and adds the events to my diary.
             </p>
+
+            <p>
+              STATUS<br>
+              <span class="project_status">
+                Complete
+              </span>
+            </p>
+
+          <!-- ACTION BUTTON -->
+          <button class="btn btn-info btn-large" type="submit">Edit your project</button>
+          <button class="btn btn-info btn-large" type="submit">View your project</button>
+          <!-- END ACTION BUTTON -->
+
           </div>
 
           <div class="row-fluid">
@@ -178,145 +192,65 @@
                 </div>
               </li>
             </ul>
+          </div><br>
 
+          <div class="line2 center">
+            <h5 class="standart-h3title"><span>Give Feedback</span></h5>
+          </div>
+          <!-- FEEDBACK FORM -->
+          <div class="well">
+            <form accept-charset="UTF-8"  method="POST" class="comments-form">
 
-      </div>
-        <div class="line2 center">
-          <h5 class="standart-h3title"><span>Post your comment</span></h5>
-      </div>
-      <!-- COMMENTS FORM -->
-       <div class="well">
+              <p class="span3">
+                <label for="comment-name">
+                  <strong>
+                    Name
+                  </strong>
+                  <span class="label">
+                    required
+                  </span>
+                </label>
+                <input class="span12" type="text" name="name" placeholder="Name" value="" >
+              </p>
 
-                      <form accept-charset="UTF-8"  method="POST" class="comments-form">
+              <p class="span3">
+                <label for="comment-name">
+                  <strong>
+                    Email
+                  </strong>
+                  <span class="label">
+                    required
+                  </span>
+                </label>
+                <input class="span12" type="text" name="name" placeholder="Email" value=""  required="" >
+              </p>
 
-                       <p class="span3">
-                      <label for="comment-name"><strong>Name</strong> <span class="label">required</span></label>
-                      <input class="span12" type="text" name="name" placeholder="Name" value="" >
-                      </p>
+              <p class="span3">
+                <div class="feedback_subject">
+                  <label for="comment-name">
+                    <strong>
+                      Who would you like to give feedback about?
+                    </strong>
+                  </label>
+                  <select class="span12" type="text" name="name" placeholder="Website" value="" id="comment-name" required="" >
+                </div>
+              </p>
 
-                      <p class="span3">
-                      <label for="comment-name"><strong>Email</strong> <span class="label">required</span></label>
-                      <input class="span12" type="text" name="name" placeholder="Email" value=""  required="" >
-                      </p>
+              <textarea class="span12" id="new_message" name="new_message" placeholder="Type in your comment" rows="5" ></textarea>
 
-                      <p class="span3">
-                      <label for="comment-name"><strong>Website</strong></label>
-                      <input class="span12" type="text" name="name" placeholder="Website" value="" id="comment-name" required="" >
-                      </p>
-
-
-                    <textarea class="span12" id="new_message" name="new_message" placeholder="Type in your comment" rows="5" ></textarea>
-
-                    <button class="btn btn-info btn-large" type="submit">Post</button>
-                </form>
-            </div>
-      <!-- END COMMENTS FORM -->
-      <hr class="soften">
-
-
-    </div>
-  <!-- END CONTENT SIDE -->
-
-
+              <button class="btn btn-info btn-large" type="submit">Post</button>
+            </form>
+          </div>
+          <!-- END FEEDBACK FORM -->
+        </div>
+        <!-- END PROJECT SHOW AREA -->
       </div>
     </div>
     <!-- ################ -->
     <!--END: CONTENT CONTAINER-->
     <!-- ################ -->
-
-
-  <!-- SIDEBAR-->
-    <div class="span4 side_bar">
-
-    <div class="row-fluid">
-        <div class="line2 center">
-          <h5 class="standart-h3title"><span>Categories</span></h5>
-        </div>
-        <ul class="l_tinynav2 widget-archive" id="nav2">
-                    <li><a href="#" style="margin-left:0px;"> news</a></li>
-                    <li><a href="# " style="margin-left:0px;">Category</a></li>
-                    <li><a href="#" style="margin-left:0px;">Blog</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category</a></li>
-                    <li><a href="#" style="margin-left:0px;">One more category </a></li>
-
-
-                  </ul>
-        </div>
-    <div class="row-fluid">
-    <hr class="half" />
-        <div class="line2 center">
-          <h5 class="standart-h3title"><span>Tags</span></h5>
-      </div>
-
-      <div class="span12">
-                <a href="#"><span class="label label-info">Snipp</span></a>
-                <a href="#"><span class="label label-info">Bootstrap</span></a>
-                <a href="#"><span class="label label-info">UI</span></a>
-                <a href="#"><span class="label label-info">growth</span></a>
-                <a href="#"><span class="label label-info">Snipp</span></a>
-                <a href="#"><span class="label label-info">Bootstrap</span></a>
-                <a href="#"><span class="label label-info">UI</span></a>
-                <a href="#"><span class="label label-info">Snipp</span></a>
-                <a href="#"><span class="label label-info">Bootstrap</span></a>
-                <a href="#"><span class="label label-info">UI</span></a>
-                <a href="#"><span class="label label-info">growth</span></a>
-                <a href="#"><span class="label label-info">growth</span></a>
-                <a href="#"><span class="label label-info">Snipp</span></a>
-                <a href="#"><span class="label label-info">Bootstrap</span></a>
-                <a href="#"><span class="label label-info">UI</span></a>
-                <a href="#"><span class="label label-info">growth</span></a>
-                </div>
-    </div>
-
-    <div class="row-fluid">
-    <hr class="half" />
-        <div class="line2 center">
-          <h5 class="standart-h3title"><span>Tabs</span></h5>
-        </div>
-          <div class="tabbable">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#1" data-toggle="tab">News</a></li>
-              <li><a href="#2" data-toggle="tab">Freebies</a></li>
-              <li><a href="#2" data-toggle="tab">WordPress</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="1">
-                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-              </div>
-              <div class="tab-pane" id="2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl orci, condimentum ultrices consequat eu. Aenean nisl orci, cosequat eu.</p>
-              </div>
-              <div class="tab-pane" id="3">
-                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-              </div>
-            </div>
-          </div>
-      </div>
-
-        <div class="row-fluid">
-    <hr class="half" />
-        <div class="line2 center">
-        <h5 class="standart-h3title"><span>Video widget</span></h5>
-        </div>
-        <div class="vendor">
-          <div class="container-video">
-          <iframe src="http://player.vimeo.com/video/29309724?title=0&amp;color=FF5050" frameborder="0"></iframe>
-          </div>
-        </div>
-        </div>
-
-    </div>
-  <!-- END SIDEBAR-->
   </div>
-  <!-- END INNER ROW-FLUID -->
-</div>
-<!-- END CONTENT CONTAINER-->
-
+  <!-- END MAIN-WRAPPER -->
 
 
   <!-- Footer
