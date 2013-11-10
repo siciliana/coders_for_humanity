@@ -41,3 +41,5 @@
 //= require jquery.validate.additional-methods
 //= require jquery.bootstrap.wizard
 //= require_tree .
+
+  $("#projects").mixitup()
