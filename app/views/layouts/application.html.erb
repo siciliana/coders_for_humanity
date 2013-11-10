@@ -8,7 +8,17 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="main-wrapper">
+  
+  <% if current_page?(:controller => 'welcome', :action => 'index') %>
+    <%= render 'shared/home_header' %>
+  <% else %>
+    <%= render 'shared/header' %>
+  <% end %>
 
+  <%= yield %>
+
+  <%= render 'shared/footer' %>
+</div>
 </body>
 </html>

@@ -1,70 +1,4 @@
-<!--START MAIN-WRAPPER--> 
-<div class="main-wrapper">
-  <!-- START HEADER headertop -->
-  <div class="headertop needhead">
-    <!-- BLURED BACKGROUND-->
-    <div class="action-banner-bg"></div>
-    <!-- END BLURED BACKGROUND-->
-
-    <!-- PIXEL BG DOTTS UNDER BLURED BACKGROUND-->
-    <div class="action-banner-bg-top"></div>
-    <!-- END PIXEL BG DOTTS UNDER BLURED BACKGROUND-->
-
-    <!-- ################-->
-    <!-- START TOP MENU -->
-    <!-- ################-->
-    <div class="nav-reaction">
-      <div class="navbar navbar-static-top"> 
-        <!-- navbar-fixed-top -->
-        <div class="navbar-inner">
-          <div class="home_page_container"> <a class="brand" href="index.html"> 
-            <img src="http://www.logomaker.com/logo-images/b22571254ae62347.gif">
-            <span id="homepage_header">Coders for Humanity</span>
-            <!--<img src="assets/img/Logo.png" alt="Logo">--></a>
-            <div id="main-nav">
-              <div class="nav-collapse collapse">
-                    <div class='center' style='color: red'><%= flash[:error] %></div>
-                <ul class="nav">
-
-                  <li class="dropdown"><a href="#about_us">About Us</a> </li>
-                  <li><a href="#projects_home">Projects</a></li>
-                  <li><a href="#wizard">Get Started</a></li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <div style="padding: 15px; padding-bottom: 0px;">
-                          <form method="post" action="login" accept-charset="UTF-8">
-                            <input style="margin-bottom: 15px;" type="text" placeholder="Email" id="email" name="email">
-                            <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
-                            <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-                            <label class="string optional" for="sign-in"> Remember me</label>
-                            <input class="btn btn-info btn-block" type="submit" id="sign-in" value="Sign In">
-                          </form>
-                          <form method='get' action='/wizard'>
-                            <label style="text-align:center;margin-top:5px">Dont Have an Account?</label>
-                            <input class="btn btn-info btn-block" type="submit" id="sign-up" value="Sign Up">
-                          </form>
-                          <form>
-                            <label style="text-align:center;margin-top:5px">Are you a Developer?</label>
-                            <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Github">
-                          </form>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ################-->
-  <!-- END TOP MENU -->
-  <!-- ################-->
-
-  <!-- VIDEO HEADER -->
+<!-- VIDEO HEADER -->
   <div class='space'></div>
 
   <div class='span6 large-text'>
@@ -79,8 +13,6 @@
     <iframe class='stretch' width="640" height="390" src="//www.youtube.com/embed/1Wxzy1wYNYw" frameborder="0" allowfullscreen></iframe>
   </div>
 </div> 
-<!-- END VIDEO HEADER -->
-
 
 <!-- ABOUT US -->
 <div class="marketing">
@@ -187,7 +119,6 @@
     <br>
     
   </div>
-</div>
 <div class='span12 offset11'>
           <p><a class="btn-large btn-warning" href="#" data-filter=".graphics">Get Started >> </a>
         </div>
@@ -195,6 +126,5 @@
 
 <hr class='half'>
 <!-- END VALUE FOR DEVS-->
-<%= render 'shared/footer' %>
 
 
