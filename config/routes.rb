@@ -1,6 +1,7 @@
 CodersFh::Application.routes.draw do
 
- resources :users
+ resources :users, controller: :idea_owners
+ post '/login' => 'idea_owners#login'
 
  post 'wizard/update_user/:id', :to => 'wizard#update_user', :as => "wizard_update_user"
  post 'wizard/create_user', :to => 'wizard#create_user', :as => "wizard_create_user"
@@ -14,5 +15,6 @@ CodersFh::Application.routes.draw do
  resources :projects
 
  root :to => 'welcome#index'
+
 
 end
