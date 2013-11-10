@@ -39,9 +39,14 @@
                             <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
                             <label class="string optional" for="sign-in"> Remember me</label>
                             <input class="btn btn-info btn-block" type="submit" id="sign-in" value="Sign In">
+                          </form>
+                          <form>
                             <label style="text-align:center;margin-top:5px">or</label>
                             <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Github">
-
+                          </form>
+                          <form method='get' action='/wizard'>
+                            <label style="text-align:center;margin-top:5px">Dont Have an Account?</label>
+                            <input class="btn btn-info btn-block" type="submit" id="sign-up" value="Sign Up">
                           </form>
                         </div>
                       </li>
@@ -66,8 +71,8 @@
     <h2>Build beautiful and meaningful things together</h2>
     <br>
     <div class="buttons">
-      <a class="btn-large btn-warning" href="#idea_creator" data-filter=".graphics">I need a solution</a>
-      <a class="btn-large btn-warning" href="#for_devs" data-filter=".graphics">I'm a developer</a>
+      <a class="btn-large btn-warning" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a>
+      <a class="btn-large btn-warning" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a>
     </div>
   </div>
   <div class="span6 offset1 videoratio">
@@ -149,9 +154,9 @@
           <br>
 
         </div>
-        <br>
-        <div class='span 12'>
-          <a class="btn-large btn-warning" href="#" data-filter=".graphics">Get Started >> </a>
+
+        <div class='span2 offset9'>
+          <a class="btn-large btn-warning" style='color:black' href="#idea_creator" data-filter=".graphics">Get Started</a>
         </div>
         <hr class="half">
       </div>

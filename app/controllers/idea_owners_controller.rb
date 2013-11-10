@@ -15,7 +15,8 @@ class IdeaOwnersController < ApplicationController
     if @account  
       @idea_owner = IdeaOwner.find_by_account_id(@account.id)
       if @idea_owner.authenticate(params[:password])
-        redirect_to user_path(@idea_owner)
+        session[:id] = @account.id
+        redirect_to user_path(@account)
       else
         flash[:error] = "Username or Password Incorrect"
         redirect_to root_path
