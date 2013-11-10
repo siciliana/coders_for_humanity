@@ -15,7 +15,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'faker'
 end
 
 group :development, :test do
@@ -35,3 +34,4 @@ end
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'jquery-validation-rails'
+gem 'faker'
