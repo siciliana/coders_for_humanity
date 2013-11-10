@@ -22,9 +22,8 @@ class ProjectsController < ApplicationController
       @project = current_user.project
     else
       @project = Project.find_by_id(params[:id])
-    end
-
-    @category = Project.find_by_id(1).category.name
+    end 
+    @category = @project.category.name
   end
 
   def edit
