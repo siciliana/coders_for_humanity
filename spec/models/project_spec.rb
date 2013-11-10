@@ -51,4 +51,23 @@ describe Project do
     end
   end
 
+   describe '#assigned?' do
+    it { assigned_project.should be_assigned }
+    it { completed_project.should_not be_assigned }
+    it { not_yet_assigned_project.should_not be_assigned }
+  end
+
+  describe '#complete?' do
+    it { assigned_project.should_not be_complete }
+    it { completed_project.should be_complete }
+    it { not_yet_assigned_project.should_not be_complete }
+  end
+
+  describe '#not_yet_assigned?' do
+    it { assigned_project.should_not be_not_yet_assigned }
+    it { completed_project.should_not be_not_yet_assigned }
+    it { not_yet_assigned_project.should be_not_yet_assigned }
+  end
+
+
 end

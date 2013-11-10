@@ -3,12 +3,12 @@
 
 
 .widget_nav_menu{
-	margin-left:0px;
-	margin-bottom:30px;
-	display:inline-block;
-	min-height:100%;
-	height:100%;
-	
+        margin-left:0px;
+        margin-bottom:30px;
+        display:inline-block;
+        min-height:100%;
+        height:100%;
+        
 }
 .socialIcons {
 min-width:100%;
@@ -19,27 +19,27 @@ margin:0px;
 .socialIcons li{
     position: relative;
     display: inline;
-	list-style: none;
-	text-indent: -999px;
+        list-style: none;
+        text-indent: -999px;
     float: left;
     width: 32px;
-	height: 32px;
-	overflow: hidden;
+        height: 32px;
+        overflow: hidden;
     margin-right: 4px;
-	margin-bottom: 4px;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+        margin-bottom: 4px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
 }
 
 .socialIcons li a{
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	display: block;
-	height: 32px;
-	width: 32px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        display: block;
+        height: 32px;
+        width: 32px;
 }
 
 .socialIcons li a:hover, .socialIcons li a:focus {
@@ -78,7 +78,6 @@ margin:0px;
 .blogger.normal {background: url(../../assets/img/social_icons/main_content/blogger.png) no-repeat;}
 .homeicon.normal{background: url(../../assets/img/social_icons/main_content/home.png) no-repeat;}
 .phone.normal {background: url(../../assets/img/social_icons/main_content/phone.png) no-repeat;}
-.email.normal {background: url(../../assets/img/social_icons/main_content/email.png) no-repeat;}
 .picassa.normal {background: url(../../assets/img/social_icons/main_content/picassa.png) no-repeat;}
 .livejournal.normal {background: url(../../assets/img/social_icons/main_content/livejournal.png) no-repeat;}
 .bebo.normal {background: url(../../assets/img/social_icons/main_content/bebo.png) no-repeat;}
@@ -96,27 +95,27 @@ margin-left:0px;
 footer .socialIcons li{
     position: relative;
     display: inline;
-	list-style: none;
-	text-indent: -999px;
+        list-style: none;
+        text-indent: -999px;
     float: left;
     width: 32px;
-	height: 32px;
-	overflow: hidden;
+        height: 32px;
+        overflow: hidden;
     margin-right: 2px;
-	
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+        
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
 }
 
 footer .socialIcons li a{
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	display: block;
-	height: 32px;
-	width: 32px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        display: block;
+        height: 32px;
+        width: 32px;
 }
 
 footer .socialIcons li a:hover, footer .socialIcons li a:focus {
@@ -156,7 +155,6 @@ footer .socialIcons li:hover {
 .blogger {background: url(../../assets/img/social_icons/footer/blogger.png) no-repeat;}
 .homeicon{background: url(../../assets/img/social_icons/footer/home.png) no-repeat;}
 .phone {background: url(../../assets/img/social_icons/footer/phone.png) no-repeat;}
-.email {background: url(../../assets/img/social_icons/footer/email.png) no-repeat;}
 .picassa {background: url(../../assets/img/social_icons/footer/picassa.png) no-repeat;}
 .livejournal {background: url(../../assets/img/social_icons/footer/livejournal.png) no-repeat;}
 .bebo {background: url(../../assets/img/social_icons/footer/bebo.png) no-repeat;}
