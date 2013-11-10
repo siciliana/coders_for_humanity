@@ -1,0 +1,76 @@
+<div class="well" style="width:760px; margin: 20px auto;">
+<div id="rootwizard">
+  <ul class="bwizard-steps" data-start="1">
+    <li><a href="#tab1" data-toggle="tab"><span class="label">1</span> Sign up</a></li>
+    <li><a href="#tab2" data-toggle="tab"><span class="label">2</span> Select category </a></li>
+    <li><a href="#tab3" data-toggle="tab"><span class="label">3</span> Details</a></li>
+    <li><a href="#tab4" data-toggle="tab"><span class="label">4</span> Agreements</a></li>
+    <li><a href="#tab5" data-toggle="tab"><span class="label">5</span> Review</a></li>
+  </ul>
+  <div class="tab-content">
+      <div class="tab-pane" id="tab1">
+        <br><p class="lead">
+        We need you to sign up before you can create a project. Don't worry, 
+        We won't spam your email.</p>
+        <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
+          <%=fields_for @account do |a| %>
+            <%= a.label :first_name, "First name" %>
+            <%= a.text_field :first_name, :class => "required" %>
+            <%= a.label :last_name, "Last name" %>
+            <%= a.text_field :last_name, :class => 'required' %>
+            <%= a.label :email, "Email" %>
+            <%= a.text_field :email, :class => "required email" %>
+          <%end%>
+          <%= f.label :password, "Password" %>
+          <%= f.text_field :password, :class => "required" %>
+        <% end %>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <% if @categories %>
+        <div style="text-align:center; margin-top: 50px;">
+        <%= form_for @project, :url => wizard_create_project_path , :html => {:id => "category_form"} do |f| %>
+        <strong><%= f.label :category_id, "Select a category for your project"  %></strong>
+        <p><%= f.select :category_id,  options_from_collection_for_select(@categories, :id, :name), {:include_blank => true, :default => nil}, { :class => 'required' }  %></p>
+        <% end %>
+        </div>
+        <% end %>
+      </div>
+    <div class="tab-pane" id="tab3">
+      <br><p class="lead">
+      In order to get you a developer that can help you build a solution to your challenge, please take some time to tell us what you need below.  If you need some assistance in knowing how to fill out the form, please <a href="#">click here</a> to see a sample form. </p>
+      <% if @project %>
+      <%= form_for @project, :url => wizard_create_project_path do |f|%>
+          <strong><%= f.label :title, "Title" %></strong>
+          <small>In one sentence, please describe your challenge.</small><br>
+          <%= f.text_field :title, :class => 'required' %>
+          <strong><%= f.label :description, "Description"%></strong>
+          <small >Please include some details about yourself or your organization, what sorts of challenges you're facing, what solution you're hoping for, and what you're looking for from your developer.</small><br>
+          <%= f.text_area :description, :class => 'required', :style => "margin: 0px; width: 717px; height: 180px;" %>
+        <% end %>
+        <% end %>
+      </div>
+    <div class="tab-pane" id="tab4">
+      <ul class="list-group">
+        <li class="list-group-item">
+          I agree to some stuff and I will do that
+        </li>
+        <li class="list-group-item">
+          I agree to some stuff and some more
+        </li>
+        <li class="list-group-item">
+          I agree to some stuff and I will do that
+        </li>
+        <li class="list-group-item">
+          I agree to some stuff and I will do that
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="tab5">
+      </div>
+    <ul class="pager wizard">
+      <li class="previous"><a href="#">Previous</a></li>
+        <li class="next"><a href="#">Next</a></li>
+    </ul>
+  </div>  
+</div>
+</div>

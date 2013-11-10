@@ -23,6 +23,8 @@ group :development, :test do
   gem "database_cleaner"
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'simplecov'
 end
 
 group :test do
@@ -32,3 +34,4 @@ end
 
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
+gem 'jquery-validation-rails'

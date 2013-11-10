@@ -21,7 +21,7 @@ class Project < ActiveRecord::Base
 
 
   def assigned?
-    status == 'complete'
+    status == 'assigned'
   end
 
 
