@@ -1,0 +1,26 @@
+<%= form_for @project do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description, :style => "width: 717px; height: 180px;" %>
+  </p>
+
+  <p>
+    <%= f.label :category_id, 'Select a category' %>
+    <%= f.select :category_id, @categories.map{|cat| [cat.name, cat.id]}%>
+  </p>
+
+  <p>
+    <%= f.label :status %>
+    <%= f.select :status,  Project.statuses.values %>
+  </p>
+
+  <p>
+    <%= f.submit 'Save changes', :class => 'btn btn-info' %>
+  </p>
+
+<% end %>

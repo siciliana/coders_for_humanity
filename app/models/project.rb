@@ -33,4 +33,8 @@ class Project < ActiveRecord::Base
   def not_yet_assigned?
     status == 'not yet assigned'
   end
+
+  def self.statuses
+    STATUSES
+  end
 end
