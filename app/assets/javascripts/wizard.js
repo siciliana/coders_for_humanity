@@ -35,6 +35,12 @@ $(document).ready(function() {
           $projectValidator.focusInvalid();
           return false;
         }else{
+        if($("#agreement").is(":checked")){
+          $('#next_button').show();
+        }
+        else{
+          $('#next_button').hide();
+        }
           var data = $("#category_form").serialize() + $("#new_project").serialize();
           var url = $("#new_project").attr('action');
 
@@ -49,6 +55,9 @@ $(document).ready(function() {
           $('#tab5').html(response)
         })
       }
+    },
+    'onPrevious' : function(tab, navigation, index) {
+      $('#next_button').show();
     }
   });
 
@@ -109,8 +118,13 @@ $(document).ready(function() {
     }
   });
 
-  $("#agreement").on("click", function(event){
-    console.log(event)
+  $("#agreement").on("click", function(){
+    if($("#agreement").is(":checked")){
+      $('#next_button').show();
+    }
+    else{
+      $('#next_button').hide();
+    }
   });
 
   var $agreementValidator = $("#agreement").validate({
@@ -124,7 +138,7 @@ $(document).ready(function() {
   });
 
   $("#sample_project").on("click", function(event) {
-    $node = '<div id="sample_project" style="width:500px; margin: 20px auto; font-size:1.2em;"><br><h3>Project Example</h3><p><strong>Title:</strong><br>Build me a system I can use to catalogue and display the plants in my nursery</p><p><strong>Description:</strong><br>My current process involves taking a photo of each plant, printing the photo, and displaying it in a folder with a hand-written description.  Each time I stock a new plant I have to rearrange the order of the folder. Printing costs are expensive, because of this I can only have one folder at a time.</p></div>'
+    $node = '<div id="sample_project" style="width:500px; margin: 20px auto; font-size:1.2em;"><br><h3>Project Example</h3><p><strong>Title:</strong><br>Build me a system I can use to catalogue and display the plants in my nursery</p><br><p><strong>Description:</strong><br>My current process involves taking a photo of each plant, printing the photo, and displaying it in a folder with a hand-written description.  Each time I stock a new plant I have to rearrange the order of the folder. Printing is expensive so I only have one folder to show my customers.</p></div>'
     $('#sample_div').append($node)
   })
 

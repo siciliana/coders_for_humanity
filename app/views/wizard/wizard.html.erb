@@ -13,7 +13,7 @@
         <p class="lead">
           Our site allows developers to look at your challenge and contact you with a solution.  To start the process you need to create an account,<br>
           we promise not to send you any spam emails.<br><br>
-          Or, if you prefer, you can just keep browsing.
+          Or, if you prefer, you can <%= link_to "just keep browsing.", root_path, :style => 'color: blue' %>
         </p>
         <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
           <%= fields_for @account do |a| %>
@@ -46,7 +46,7 @@
 
       <div class="tab-pane" id="tab3"><br>
         <p class="lead">
-          To help us connect you to the right person or team, please tell us more about your challenge.  <a id="sample_project" href="#sample_project">Click here</a> to see an example of the sort of detail that is helpful.
+          To help us connect you to the right person or team, please tell us more about your challenge.  <a id="sample_project" style='color: blue' href="#sample_project">Click here</a> to see an example of the sort of detail that is helpful.
           <div id='sample_div'></div>
         </p>
         <% if @project %>
@@ -78,7 +78,7 @@
         <strong>Here are some guidelines to make the most of the relationship with your developers:</strong><br><br>
         <ul class="list-group">
           <li class="list-group-item">
-              At the start of the project, please provide details of a contact, someone who can answer any questions that arise during the process.<br><br>
+            At the start of the project, please provide details of a contact, someone who can answer any questions that arise during the process.<br><br>
           </li>
           <li class="list-group-item">
             Please mark your project as complete once you have a solution that you are happy with.
@@ -98,7 +98,7 @@
           <a href="#">Previous</a>
         </li>
         <li class="next">
-          <a href="#">Next</a>
+          <a id="next_button"ref="#">Next</a>
         </li>
       </ul>
     </div>
