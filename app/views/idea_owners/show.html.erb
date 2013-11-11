@@ -1,157 +1,159 @@
 
-    <!-- ################-->
-    <!-- PAGE HEADER -->
-    <div class="page-header">
-      <div class="shine">
-        <div class="container">
+<!-- ################-->
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="shine">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
           <div class="row-fluid">
             <div class="span12">
-              <div class="row-fluid">
-                <div class="span12">
-                  <h1 class="welcome_to_dashboard">Dashboard</h1>
-                </div>
-              </div>
+              <h1 class="welcome_to_dashboard">Dashboard</h1>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- PAGE HEADER -->
+  </div>
+</div>
+<!-- PAGE HEADER -->
 
-    <!-- ################ -->
-    <!-- CONTENT CONTAINER-->
-    <!-- ################ -->
-    <div class="container">
-      <div class="row-fluid">
-        <!-- ASIDE -->
-        <div class="span4">
-          <div class="well">
-            <h2 class="standart-h2title line2">Profile</h2>
-            <p class="idea_owners_name">
-              Nadine Anderson
-            </p><br>
-            <p class="idea_owners_organization">
-              Beata Gardens
-            </p>
-          </div>
-        </div>
-        <!-- END:  ASIDE -->
-        <!-- PROJECT SHOW AREA -->
-        <div class="span8">
-          <div class="blog-post">
-            <div class="">
-              <span class="label label-info label-xl span2 center">
-                <span class="date-blog">
-                  <p class="project_flag">
-                    Project
-                  </p>
-                </span>
-              </span>
+<!-- ################ -->
+<!-- CONTENT CONTAINER-->
+<!-- ################ -->
+<div class="container">
+  <div class="row-fluid">
+    <!-- ASIDE -->
+    <div class="span4">
+      <div class="well">
+        <h1 class="standart-h2title line2">My Profile <%= link_to edit_user_path(current_user) do %>
+          <i class = "icon-edit"></i></h1>
+          <% end %>
+          <p class="idea_owners_name">
+            <%= current_user.name %>
 
-              <div class="span10">
-                <h2 class="standart-h2title">
-                  <div class="project_title">
-                    TITLE<br>
-                    <a href="#">
-                      Find and schedule network opportunities in my area
-                    </a>
-                  </div>
-                </h2>
-              </div>
+          </p><br>
+          <p class="idea_owners_organization">
+            Beata Gardens
+          </p>
 
-              <p class="meta-blog clearfix">
-                <i class="icon-comment"></i>
-                <a id="discussion_thread" href="#">
-                  3 Discussion comments
-                </a>
-                |
-                <i class="icon-share"></i>
-                <a id="feedback_thread" href="#">
-                  2 Feedback comments
-                </a>
-                |
-                <a href="#"><span class="label label-info">Join Discussion</span></a>
-                <a href="#"><span class="label label-info">Give Feedback</span></a>
-              </p>
-            </div>
+          <p class="idea_owners_email">
+            <%= current_user.email %>
+          </p>
 
-            <p>
-              DESCRIPTION<br>
-              Build me an app that tells me about the network opportunities in my area, allows me to select the ones I am interested in, and adds the events to my diary.
-            </p>
+          <p class="idea_owners_organization">
+            <%= link_to "Change Password", edit_user_path(current_user) %>
+          </p>            
 
-            <p>
-              STATUS<br>
-              <span class="project_status">
-                Complete
-              </span>
-            </p>
-
-            <p>
-              CATEGORY<br>
-              <span class="project_category">
-                Small Business
-              </span>
-            </p>
-
-          <!-- ACTION BUTTON -->
-          <button class="btn btn-info btn-large" type="submit">Edit your project</button>
-          <button class="btn btn-info btn-large" type="submit">View your project</button>
-          <!-- END ACTION BUTTON -->
-
-          </div>
+          <hr class="half">
 
           <div class="row-fluid">
             <div class="line2 center">
-              <h5 class="standart-h3title">
-                <span class="idea_owners_feedback">
-                  Feedback
-                </span>
-              </h5>
-            </div>
-
-            <ul class="media-list">
-              <li class="media">
-                <div class="media-body">
-                  <div class="media-heading comment-info">
-                    Posted by
-                    <i class="fa-icon-user"></i>
-                    <a href="#">
-                      Anna Smith
-                    </a>
-                    <span>|</span>
-                    25 apr 2019
-                  </div>
-                  <p></p>
-                  <p>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                  </p>
-                </div>
-              </li>
-              <li class="media">
-                <div class="media-body">
-                  <div class="media-heading comment-info">
-                    Posted by
-                    <i class="fa-icon-user"></i>
-                    <a href="#">
-                      Anna Smith
-                    </a>
-                    <span>|</span>
-                    25 apr 2019
-                  </div>
-                  <p>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div><br>
-
-          <div class="line2 center">
-            <h5 class="standart-h3title"><span>Give Feedback</span></h5>
+              <a name="feedback_comments"><h5 class="standart-h3title"></a>
+              <span class="idea_owners_feedback">
+                Your Project Feedback
+              </span>
+            </h5>
           </div>
+
+          <ul class="media-list">
+            <li class="media">
+              <div class="media-body">
+                <div class="media-heading comment-info">
+                  Posted by Developer
+                  <i class="fa-icon-user"></i>
+                  <a href="#">
+                    Anna Smith
+                  </a>
+                  <span>|</span>
+                  25 apr 2019
+                </div>
+                <p></p>
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </p>
+              </div>
+            </li>
+            <li class="media">
+              <div class="media-body">
+                <div class="media-heading comment-info">
+                  Posted by Developer
+                  <i class="fa-icon-user"></i>
+                  <a href="#">
+                    Anna Smith
+                  </a>
+                  <span>|</span>
+                  25 apr 2019
+                </div>
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div><br>
+        <a href="#"><span class="label label-info">Give Feedback to your Developer</span></a>
+      </div>
+    </div>
+
+
+    <!-- END:  ASIDE -->
+    <!-- PROJECT SHOW AREA --> 
+    <div class="span8">
+      <div class="blog-post">
+        <div class="">
+          <span class="label label-info label-xl span2 center">
+            <span class="date-blog">
+              <p class="project_flag">
+                Current<br><br>Project
+              </p>
+            </span>
+          </span>
+
+          <div class="span10">
+            <h2 class="standart-h2title">
+              <div class="project_title">
+                <br><%= @project_title %><br>
+              </div>
+            </h2>
+          </div>
+
+       <!-- ACTION BUTTON -->
+
+        <%= button_to "Edit Your Project", edit_project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
+          <p class="meta-blog clearfix">
+      <!-- END ACTION BUTTON -->
+
+          </p>
+        </div>
+
+        <p>
+          PROJECT DESCRIPTION: <br>
+          <%= @project_description %>
+        </p>
+
+        <p>
+          CATEGORY: <br>
+          <span class="project_category">
+            Small Business
+          </span>
+        </p>
+
+        <p>
+          STATUS: <br>
+          <span class="project_status">
+           <%= @project_status  %>
+         </span>
+        </p>
+    </div>
+
+
+
+<!--           <div class="line2 center">
+            <h5 class="standart-h3title"><span>Give Feedback</span></h5>
+          </div> -->
           <!-- FEEDBACK FORM -->
-          <div class="well">
+          <!-- <div class="well">
             <form accept-charset="UTF-8"  method="POST" class="comments-form">
 
               <p class="span3">
@@ -193,7 +195,7 @@
 
               <button class="btn btn-info btn-large" type="submit">Post</button>
             </form>
-          </div>
+          </div> -->
           <!-- END FEEDBACK FORM -->
         </div>
         <!-- END PROJECT SHOW AREA -->
