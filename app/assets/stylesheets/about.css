@@ -1,3 +1,7 @@
+.jen, .uku, .liz, .luis, .adigo {
+	float:left;
+}
+
 .jen { 
 	background-image: url('jen.jpeg');
 	background-repeat: no-repeat;
