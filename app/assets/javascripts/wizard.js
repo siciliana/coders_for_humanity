@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('#rootwizard').bootstrapWizard({
-    'tabClass': 'bwizard-steps', 
+    'tabClass': 'bwizard-steps',
     onTabClick: function(tab, navigation, index) {
       return false;
     },
@@ -43,24 +43,24 @@ $(document).ready(function() {
             $("#new_project").attr('action', '/wizard/update_project/' + projectId)
           });
         }
- 
+
       } else if(index == 4){
         $.get('/wizard/review/' + projectId , function(response){
           $('#tab5').html(response)
         })
       }
-    }   
+    }
   });
 
   $(document).on("click", "li.next", function(){
     $(".bwizard-steps li.active").prev().addClass('completed')
   });
-  
+
   var $accountValidator = $("#new_idea_owner").validate({
     errorClass: "alert alert-error",
     errorPlacement: function(error, element) {
       error.insertBefore(element);
-    }, 
+    },
     rules: {
       first_name: {
         required: true
@@ -78,26 +78,26 @@ $(document).ready(function() {
         required: true,
         minlength: 6
       }
-    } 
+    }
   });
 
   var $categoryValidator = $("#category_form").validate({
     errorClass: "alert alert-error",
     errorPlacement: function(error, element) {
       error.insertBefore(element);
-    }, 
+    },
     rules: {
       project_category_id: {
         required: true
       },
-    } 
+    }
   });
 
   var $projectValidator = $("#new_project").validate({
     errorClass: "alert alert-error",
     errorPlacement: function(error, element) {
       error.insertBefore(element);
-    }, 
+    },
     rules: {
       project_title: {
         required: true
@@ -106,7 +106,21 @@ $(document).ready(function() {
       project_description: {
         required: true
       },
-    } 
+    }
+  });
+
+  $("#agreement").on("click", function(event){
+    console.log(event)
+  });
+
+  var $agreementValidator = $("#agreement").validate({
+    errorClass: "alert alert-error",
+    errorPlacement: function(error, element) {
+      error.insertBefore(element);
+    },
+    rules: {
+      agreement: true
+    }
   });
 
 });

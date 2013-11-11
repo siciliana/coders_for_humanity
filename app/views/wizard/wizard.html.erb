@@ -11,8 +11,8 @@
 
       <div class="tab-pane" id="tab1"><br>
         <p class="lead">
-          First off you need to create an account,<br>
-          don't worry, we won't send you any spam emails.
+          Our site allows developers to look at your challenge and contact you with a solution.  To start the process you need to create an account, we promise not to send you any spam emails.<br>
+          Or, if you prefer, you can just keep browsing.
         </p>
         <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
           <%= fields_for @account do |a| %>
@@ -45,7 +45,7 @@
 
       <div class="tab-pane" id="tab3"><br>
         <p class="lead">
-          To help us connect you to the right person or team, please tell us more about your challenge.  <a href="#">Click here</a> to see an example of the sort of detail that is helpful.
+          To help us connect you to the right person or team, please tell us more about your challenge.  <a href="#sample_project">Click here</a> to see an example of the sort of detail that is helpful.
         </p>
         <% if @project %>
           <%= form_for @project, :url => wizard_create_project_path do |f| %>
@@ -57,14 +57,14 @@
               In one sentence, please describe your challenge.
             </small><br>
 
-            <%= f.text_field :title, :class => 'required' %>
+            <%= f.text_field :title, :class => 'required', :style => "margin: 0px; width: 717px;" %>
 
             <strong>
               <%= f.label :description, "Description"%>
             </strong>
 
             <small >
-              Please include some details about yourself or your organization, what sorts of challenges you're facing, what solution you're hoping for, and what you're looking for from your developer.
+              What are the steps in your current process?  What single task takes up the most time?  What task do you repeat most often?  What is biggest problem about the way you currently work?
             </small><br>
 
             <%= f.text_area :description, :class => 'required', :style => "margin: 0px; width: 717px; height: 180px;" %>
@@ -88,8 +88,8 @@
           </li>
         </ul><br>
 
-        <form>
-          <input type="checkbox" name="agreement" value="True"> I agree<br>
+        <form name="user_agreement" action="agree_to_conditions" method="post">
+          <input class='required' id="agreement" type="checkbox" name="agreement" value="false"> I agree<br>
         </form>
 
       </div>

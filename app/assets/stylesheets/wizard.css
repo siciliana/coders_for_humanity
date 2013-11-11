@@ -16,7 +16,7 @@
     margin: 0 5px 0 0; padding: 1px 5px 2px }
   .bwizard-steps .completed .label {
      background-color: #77CC62;
-     
+
   }
   .bwizard-steps .active .label {
     background-color: #FFFFFF;
@@ -74,7 +74,7 @@
   border-left-color: #ccc }
 .bwizard-steps li:hover:not(.active) a {
   color: #333 }
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   /* badges only on small screens */
   .bwizard-steps li:after,
   .bwizard-steps li:before {
@@ -86,4 +86,3 @@
     margin-right: 0;
     padding: 0;
     background-color: transparent }
-

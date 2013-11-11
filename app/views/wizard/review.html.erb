@@ -1,7 +1,33 @@
 <br>
-<h4>Title:</h4>
-<%= @project.title %>
-<h4>Description:</h4>
-<%= @project.description %>
-<h4>Category:</h4>
-<%= @project.category.name %>
+<br>
+<table style="width:350px;">
+  <tr>
+    <td>
+      <h4>Title:</h4>
+    </td>
+
+    <td>
+      <%= @project.title %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h4>Description:</h4>
+    </td>
+
+    <td>
+      <%= @project.description %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h4>Category:</h4>
+    </td>
+
+    <td>
+      <%= @project.category.name %>
+    </td>
+  </tr>
+</table>
