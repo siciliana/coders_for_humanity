@@ -47,6 +47,7 @@
       <div class="tab-pane" id="tab3"><br>
         <p class="lead">
           To help us connect you to the right person or team, please tell us more about your challenge.  <a id="sample_project" href="#sample_project">Click here</a> to see an example of the sort of detail that is helpful.
+          <div id='sample_div'></div>
         </p>
         <% if @project %>
           <%= form_for @project, :url => wizard_create_project_path do |f| %>
