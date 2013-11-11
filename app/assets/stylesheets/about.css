@@ -1,0 +1,22 @@
+.first {
+	-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: url(desaturate.svg#greyscale);
+}
+
+
+.jen { 
+	height: 200px;
+	width: 200px;
+	background-image: url('jen.jpeg');
+	background-repeat: no-repeat;	
+} /*Set the normal image*/
+
+.jen:hover { 
+	height: 200px;
+	width: 200px
+	background-image: url('jen_alter.jpg');
+} /*Set the rollover image*/
+
+
+ 
