@@ -69,11 +69,6 @@ a.click-here {
   color: #0088cc;
 }
 
-hr.half{
-  clear:both;
-  margin: 0px;
-}
-
 #featured, 
 #developers {
   background-color: #DEF1F7;
@@ -83,6 +78,35 @@ hr.half{
   display:inline;
   margin-left: auto;
 }
-/* p.features{
-  border-bottom: 4px solid orange;
- }*/
+
+#about_us, 
+#featured, 
+#creators, 
+#developers {
+  padding-top:100px;
+  padding-bottom: 100px;
+}
+
+#developers{
+  margin: -70px;
+}
+
+.span2.offset9 {
+  padding-top: 40px;
+}
+
+.span1.arrow-right1{
+  width:0;
+  height:0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #2790B0;
+}
+
+.span1.arrow-right2{
+  width:0;
+  height:0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #2790B0;
+}

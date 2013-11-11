@@ -5,10 +5,8 @@
     <h2>Build beautiful and meaningful things together</h2>
     <br>
     <div class="buttons span5">
-      <%=link_to "I need a solution", "#idea_creator", :class => "btn-large btn-warning", :id => "solution", :style => "color:black" :data => {:filter => ".graphics"}%>
-      <!-- <a class="btn-large btn-warning" id="solution" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a> -->
-      <%=link_to "I'm a developer", "#for_devs", :class => "btn-large btn-warning", :id => "solution", :style => "color:black"%>
-     <!--  <a class="btn-large btn-warning" id="developer" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a> -->
+      <%=link_to "I need a solution", "#idea_creator", :class => "btn-large btn-warning", :id => "solution", :style => "color:black", :data => {:filter => ".graphics"} %>
+      <%=link_to "I'm a developer", "#for_devs", :class => "btn-large btn-warning", :id => "solution", :style => "color:black", :data => {:filter => ".graphics"}%>
     </div>
   </div>
   <div class="span6 offset1 videoratio">
@@ -22,7 +20,6 @@
   <div id="about_us">
     <a name="about_us"></a>
     <div class="row-fluid">
-      <hr class="half">
       <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">OUR</span> MISSION</span>
       </h2>
       <br>
@@ -40,7 +37,6 @@
   <!-- END ABOUT US -->
   <!-- FEATURED PROJECTS -->
   <div id="featured">
-    <hr class="half">
     <a name="projects_home"></a>
     <div class="row-fluid">
       <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Featured</span> Projects</span><br></h2>
@@ -66,23 +62,22 @@
 
     <!-- VALUE FOR CREATORS -->
     <div id= "creators">
-      <hr class="half">
       <a name="idea_creator"></a>
       <div class="row-fluid">
         
         <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">VALUE</span> FOR CREATORS</span></h2>
         <br>
-        <div class='span3 large-text xspace offset1'>
+        <div class='span3 large-text'>
           <p>Create a project by posting your technical challenge to our projects board.</p> 
           <br>
-          
         </div>
-
-        <div class='span3 large-text xspace '>
+        <div class="span1 arrow-right1"></div> 
+        <div class='span3 large-text'>
           <p>Talented developers will publicly view your challenge and self-select to work on your project, solo or in teams.</p> 
           <br>
         </div>
-        <div class='span3 large-text xspace '>
+        <div class="span1 arrow-right2"></div> 
+        <div class='span3 large-text'>
           <p>Developers will then contact you directly to discuss your project and form a memorandum of understanding.</p>
           <br>
         </div>
@@ -95,7 +90,6 @@
 
       <!-- VALUE FOR DEVS -->
       <div id="developers">
-        <hr class='half'>
         <div class="row-fluid">
           <a name="for_devs"></a>
           <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Value</span> For Developers</span>
