@@ -26,9 +26,12 @@
         <!-- ASIDE -->
         <div class="span4">
           <div class="well">
-            <h2 class="standart-h2title line2">Profile</h2>
+            <h2 class="standart-h2title line2">Profile <%= link_to edit_user_path(current_user) do %>
+              <i class = "icon-edit"></i></h2>
+              <% end %>
             <p class="idea_owners_name">
-              Nadine Anderson
+              <%= current_user.name %>
+
             </p><br>
             <p class="idea_owners_organization">
               Beata Gardens
