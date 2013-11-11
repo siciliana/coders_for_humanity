@@ -5,7 +5,8 @@
   <p class="meta-blog clearfix">
     <i class="icon-comment"></i>
     <a href="#discussion">2 Discussions</a> | <i class="icon-share"></i>
-    Posted By: <%= Account.find(@project.creator_id).first_name %> | <i class="icon-user"></i>               <!--FIXME--> 
+    Posted By: <%= Account.find(@project.creator_id).first_name %> | <i class="icon-envelope"></i>               <!--FIXME--> 
+    Contact: <%= Account.find(@project.creator_id).email %> | <i class="icon-user"></i>
     Project status: <%= @project.status %> 
   </p>
   <div class="dd_buttons clearfix">
