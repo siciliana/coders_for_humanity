@@ -40,7 +40,7 @@ class WizardController < ApplicationController
 
   def review
     @project = Project.find(params[:id])
-    render 'review'
+    render 'review', layout: false
   end
 
 end
