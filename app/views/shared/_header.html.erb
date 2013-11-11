@@ -6,12 +6,12 @@
     <!-- navbar-fixed-top -->
     <div class="navbar-inner">
       <div class="home_page_container"> <a class="brand" href="/"> 
-        <img src="http://www.logomaker.com/logo-images/b22571254ae62347.gif">
+        <%= image_tag "logo.gif" %>
         <span id="homepage_header">Coders for Humanity</span></a>
         <div id="main-nav">
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><%= link_to 'About us', '#about_us' %></li>
+              <li><%= link_to 'About Us', about_path %></li>
               <li><%= link_to 'Projects', projects_path %></li>
               <% if current_user %>
                 <li><%= link_to 'My Dashboard', user_path(current_user) %></li>
