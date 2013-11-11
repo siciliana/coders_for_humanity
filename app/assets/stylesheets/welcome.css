@@ -6,10 +6,10 @@
   list-style-type: none;
 }
 
-/*.span6 .pull-right {
-  padding-top: 300px;
-  padding-right: 40px;
-}*/
+.span6.offset1.videoratio.pull-right {
+  /*padding-top: 300px;*/
+  margin-right: 100px;
+}
 
 .minspace{
   padding-bottom: 50px;
@@ -110,3 +110,10 @@ a.click-here {
   border-bottom: 50px solid transparent;
   border-left: 50px solid #2790B0;
 }
+
+.span6.center.lead{
+  margin:auto;
+  float:none;
+}
+
+
