@@ -1,0 +1,15 @@
+
+<div class="blog-post">
+  <div class="span10 offset1"><h2 class="standart-h2title">Project: <%= @project.title %></h2>
+  </div>
+  <p class="meta-blog clearfix">
+    <i class="icon-comment"></i>
+    <a href="#discussion">2 Discussions</a> | <i class="icon-share"></i>
+    <a href="">Admin Edit</a> | <i class="icon-user"></i>
+    <a href="#">Posted By: <%= Account.find(@project.creator_id).first_name %></a> | <i class="icon-user"></i>               <!--FIXME--> 
+    Project status: <%= @project.status %> 
+  </p>
+  <div class="dd_buttons clearfix">
+  </div>
+  <h3>Description: <%= @project.description %></h3>
+</div>
