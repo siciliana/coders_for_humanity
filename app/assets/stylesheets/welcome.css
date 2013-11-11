@@ -7,9 +7,9 @@
 }
 
 .span6.offset1.videoratio.pull-right {
-  /*padding-top: 300px;*/
   margin-right: 100px;
 }
+
 .minspace{
   padding-bottom: 50px;
 }
@@ -115,27 +115,4 @@ a.click-here {
 .span6.center.lead{
   margin:auto;
   float:none;
-}
-
-/*#containingBlock{
-  width:40%;
-  margin-top: -50px;*/
-  /*padding-right: 70px;*/
-/*}
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-}
-*//*.videoWrapper object,
-.videoWrapper embed {
-  position: absolute;
-  
-  width: 100%;
-  height: 100%;
-}*/
-
-.video-bar {
-  /*overflow: hidden;*/
 }
