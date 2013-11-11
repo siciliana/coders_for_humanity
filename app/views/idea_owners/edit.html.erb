@@ -1,0 +1,35 @@
+<div class="well" style="width:760px; margin: 20px auto;">
+<div id="rootwizard">
+  <ul class="bwizard-steps" data-start="1">
+    <li><a href="#tab1" data-toggle="tab" class="lead"> Edit your profile</a></li>
+  </ul>
+  <div class="tab-content">
+      <div class="tab-pane" id="tab1">
+        <br><p class="lead">
+        Please edit the fields below, and click update to save the changes.</p>
+        <%= form_for @user, :url => user_path, :method => "PUT" do |f| %>
+            <%=fields_for @account do |a|%>
+              <%= a.label :first_name, "First name" %>
+              <%= a.text_field :first_name%>
+              <%= a.label :last_name, "Last name" %>
+              <%= a.text_field :last_name %>
+              <%= a.label :email, "Email" %>
+              <%= a.text_field :email, :class => "email"%>
+              <%= a.label :organization, "Organization/Company"%>
+              <%= a.text_field :organization%>
+              <%= a.label :city, "City"%>
+              <%= a.text_field :city%>
+              <%= a.label :country, "Country"%>
+              <%= a.text_field :country%>
+            <%end%>
+            <%= f.label :password, "Password" %>
+            <%= f.password_field :password, :placeholder => "New password"%>
+            <%= f.submit "Update", :class => "submit-changes" %>
+        <%end%>
+      </div>
+      
+    
+    
+  </div>  
+</div>
+</div>
