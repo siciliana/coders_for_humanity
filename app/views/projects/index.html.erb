@@ -6,7 +6,6 @@
 
 <!-- PAGE HEADER IMAGE BACKGROUND -->
 <div class="page-header"> 
-  <div class="large-text center"> Projects </div>
   <div class="shine">
     <div class="container">
       <div class="row-fluid">
@@ -21,8 +20,6 @@
 <div class="span12">
   <div class="container">
     <div class="row-fluid blog">
-      <div class="blog-post">
-      </div>
     </div>
   </div>
 </div>
@@ -33,6 +30,7 @@
   <!-- FILTERS-->
   <!--###################-->
 
+  <div class="large-text center"> Project Categories </div>
 
 
   <div class="blog-line">     
@@ -40,6 +38,7 @@
       <div class="proj">           
         <div id="filters-blog">
           <ul id="Grid">
+
           <% @categories.each do |category| %>
           <li class="btn btn-link active filter" data-filter="<%= category.id %>" ><%= category.name %></li>
           <% end  %>
@@ -63,22 +62,68 @@
         <!-- portfolio item // THIS ITEM COMMENTED -->
         <ul id="projects">
         <% @projects.each do |project| %>
+          <% if project.complete? != true %>
+          <li class="span3 mix <%= project.category.id %> box pint-blog popular" >
+            <h4 class="single-title">
+              <%= link_to project.title, project_path(project) %></a>
+            </h4>
+    
+            <%= project.creator.name %> <br>
 
-        <li class="span3 mix <%= project.category.id %> box pint-blog popular" >
+            <%= project.category.name %><br>
 
-          <!-- TITLE-->
-          <h4 class="single-title">
-            <%= link_to project.title, project_path(project) %></a>
-          </h4>
-          <!-- END TITLE-->
-          <!-- META-->
+            <%= project.status %>
+          </li>                    
+          <% end %>
 
-          <%= project.creator.name %>
-         
-          <!-- END META-->
+        <% end %>
+        </ul>
 
-          </li>
-        <!-- END portfolio item -->
+      </div>
+    </div>
+  </div>
+
+    <hr class="half">
+
+    <div class="large-text center"> Completed Projects </div>
+
+
+  <div class="blog-line">     
+    <div class="line-proj center">
+      <div class="proj">           
+        <div id="filters-blog">
+          <ul id="Grid">
+
+          <% @categories.each do |category| %>
+          <li class="btn btn-link active filter" data-filter="<%= category.id %>" ><%= category.name %></li>
+          <% end  %>
+        </ul>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div id="container-folio" class="row ufilter"><!-- !important! => DONT REMOVE class="ufilter"--> 
+    <!-- START MAIN CONTENT DIV -->
+    <div class="span9 offset3">
+      <div id="portfolio" class="row">
+        <!-- portfolio item // THIS ITEM COMMENTED -->
+        <ul id="projects">
+        <% @projects.each do |project| %>
+          <% if project.complete? == true %>
+          <li class="span3 mix <%= project.category.id %> box pint-blog popular" >
+            <h4 class="single-title">
+              <%= link_to project.title, project_path(project) %></a>
+            </h4>
+    
+            <%= project.creator.name %> <br>
+
+            <%= project.category.name %><br>
+
+            <%= project.status %>
+          </li>                    
+          <% end %>
+
         <% end %>
         </ul>
 
