@@ -1,0 +1,17 @@
+
+<div class="blog-post">
+  <div class="span10 offset1"><h2 class="standart-h2title">Project: <%= @project.title %></h2>
+  </div>
+  <p class="meta-blog clearfix" style='text-transform: capitalize' >
+    <i class="icon-user"></i> Posted By: <%= Account.find(@project.creator_id).first_name %> | 
+    <i class="icon-envelope"></i> <%= link_to 'Contact' %> | 
+    <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> | 
+    <i class="icon-user"></i> Project status: <%= @project.status %>
+    <% if current_user.id == @project.creator.id %> 
+     | <i class="icon-edit"></i> <%= link_to 'Edit this Project', edit_project_path(@project) %>
+    <% end %>
+  </p>
+  <div class="dd_buttons clearfix">
+  </div>
+  <h2 class='big-text'>Description:</h2> <br> <h3><%= @project.description %></h3>
+</div>
