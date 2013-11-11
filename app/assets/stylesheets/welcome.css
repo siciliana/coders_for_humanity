@@ -40,6 +40,8 @@ div.span5.large-text h2 {
 .buttons.span5 {
  text-align: center;
  margin:auto;
+ padding-top: 10px;
+ margin-bottom: 75px; 
 }
 
 .videoratio {
@@ -113,4 +115,27 @@ a.click-here {
 .span6.center.lead{
   margin:auto;
   float:none;
+}
+
+/*#containingBlock{
+  width:40%;
+  margin-top: -50px;*/
+  /*padding-right: 70px;*/
+/*}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+*//*.videoWrapper object,
+.videoWrapper embed {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+}*/
+
+.video-bar {
+  /*overflow: hidden;*/
 }

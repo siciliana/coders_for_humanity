@@ -2,12 +2,12 @@ $(document).ready(function(){
   $("#solution_button").click(function() {
       $('html, body').animate({
           scrollTop: $("#creators").offset().top
-      }, 1500);
+      }, 2000);
   })
   $("#dev_button").click(function() {
       $('html, body').animate({
           scrollTop: $("#developers").offset().top
-      }, 1500);
+      }, 2000);
   })
 });
 
