@@ -1,22 +1,14 @@
 module ApplicationHelper
 
   def current_user
-    @current_user ||= Account.find(session[:id])
+    @current_user ||= IdeaOwner.find_by_id(session[:idea_owner_id]) || Developer.find_by_id(params[:developer_id])
   end
 
   def developer?
-    if Developer.find_by_account_id(current_user.id)
-      return true
-    else
-      return false
-    end
+    current_user.is_a? Developer
   end
 
   def idea_owner?
-    if IdeaOwner.find_by_account_id(current_user.id)
-      return true
-    else
-      return false
-    end
+    current_user.is_a? IdeaOwner
   end
 end
