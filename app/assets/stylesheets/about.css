@@ -1,22 +1,64 @@
-.first {
-	-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
-filter: grayscale(100%);
-filter: url(desaturate.svg#greyscale);
-}
-
-
 .jen { 
-	height: 200px;
-	width: 200px;
 	background-image: url('jen.jpeg');
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
 } /*Set the normal image*/
 
-.jen:hover { 
-	height: 200px;
-	width: 200px
-	background-image: url('jen_alter.jpg');
+.jen:hover{ 
+	background-image: url('jen_alter2.jpg');
+	width: 150px;
+	height: 150px;
 } /*Set the rollover image*/
 
+.uku { 
+	background-image: url('uku.jpeg');
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+} /*Set the normal image*/
 
- 
+.uku:hover{ 
+	background-image: url('uku_alter2.gif');
+	width: 150px;
+	height: 150px;
+} /*Set the rollover image*/
+
+.liz { 
+	background-image: url('liz.jpeg');
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+} /*Set the normal image*/
+
+.liz:hover{ 
+	background-image: url('liz_alter2.png');
+	width: 150px;
+	height: 150px;
+} /*Set the rollover image*/
+
+.luis { 
+	background-image: url('luis.jpeg');
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+} /*Set the normal image*/
+
+.luis:hover{ 
+	background-image: url('luis_alter2.jpg');
+	width: 150px;
+	height: 150px;
+} /*Set the rollover image*/
+
+.adigo { 
+	background-image: url('adigo.jpeg');
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+} /*Set the normal image*/
+
+.adigo:hover{ 
+	background-image: url('adigo_alter2.jpg');
+	width: 150px;
+	height: 150px;
+} /*Set the rollover image*/
