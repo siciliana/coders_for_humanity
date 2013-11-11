@@ -11,7 +11,8 @@
 
       <div class="tab-pane" id="tab1"><br>
         <p class="lead">
-          Our site allows developers to look at your challenge and contact you with a solution.  To start the process you need to create an account, we promise not to send you any spam emails.<br>
+          Our site allows developers to look at your challenge and contact you with a solution.  To start the process you need to create an account,<br>
+          we promise not to send you any spam emails.<br><br>
           Or, if you prefer, you can just keep browsing.
         </p>
         <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
@@ -72,26 +73,20 @@
         <% end %>
       </div>
 
-      <div class="tab-pane" id="tab4"><br>
+      <div class="tab-pane" id="tab4"><br><br>
+        <strong>Here are some guidelines to make the most of the relationship with your developers:</strong><br><br>
         <ul class="list-group">
           <li class="list-group-item">
-            I agree to some stuff and I will do that
+              At the start of the project, please provide details of a contact, someone who can answer any questions that arise during the process.<br><br>
           </li>
           <li class="list-group-item">
-            I agree to some stuff and some more
-          </li>
-          <li class="list-group-item">
-            I agree to some stuff and I will do that
-          </li>
-          <li class="list-group-item">
-            I agree to some stuff and I will do that
+            Please mark your project as complete once you have a solution that you are happy with.
           </li>
         </ul><br>
 
         <form name="user_agreement" action="agree_to_conditions" method="post">
-          <input class='required' id="agreement" type="checkbox" name="agreement" value="false"> I agree<br>
+          <input class='required' id="agreement" type="checkbox" name="agreement" value="false"> I agree to follow these guidelines<br>
         </form>
-
       </div>
 
       <div class="tab-pane" id="tab5">

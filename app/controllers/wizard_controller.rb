@@ -43,13 +43,4 @@ class WizardController < ApplicationController
     render 'review'
   end
 
-  # def sample_project
-  #   flash[:notice] = :partial => 'sample_project_flash',
-  # end
-
-  def agree_to_conditions
-    p @agreement = params
-    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  end
-
 end
