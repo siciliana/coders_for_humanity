@@ -120,13 +120,14 @@
 
        <!-- ACTION BUTTON -->
 
-        <%= button_to "Edit Your Project", edit_project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
+        <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span2", :method => :get %><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
           <p class="meta-blog clearfix">
       <!-- END ACTION BUTTON -->
 
           </p>
         </div>
 
+        <div id="project-area">
         <p>
           PROJECT DESCRIPTION: <br>
           <%= @project_description %>
@@ -145,6 +146,9 @@
            <%= @project_status  %>
          </span>
         </p>
+
+        </div>
+
     </div>
 
 
