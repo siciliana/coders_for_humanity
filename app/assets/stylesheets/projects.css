@@ -5,3 +5,11 @@
 .row-fluid.blog {
   padding-left: 40px;
 }
+
+.proj ul li{
+	display: inline;
+}
+
+.box.pint-blog.popular {
+	height: 150px;
+}
