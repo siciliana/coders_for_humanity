@@ -5,8 +5,10 @@
     <h2>Build beautiful and meaningful things together</h2>
     <br>
     <div class="buttons span5">
-      <a class="btn-large btn-warning" id="solution" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a>
-      <a class="btn-large btn-warning" id="developer" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a>
+      <%=link_to "I need a solution", "#idea_creator", :class => "btn-large btn-warning", :id => "solution", :style => "color:black" :data => {:filter => ".graphics"}%>
+      <!-- <a class="btn-large btn-warning" id="solution" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a> -->
+      <%=link_to "I'm a developer", "#for_devs", :class => "btn-large btn-warning", :id => "solution", :style => "color:black"%>
+     <!--  <a class="btn-large btn-warning" id="developer" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a> -->
     </div>
   </div>
   <div class="span6 offset1 videoratio">
@@ -85,9 +87,7 @@
           <br>
         </div>
         <div class='span2 offset9'>
-          <form method='get' action='/wizard'>
-              <input class="btn btn-large btn-warning" style='color:black' type='submit' id='sign-up' value='Get Started'>
-          </form>
+            <%=button_to "Get Started", new_wizard_path, :class => "btn btn-large btn-warning", :method => :get, :style => "color:black"%>
         </div>
       </div> <!-- end row-fluid div -->
     </div> <!-- end creators div -->
@@ -113,10 +113,8 @@
             <br>
           </div>
           <br>
-          <div class='span2 offset12'>
-            <form method='get' action='/'>
-              <input class="btn btn-large btn-warning" style='color:black' type='submit' id='sign-up' value='Get Started'>
-            </form>
+          <div class='span2 offset9'>
+            <%=button_to "Get Started", new_wizard_path, :class => "btn btn-large btn-warning", :method => :get, :style => "color:black"%>
           </div>
         </div> <!-- end row-fluid div -->
       </div> <!-- end developers div -->
