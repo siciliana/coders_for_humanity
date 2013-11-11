@@ -1,19 +1,22 @@
-<div class="well" style="width:760px; margin: 20px auto;">
-<div id="rootwizard">
-  <ul class="bwizard-steps" data-start="1">
-    <li><a href="#tab1" data-toggle="tab"><span class="label">1</span> Sign up</a></li>
-    <li><a href="#tab2" data-toggle="tab"><span class="label">2</span> Select category </a></li>
-    <li><a href="#tab3" data-toggle="tab"><span class="label">3</span> Details</a></li>
-    <li><a href="#tab4" data-toggle="tab"><span class="label">4</span> Agreements</a></li>
-    <li><a href="#tab5" data-toggle="tab"><span class="label">5</span> Review</a></li>
-  </ul>
-  <div class="tab-content">
-      <div class="tab-pane" id="tab1">
-        <br><p class="lead">
-        We need you to sign up before you can create a project. Don't worry, 
-        We won't spam your email.</p>
+<div class="well" style="width:800px; margin: 20px auto;">
+  <div id="rootwizard">
+    <ul class="bwizard-steps" data-start="1">
+      <li><a href="#tab1" data-toggle="tab"><span class="label">1</span> Sign up</a></li>
+      <li><a href="#tab2" data-toggle="tab"><span class="label">2</span> Select category </a></li>
+      <li><a href="#tab3" data-toggle="tab"><span class="label">3</span> Details</a></li>
+      <li><a href="#tab4" data-toggle="tab"><span class="label">4</span> Agreements</a></li>
+      <li><a href="#tab5" data-toggle="tab"><span class="label">5</span> Review</a></li>
+    </ul>
+    <div class="tab-content">
+
+      <div class="tab-pane" id="tab1"><br>
+        <p class="lead">
+          Our site allows developers to look at your challenge and contact you with a solution.  To start the process you need to create an account,<br>
+          we promise not to send you any spam emails.<br><br>
+          Or, if you prefer, you can <%= link_to "just keep browsing.", root_path, :style => 'color: blue' %>
+        </p>
         <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
-          <%=fields_for @account do |a| %>
+          <%= fields_for @account do |a| %>
             <%= a.label :first_name, "First name" %>
             <%= a.text_field :first_name, :class => "required" %>
             <%= a.label :last_name, "Last name" %>
@@ -22,55 +25,82 @@
             <%= a.text_field :email, :class => "required email" %>
           <%end%>
           <%= f.label :password, "Password" %>
-          <%= f.text_field :password, :class => "required" %>
+          <%= f.password_field :password, :class => "required" %>
         <% end %>
       </div>
+
       <div class="tab-pane" id="tab2">
         <% if @categories %>
-        <div style="text-align:center; margin-top: 50px;">
-        <%= form_for @project, :url => wizard_create_project_path , :html => {:id => "category_form"} do |f| %>
-        <strong><%= f.label :category_id, "Select a category for your project"  %></strong>
-        <p><%= f.select :category_id,  options_from_collection_for_select(@categories, :id, :name), {:include_blank => true, :default => nil}, { :class => 'required' }  %></p>
-        <% end %>
-        </div>
-        <% end %>
-      </div>
-    <div class="tab-pane" id="tab3">
-      <br><p class="lead">
-      In order to get you a developer that can help you build a solution to your challenge, please take some time to tell us what you need below.  If you need some assistance in knowing how to fill out the form, please <a href="#">click here</a> to see a sample form. </p>
-      <% if @project %>
-      <%= form_for @project, :url => wizard_create_project_path do |f|%>
-          <strong><%= f.label :title, "Title" %></strong>
-          <small>In one sentence, please describe your challenge.</small><br>
-          <%= f.text_field :title, :class => 'required' %>
-          <strong><%= f.label :description, "Description"%></strong>
-          <small >Please include some details about yourself or your organization, what sorts of challenges you're facing, what solution you're hoping for, and what you're looking for from your developer.</small><br>
-          <%= f.text_area :description, :class => 'required', :style => "margin: 0px; width: 717px; height: 180px;" %>
-        <% end %>
+          <div style="text-align:center; margin-top: 50px;">
+            <%= form_for @project, :url => wizard_create_project_path , :html => {:id => "category_form"} do |f| %>
+              <strong>
+                <%= f.label :category_id, "Select a category for your project"  %>
+              </strong>
+              <p>
+                <%= f.select :category_id,  options_from_collection_for_select(@categories, :id, :name), {:include_blank => true, :default => nil}, { :class => 'required' }  %>
+              </p>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <div class="tab-pane" id="tab4">
-      <ul class="list-group">
-        <li class="list-group-item">
-          I agree to some stuff and I will do that
+
+      <div class="tab-pane" id="tab3"><br>
+        <p class="lead">
+          To help us connect you to the right person or team, please tell us more about your challenge.  <a id="sample_project" style='color: blue' href="#sample_project">Click here</a> to see an example of the sort of detail that is helpful.
+          <div id='sample_div'></div>
+        </p>
+        <% if @project %>
+          <%= form_for @project, :url => wizard_create_project_path do |f| %>
+            <strong>
+              <%= f.label :title, "Title" %>
+            </strong>
+
+            <small>
+              In one sentence, please describe your challenge.
+            </small><br>
+
+            <%= f.text_field :title, :class => 'required', :style => "margin: 0px; width: 717px;" %>
+
+            <strong>
+              <%= f.label :description, "Description"%>
+            </strong>
+
+            <small >
+              What are the steps in your current process?  What single task takes up the most time?  What task do you repeat most often?  What is biggest problem about the way you currently work?
+            </small><br>
+
+            <%= f.text_area :description, :class => 'required', :style => "margin: 0px; width: 717px; height: 180px;" %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="tab-pane" id="tab4"><br><br>
+        <strong>Here are some guidelines to make the most of the relationship with your developers:</strong><br><br>
+        <ul class="list-group">
+          <li class="list-group-item">
+            At the start of the project, please provide details of a contact, someone who can answer any questions that arise during the process.<br><br>
+          </li>
+          <li class="list-group-item">
+            Please mark your project as complete once you have a solution that you are happy with.
+          </li>
+        </ul><br>
+
+        <form name="user_agreement" action="agree_to_conditions" method="post">
+          <input class='required' id="agreement" type="checkbox" name="agreement" value="false"> I agree to follow these guidelines<br>
+        </form>
+      </div>
+
+      <div class="tab-pane" id="tab5">
+      </div>
+
+      <ul class="pager wizard">
+        <li class="previous">
+          <a href="#">Previous</a>
         </li>
-        <li class="list-group-item">
-          I agree to some stuff and some more
-        </li>
-        <li class="list-group-item">
-          I agree to some stuff and I will do that
-        </li>
-        <li class="list-group-item">
-          I agree to some stuff and I will do that
+        <li class="next">
+          <a id="next_button"ref="#">Next</a>
         </li>
       </ul>
     </div>
-    <div class="tab-pane" id="tab5">
-      </div>
-    <ul class="pager wizard">
-      <li class="previous"><a href="#">Previous</a></li>
-        <li class="next"><a href="#">Next</a></li>
-    </ul>
-  </div>  
-</div>
+  </div>
 </div>

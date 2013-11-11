@@ -1,6 +1,37 @@
-<h4>Title:</h4>
-<%= @project.title %>
-<h4>Description:</h4>
-<%= @project.description %>
-<h4>Category:</h4>
-<%= @project.category.name %>
+<br>
+<br>
+Please review the details below, click submit if you are happy, otherwise click previous to edit.
+<br>
+<table style="width:350px;">
+  <tr>
+    <td>
+      <h4>Title:</h4>
+    </td>
+
+    <td>
+      <%= @project.title %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h4>Category:</h4>
+    </td>
+
+    <td>
+      <%= @project.category.name %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h4>Description:</h4>
+    </td>
+
+    <td>
+      <%= @project.description %>
+    </td>
+  </tr>
+</table><br>
+
+<%= link_to "Submit", root_path, :style => '-moz-border-radius: 15px; -webkit-border-radius: 15px; border: 3px solid #009900; padding: 5px; text-decoration: none;'%>

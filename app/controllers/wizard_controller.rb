@@ -5,7 +5,7 @@ class WizardController < ApplicationController
     @account = Account.new
     @project = Project.new
     @categories = Category.all
-    
+
     render 'wizard'
   end
 
@@ -27,14 +27,14 @@ class WizardController < ApplicationController
 
   def create_project
     @project = Project.create(params[:project])
-    
+
     render :json => { :project_id => @project.id }
   end
 
   def update_project
     @project = Project.find(params[:id])
     @project.update_attributes(params[:project])
-  
+
     render :json => { :project_id => @project.id }
   end
 
