@@ -1,0 +1,25 @@
+.bwizard-steps li:first-child {
+	background-color: white;
+	margin-bottom: -20px;
+
+}
+ 
+.bwizard-steps li.active a {
+color: #2790b0;
+font-weight: bold;
+margin-left: -10px;
+}
+
+.submit-changes {
+	border: 2px solid #2790b0; 
+	border-radius: 15px;
+	padding: 7px; 
+	margin-left: 10px;
+	background-color: white;
+	font-size: 16px;
+
+}
+
+.submit-changes:hover{
+	font-weight: bold;
+}
