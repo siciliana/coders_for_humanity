@@ -14,8 +14,8 @@
 
 <!-- PAGE HEADER -->
 <div class="container">
-  <div class="row-fluid blog">
-    <div class="span9">
+  <div class="row-fluid">
+    <div class="span10 offset1">
       <%= render 'shared/project' %>
       <div class="row-fluid">
         <div class="line2 center">
@@ -28,8 +28,7 @@
                <div class="media-body">
                  <!-- Nested media object -->
                  <div class="media">
-                   <a class="pull-left " href="#">
-
+                  <a class="pull-left " href="#">
                     <noscript>&lt;img class="media-object" src="images/ava1.jpg" alt=""&gt;</noscript>
                   </a>
                   <div class="media-body">
@@ -80,26 +79,7 @@
       </form>
     </div>
     <!-- END COMMENTS FORM -->
-    <hr class="soften">
-    
-
   </div>
-  <!-- END CONTENT SIDE -->
-  <!-- SIDEBAR-->
-  <div class="span3 side_bar">
-
-    <div class="row-fluid">
-      <div class="line2 center">
-        <h5 class="standart-h3title"><span>Category</span></h5>
-      </div>
-      <ul class="l_tinynav2 widget-archive" id="nav2">
-        <li><a href="#" style="margin-left:0px;"> >> <%= @category.upcase %></a></li>
-      </ul>
-    </div>
-  </div>
-  <!-- END SIDEBAR-->
-</div>
-<!-- END INNER ROW-FLUID -->
 </div>
 <!-- END CONTENT CONTAINER-->
 <!-- Footer
