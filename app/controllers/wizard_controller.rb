@@ -1,5 +1,6 @@
 class WizardController < ApplicationController
-
+  include ApplicationHelper
+  
   def new
     @user = IdeaOwner.new
     @account = Account.new
@@ -10,30 +11,32 @@ class WizardController < ApplicationController
   end
 
   def create_user
-    @user = IdeaOwner.create(params[:idea_owner])
-    @user.create_account(params[:account])
-    @user.save
+    user = IdeaOwner.create(params[:idea_owner])
+    user.create_account(params[:account])
+    user.save
 
-    render :json => { :user_id => @user.id}
+    session[:idea_owner_id] = user.id
+    render :json => { :user_id => user.id}
   end
 
   def update_user
-    @user = IdeaOwner.find(params[:id])
-    @user.update_attributes(params[:idea_owner])
-    @account = @user.account.update_attributes(params[:account])
+    user = IdeaOwner.find(params[:id])
+    user.update_attributes(params[:idea_owner])
+    user.account.update_attributes(params[:account])
 
-    render :json => { :user_id => @user.id }
+    render :json => { :user_id => user.id }
   end
 
   def create_project
-    @project = Project.create(params[:project])
+    project = current_user.create_project(params[:project])
 
-    render :json => { :project_id => @project.id }
+
+    render :json => { :project_id => project.id }
   end
 
   def update_project
-    @project = Project.find(params[:id])
-    @project.update_attributes(params[:project])
+    project = Project.find(params[:id])
+    project.update_attributes(params[:project])
 
     render :json => { :project_id => @project.id }
   end
