@@ -9,5 +9,6 @@ $(document).ready(function(){
           scrollTop: $("#developers").offset().top
       }, 2000);
   })
+  
 });
 

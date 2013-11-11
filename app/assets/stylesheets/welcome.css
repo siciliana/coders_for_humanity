@@ -116,3 +116,19 @@ a.click-here {
   margin:auto;
   float:none;
 }
+
+a#solution_button.btn-large.btn-warning {
+  background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
+}
+
+a#dev_button.btn-large.btn-warning {
+  background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
+}
+
+input.btn-large.btn-warning.first {
+  background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
+}
+
+input.btn-large.btn-warning.second {
+  background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
+}
