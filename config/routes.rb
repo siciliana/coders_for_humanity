@@ -4,6 +4,8 @@ CodersFh::Application.routes.draw do
  post '/login' => 'sessions#new'
  get '/logout' => 'sessions#destroy'
 
+ get '/about' => 'about#index'
+
  post 'wizard/update_user/:id', :to => 'wizard#update_user', :as => "wizard_update_user"
  post 'wizard/create_user', :to => 'wizard#create_user', :as => "wizard_create_user"
  post 'wizard/create_project', :to => 'wizard#create_project', :as => "wizard_create_project"
