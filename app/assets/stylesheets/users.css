@@ -22,3 +22,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.dashboard_button ul li {
+  display: inline;
+}
