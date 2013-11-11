@@ -11,8 +11,8 @@
 
       <div class="tab-pane" id="tab1"><br>
         <p class="lead">
-          In order to create a project we need you to sign up.<br>
-          Don't worry, we won't spam your email.
+          First off you need to create an account,<br>
+          don't worry, we won't send you any spam emails.
         </p>
         <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
           <%= fields_for @account do |a| %>
@@ -45,7 +45,7 @@
 
       <div class="tab-pane" id="tab3"><br>
         <p class="lead">
-          To help you find the right developer, please tell us more about your needs.  To see an example of the sort detail that is helpful, please <a href="#">click here</a>.
+          To help us connect you to the right person or team, please tell us more about your challenge.  <a href="#">Click here</a> to see an example of the sort of detail that is helpful.
         </p>
         <% if @project %>
           <%= form_for @project, :url => wizard_create_project_path do |f| %>
@@ -86,11 +86,12 @@
           <li class="list-group-item">
             I agree to some stuff and I will do that
           </li>
-        </ul>
+        </ul><br>
 
-        <%= fields_for "agrees_to_conditions" do |form| %>
-          <%= form.check_box :paid %>
-        <% end %>
+        <form>
+          <input type="checkbox" name="agreement" value="True"> I agree<br>
+        </form>
+
       </div>
 
       <div class="tab-pane" id="tab5">
