@@ -23,8 +23,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
 
-              <li><%= link_to 'About us', '#about_us' %></li>
-              <li><%= link_to 'Projects', '#projects_home' %></li>
+              <li><%= link_to 'About us', '#about_us', :class => "about_us_navbar" %></li>
+              <li><%= link_to 'Projects', '#projects_home', :class => "projects_navbar" %></li>
               <% if current_user %>
                 <li><%= link_to 'My Dashboard', user_path(current_user) %></li>
               <% else %>
