@@ -6,10 +6,10 @@
   list-style-type: none;
 }
 
-.span6 .pull-right {
+/*.span6 .pull-right {
   padding-top: 300px;
   padding-right: 40px;
-}
+}*/
 
 .minspace{
   padding-bottom: 50px;
@@ -48,6 +48,7 @@ div.span5.large-text h2 {
   padding-right: 20%;
   padding-bottom: 20%;
   height: 0;
+  float: right;
 }
 
 .stretch {
@@ -59,11 +60,29 @@ div.span5.large-text h2 {
   background: teal; 
 }
 
-
-
 a.btn-large.btn-warning:hover {
   font-weight: bold;
   text-decoration: none;
 }
 
+a.click-here {
+  color: #0088cc;
+}
 
+hr.half{
+  clear:both;
+  margin: 0px;
+}
+
+#featured, 
+#developers {
+  background-color: #DEF1F7;
+}
+
+.span4.offset5.large-text.xspace {
+  display:inline;
+  margin-left: auto;
+}
+/* p.features{
+  border-bottom: 4px solid orange;
+ }*/

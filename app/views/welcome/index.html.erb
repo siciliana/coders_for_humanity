@@ -5,71 +5,69 @@
     <h2>Build beautiful and meaningful things together</h2>
     <br>
     <div class="buttons span5">
-      <a class="btn-large btn-warning" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a>
-      <a class="btn-large btn-warning" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a>
+      <a class="btn-large btn-warning" id="solution" style='color:black' href="#idea_creator" data-filter=".graphics">I need a solution</a>
+      <a class="btn-large btn-warning" id="developer" style='color:black' href="#for_devs" data-filter=".graphics">I'm a developer</a>
     </div>
   </div>
   <div class="span6 offset1 videoratio">
     <iframe class="stretch" width="640" height="360" src="//www.youtube.com/embed/1Wxzy1wYNYw?rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
- 
+
 </div> 
 
 <!-- ABOUT US -->
 <div class="marketing">
-  <a name="about_us"></a>
-  <div class="row-fluid">
-    <hr class="half">
-    <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">OUR</span> MISSION</span>
-    </h2>
-    <br>
-    <div class='span6 offset3 center'>
-      <p>To facilitate an open-sourced, community-minded platform that provides working technological solutions, connecting the world's non-tech savvy with socially beneficial causes to talented web developers.</p> 
+  <div id="about_us">
+    <a name="about_us"></a>
+    <div class="row-fluid">
+      <hr class="half">
+      <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">OUR</span> MISSION</span>
+      </h2>
       <br>
-      <p>For those facing a challenge in their social cause, but who don't have the technological and financial resources to solve it, our developers will actively seek you out to assist in providing a pro-bono solution.</p> 
-      <br>
-      <p>For developers, our platform provides numerous opportunities to practice and learn new tech skills, solo or in teams, for hackathons, course final projects, or as a hobby in your free time.</p>
-      <br>
-      <p> Coders for Humanity is a place to meet and form an agreement on the project goals and deliverables and build beautiful and meaningful things together.</p>
-    </div>
-    <hr class="half">
-  </div>
+      <div class='span6 offset3 center'>
+        <p>To facilitate an open-sourced, community-minded platform that provides working technological solutions, connecting the world's non-tech savvy with socially   beneficial causes to talented web developers.</p> 
+        <br>
+        <p>For those facing a challenge in their social cause, but who don't have the technological and financial resources to solve it, our developers will actively   seek you out to assist in providing a pro-bono solution.</p> 
+        <br>
+        <p>For developers, our platform provides numerous opportunities to practice and learn new tech skills, solo or in teams, for hackathons, course final projects,   or as a hobby in your free time.</p>
+        <br>
+        <p> Coders for Humanity is a place to meet and form an agreement on the project goals and deliverables and build beautiful and meaningful things together.</p>
+      </div>
+    </div> <!-- end row-fluid div -->
+  </div> <!-- end about us div -->
   <!-- END ABOUT US -->
   <!-- FEATURED PROJECTS -->
-  <hr class="half">
-  <a name="projects_home"></a>
-  <div class="row-fluid">
+  <div id="featured">
     <hr class="half">
-    <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Featured</span> Projects</span><br>
-    </h2>
-  </div>
-  <div class="row-fluid">
-    <div class="span4 offset2"> 
-      <i class="main-color"></i>
-      <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project1) %></span> <%= @featured_project1.title %></h3>
-      <p class="features"><%= @featured_project1.description %></p>
+    <a name="projects_home"></a>
+    <div class="row-fluid">
+      <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Featured</span> Projects</span><br></h2>
+      <div class="span4 offset2"> 
+        <i class="main-color"></i>
+        <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project1) %></span> <%= @featured_project1.title %></h3>
+        <p class="features"><%= @featured_project1.description %></p>
       
-      <br>
-    </div>
-    <div class="span4"> 
-
-      <i class="main-color"></i>
-      <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project2) %> </span> <%= @featured_project2.title %></h3>
-      <p class="features"> <%= @featured_project1.description %></p>
-      <br>
-    </div>
-    <div class="span12">
-      <p>To see a full list of current projects, please <a href='/projects#index'>click here</a>
+        <br>
       </div>
-    </div>
+      <div class="span4">
+        <i class="main-color"></i>
+        <h3 class="features-title"> <span class="firstword"><%= link_to "Project: ", project_path(@featured_project2) %> </span> <%= @featured_project2.title %></h3>
+        <p class="features"> <%= @featured_project1.description %></p>
+        <br>
+      </div>
+      <div class="span12">
+        <p>To see a full list of current projects, please <%=link_to "click here.", projects_path, class: "click-here"%>
+      </div>
+    </div> <!-- end row-fluid div -->
+  </div> <!-- end featured div -->
     <!-- END FEATURED PROJECTS -->
 
     <!-- VALUE FOR CREATORS -->
-    <hr class="half"> 
-    <!-- <a name="idea_creator"> -->
-      <a name="about_us"></a>
+    <div id= "creators">
+      <hr class="half">
+      <a name="idea_creator"></a>
       <div class="row-fluid">
-        <hr class="half">
+        
         <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">VALUE</span> FOR CREATORS</span></h2>
         <br>
         <div class='span3 large-text xspace offset1'>
@@ -77,55 +75,53 @@
           <br>
           
         </div>
+
         <div class='span3 large-text xspace '>
           <p>Talented developers will publicly view your challenge and self-select to work on your project, solo or in teams.</p> 
           <br>
-         
         </div>
         <div class='span3 large-text xspace '>
           <p>Developers will then contact you directly to discuss your project and form a memorandum of understanding.</p>
           <br>
-
         </div>
-          <div class='span2 offset9'>
-            <form method='get' action='/wizard'>
-               <input class="btn btn-large btn-warning" style='color:black' type='submit' id='sign-up' value='Get Started'>
-            </form>
-          </div>
-        <hr class="half">
-      </div>
+        <div class='span2 offset9'>
+          <form method='get' action='/wizard'>
+              <input class="btn btn-large btn-warning" style='color:black' type='submit' id='sign-up' value='Get Started'>
+          </form>
+        </div>
+      </div> <!-- end row-fluid div -->
+    </div> <!-- end creators div -->
       <!-- END VALUE FOR CREATORS-->
 
       <!-- VALUE FOR DEVS -->
-      <hr class='half'>
-      <div class="row-fluid">
-        <a name="for_devs"></a>
-        <hr class="half">
-        <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Value</span> For Developers</span>
-        </h2>
-        <br>
-      </div> 
+      <div id="developers">
+        <hr class='half'>
+        <div class="row-fluid">
+          <a name="for_devs"></a>
+          <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Value</span> For Developers</span>
+          </h2>
+          <br>
+          <div class='span6'>
+            <img src='https://drupal.org/files/x-all-the-things-template.png'>  
+          </div>
+          <div class='span4 offset5 large-text xspace'> 
+            <p>Find a real-world problem to help solve</p>
+            <br>
+            <p>Join a team or work solo</p>
+            <br>
+            <p>Challenge your coding skills and learn new concepts</p>
+            <br>
+          </div>
+          <br>
+          <div class='span2 offset12'>
+            <form method='get' action='/'>
+              <input class="btn btn-large btn-warning" style='color:black' type='submit' id='sign-up' value='Get Started'>
+            </form>
+          </div>
+        </div> <!-- end row-fluid div -->
+      </div> <!-- end developers div -->
 
-    <div class='span6 offset2'>
-      <img src='https://drupal.org/files/x-all-the-things-template.png'>  
-    </div>
-    <div class='span6 large-text xspace'> 
-      <p>Find a real-world problem to help solve</p>
-      <br>
-      <p>Join a team or work solo</p>
-      <br>
-      <p>Challenge your coding skills and learn new concepts</p>
-      <br>
-    </div>
-    <br>
-    
-  </div>
-<div class='span12 offset11'>
-          <p><a class="btn-large btn-warning" href="#" data-filter=".graphics">Get Started >> </a>
-        </div>
-        </div>
-
-<hr class='half'>
+  </div><!--  end marketing div? -->
 <!-- END VALUE FOR DEVS-->
 
 
