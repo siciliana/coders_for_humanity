@@ -3,9 +3,9 @@
   <div class="span10 offset1"><h2 class="standart-h2title">Project: <%= @project.title %></h2>
   </div>
   <p class="meta-blog clearfix" style='text-transform: capitalize' >
-    <i class="icon-user"></i> Posted By: <%= @project.creator.name %> | 
-    <i class="icon-envelope"></i> <%= link_to 'Contact' %> | 
-    <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> | 
+    <i class="icon-user"></i> Posted By: <%= @project.creator.name %> |  
+    <i class="icon-envelope"></i> <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Contact</a>  |
+    <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> |
     <i class="icon-user"></i> Project status: <%= @project.status %>
     <% if current_user && current_user.id == @project.creator.id %> 
      | <i class="icon-edit"></i> <%= link_to 'Edit this Project', edit_project_path(@project) %>
