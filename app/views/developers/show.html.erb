@@ -1,0 +1,37 @@
+<div class="page-header">
+  <div class="shine">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="row-fluid">
+            <div class="span12">
+              <h1 class="welcome_to_dashboard">Developer Profile</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="well" style="width:760px; margin: 20px auto;">
+<div id="rootwizard">
+  <ul class="bwizard-steps" data-start="1">
+    <li><a href="#tab1" data-toggle="tab" class="lead"> <%= @user.name %>'s Profile  <br>
+      <%= link_to edit_developer_path(@user) do %>
+          <i class = "icon-edit"></i></h1></a></li>
+          <% end %>
+  </ul>
+  <div class="tab-content">
+    <ul>
+      <li><%= image_tag(@user.gravatar_url) %></li></br>
+      <li><%= link_to "Github Profile", @user_github_url %></li><br>
+      <li>Email: <%= @user_email %></li><br>
+      <li>Location: <%= @user_location %></li><br>
+      <li>Organization: <%= @user_organization %>
+
+    </ul>
+    
+  </div>  
+</div>
+</div>
