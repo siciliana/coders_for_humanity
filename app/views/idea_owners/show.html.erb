@@ -26,25 +26,32 @@
     <!-- ASIDE -->
     <div class="span4">
       <div class="well">
-        <h1 class="standart-h2title line2">My Profile <%= link_to edit_user_path(current_user) do %>
+        <h1 class="standart-h2 line2">My Profile <%= link_to edit_user_path(current_user) do %>
           <i class = "icon-edit"></i></h1>
           <% end %>
           <p class="idea_owners_name">
-            <%= current_user.name %>
+            <b>Name:</b> <%= current_user.name %>
 
           </p><br>
           <p class="idea_owners_organization">
-            Beata Gardens
-          </p>
+            <b>Organization:</b> <%= current_user.organization %>
+          </p><br>
 
           <p class="idea_owners_email">
-            <%= current_user.email %>
-          </p>
+            <b>Email:</b> <%= current_user.email %>
+          </p><br>
+
+          <p class="idea_owners_city">
+            <b>City:</b> <%= current_user.city %>
+          </p><br>
+
+          <p class="idea_owners_country">
+            <b>Country:</b> <%= current_user.country %>
+          </p><br>
 
           <p class="idea_owners_organization">
             <%= link_to "Change Password", edit_user_path(current_user) %>
-          </p>            
-
+          </p>
           <hr class="half">
 
           <div class="row-fluid">
