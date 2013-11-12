@@ -80,6 +80,7 @@ GEM
     mime-types (1.25)
     mini_portile (0.5.2)
     multi_json (1.8.2)
+    newrelic_rpm (3.6.9.171)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     nyan-cat-formatter (0.5.2)
@@ -170,6 +171,7 @@ DEPENDENCIES
   faker
   jquery-rails
   jquery-validation-rails
+  newrelic_rpm
   nyan-cat-formatter
   pg
   rails (= 3.2.13)
