@@ -1,37 +1,15 @@
 <br>
 <br>
-Please review the details below, click submit if you are happy, otherwise click previous to edit.
-<br>
-<table style="width:350px;">
-  <tr>
-    <td>
-      <h4>Title:</h4>
-    </td>
 
-    <td>
-      <%= @project.title %>
-    </td>
-  </tr>
+<p class="lead">
+          Please review your submission; the text will appear on our Projects page as it does below.  Should you wish to edit your form please click 'Previous'. 'Submit' will save all of your data and redirect you to our home page. <br>
+<hr class="half"> 
 
-  <tr>
-    <td>
-      <h4>Category:</h4>
-    </td>
+<%= render 'shared/project_submission'  %>
 
-    <td>
-      <%= @project.category.name %>
-    </td>
-  </tr>
+<hr class="half"> 
 
-  <tr>
-    <td>
-      <h4>Description:</h4>
-    </td>
+<hr class="half"> 
 
-    <td>
-      <%= @project.description %>
-    </td>
-  </tr>
-</table><br>
-
-<%= link_to "Submit", root_path, :style => '-moz-border-radius: 15px; -webkit-border-radius: 15px; border: 3px solid #009900; padding: 5px; text-decoration: none;'%>
+  
+<%= link_to "Submit", root_path, :style => '-moz-border-radius: 15px; -webkit-border-radius: 15px; border: 3px solid #009900; padding: 5px; text-decoration: none;', :class => "submit_button" %>
