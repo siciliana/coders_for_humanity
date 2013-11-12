@@ -35,19 +35,19 @@
           </p><br>
           <p class="idea_owners_organization">
             <b>Organization:</b> <%= current_user.organization %>
-          </p>
+          </p><br>
 
           <p class="idea_owners_email">
             <b>Email:</b> <%= current_user.email %>
-          </p>
+          </p><br>
 
           <p class="idea_owners_city">
             <b>City:</b> <%= current_user.city %>
-          </p>
+          </p><br>
 
           <p class="idea_owners_country">
             <b>Country:</b> <%= current_user.country %>
-          </p>
+          </p><br>
 
           <p class="idea_owners_organization">
             <%= link_to "Change Password", edit_user_path(current_user) %>

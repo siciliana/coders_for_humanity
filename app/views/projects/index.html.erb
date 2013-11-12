@@ -51,8 +51,8 @@
               <b><%= link_to project.title, project_path(project) %></b>
             </h4>
             Creator: <%= project.creator.name %> <br>
-            Category: <%= project.category.name %><br>
-            Status: <%= project.status %>
+            Category: <%= project.category.name.humanize %><br>
+            Status: <%= project.status.humanize %>
           </li>                   
           <% end %>
           <% end %>
