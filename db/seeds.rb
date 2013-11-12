@@ -29,9 +29,9 @@ end
 
 
 Category.create name: 'not for profit'
-Category.create name: 'small business'
+Category.create name: 'community organization'
 Category.create name: 'social enterprise'
-Category.create name: 'special interest group'
+Category.create name: 'education'
 
 
 30.times do

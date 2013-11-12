@@ -75,6 +75,10 @@
 .bwizard-steps li:hover:not(.active) a {
   color: #333 }
 
+.submit_button {
+  float: right;
+}
+
 @media (max-width: 480px) {
   /* badges only on small screens */
   .bwizard-steps li:after,
