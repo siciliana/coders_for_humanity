@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#rootwizard').bootstrapWizard({
     'tabClass': 'bwizard-steps',
+
     onTabClick: function(tab, navigation, index) {
       return false;
     },
@@ -34,10 +35,11 @@ $(document).ready(function() {
         if(!$valid) {
           $projectValidator.focusInvalid();
           return false;
-        }else{
-        if($("#agreement").is(":checked")){
-          $('#next_button').show();
         }
+        else{
+          if($("#agreement").is(":checked")){
+            $('#next_button').show();
+          }
         else{
           $('#next_button').hide();
         }
@@ -56,6 +58,7 @@ $(document).ready(function() {
         })
       }
     },
+
     'onPrevious' : function(tab, navigation, index) {
       $('#next_button').show();
     }
