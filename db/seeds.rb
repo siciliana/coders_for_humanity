@@ -73,10 +73,9 @@ project_titles.push("Build me an app I can use to perform a survey of homeless p
                     "Write an app to help me teach adult learners to read and write",
                     "I would like an app to foster collaboration within my local arts and crafts community")
 
-What are the steps in your current process?  What single task takes up the most time?  What task do you repeat most often?  What is biggest problem about the way you currently work?
 
 project_descriptions = []
-project_descriptions.push("I currently use a clipboard and pen to conduct the homeless surveys.  Then I input the data into a spreadsheet.  To write reports I cut and paste database queries from the spreadsheet to the word processor package.  Data entry and producing reports are the most time consuming tasks.  My current process is time-consuming and inefficient",
+project_descriptions.push("I currently use a clipboard and pen to conduct the homelessness surveys.  Then I input the data into a spreadsheet.  To write reports I cut and paste database queries from the spreadsheet to the word processor package.  Data entry and producing reports are the most time consuming tasks.  My current process is time-consuming and inefficient",
                           "When I act as a birth attendant in rural communities, I am isolated and unsupported.  I need a way to communicate quickly with my regional hospital to mobilize help and arrange transportation.  It is difficult for me to describe my exact location, and local options for transportation are unknown.",
                           "I maintain a mailing list of members of the LGBT community in my area.  I would like to keep them updated of meetups and local events of interest.  Currently, I check listings in my local paper, send out a circular email, and keep a record of responders in my diary.  I then inform event organisers about expected numbers.  I would love to collect feedback about events and publish a rating system.",
                           "I work for a local NGO dedicated to the conservation of near-extinct plant species.  We need a digit resource and algorithm to help identify the species, and a means of entering each sighting into a database.  Currently, when we identify a rare plant we take a photograph on site and record a rough estimate of the location.  When we return to base camp we consult hard copies of encylopedias to identify the plant.",
@@ -87,13 +86,19 @@ project_descriptions.push("I currently use a clipboard and pen to conduct the ho
                           "As a retired teacher, I volunteer on a one-to-one basis to teach adult learners basic numeracy and literacy.  I have developed an innovative system of learning on paper and I would like to produce an interative electronic version to use with my students.",
                           "I am part of a community of arts and crafts makers.  We would like a management system to help us create and run workshops as well as a noticeboard to alert members and the wider community of these workshops and arts and crafts fares.")
 
+
+project_categories = [2, 1, 2, 1, 3, 1, 2, 2, 4, 3]
+
+
 creator_id_counter = 0
+project_counter = 0
 10.times do
 creator_id_counter += 1
-  Project.create  title: Faker::Lorem.sentence,
+project_counter += 1
+  Project.create  title: project_titles[project_counter],
                   creator_id: creator_id_counter,
-                  description: Faker::Lorem.paragraph,
-                  category_id: rand(1..4),
+                  description: project_descriptions[project_counter],
+                  category_id: project_categories[project_counter],
                   status: Project::STATUSES.values.sample
 end
 
