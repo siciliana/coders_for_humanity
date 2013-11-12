@@ -61,6 +61,18 @@ idea_owner_counter = 0
 end
 
 
+project_titles = []
+project_titles.push("Build me a mobile app I can use to perform a survey of homeless people in Chicago",
+                    "Help me make contact with my hospital team when I need suppport during rural deliveries in the Congo",
+                    "I need a system to help me arrange and manage networking events for members of the gay and lesbian community",
+                    "Create an app to help me identify and record rare plant species in the Amazon basin",
+                    "Assist me with a system to communicate between my fairtrade producers and buyers worldwide",
+                    "We want a system to document the NGOs working in our district to prevent overlapping concerns",
+                    "I want a system to support battered women by allowing them to check in with me and eachother",
+                    "Help me identify the recycling identify and interact with the recycling initiatives in my area",
+                    "Write an app to help me teach adult learners to read and write",
+                    "I would like an app to foster collaboration within my local arts and crafts community")
+
 creator_id_counter = 0
 10.times do
 creator_id_counter += 1
