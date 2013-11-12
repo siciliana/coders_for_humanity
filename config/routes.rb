@@ -3,6 +3,8 @@ CodersFh::Application.routes.draw do
  resources :users, controller: :idea_owners
  post '/login' => 'sessions#new'
  get '/logout' => 'sessions#destroy'
+ get '/auth/:provider/callback' => 'sessions#github_auth'
+ get 'auth/failure' => redirect('/')
 
  get '/about' => 'about#index'
 

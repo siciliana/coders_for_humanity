@@ -14,12 +14,11 @@
 ActiveRecord::Schema.define(:version => 20131107232849) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "email"
     t.string   "organization"
-    t.string   "city"
-    t.string   "country"
+    t.string   "location"
+    t.string   "gravatar_url"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -40,10 +39,12 @@ ActiveRecord::Schema.define(:version => 20131107232849) do
 
   create_table "developers", :force => true do |t|
     t.string   "github_url"
-    t.integer  "github_id"
+    t.integer  "uid"
+    t.string   "provider"
+    t.string   "gravatar_url"
     t.integer  "account_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "feedbacks", :force => true do |t|
