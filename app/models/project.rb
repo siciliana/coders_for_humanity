@@ -19,7 +19,6 @@ class Project < ActiveRecord::Base
   scope :completed, -> { where(status: STATUSES[:complete]) }
   scope :not_yet_assigned, -> { where(status: STATUSES[:not_yet_assigned]) }
 
-
   def assigned?
     status == 'assigned'
   end

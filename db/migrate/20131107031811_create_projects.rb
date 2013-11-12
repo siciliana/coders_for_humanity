@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :creator_id
       t.text :description
       t.integer :category_id
-      t.integer :status_id
+      t.string :status, default: 'Not Assigned'
 
       t.timestamps
     end
