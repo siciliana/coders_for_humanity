@@ -42,4 +42,3 @@
 //= require jquery.bootstrap.wizard
 //= require_tree .
 
-  $("#projects").mixitup()
