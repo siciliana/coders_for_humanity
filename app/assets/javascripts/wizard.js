@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#rootwizard').bootstrapWizard({
     'tabClass': 'bwizard-steps',
+
     onTabClick: function(tab, navigation, index) {
       return false;
     },
