@@ -1,7 +1,7 @@
 
 <div class="blog-post">
-  <div class="span10 offset1"><h2 class="standart-h2title">Project: <%= @project.title %></h2>
-  </div>
+  <h2 class="standart-h2title">Project: <%= @project.title %></h2>
+
   <p class="meta-blog clearfix" style='text-transform: capitalize' >
     <i class="icon-user"></i> Posted By: <%= @project.creator.name %> | 
     <i class="icon-envelope"></i> <%= link_to 'Contact' %> | 
@@ -11,7 +11,5 @@
      | <i class="icon-edit"></i> <%= link_to 'Edit this Project', edit_project_path(@project) %>
     <% end %>
   </p>
-  <div class="dd_buttons clearfix">
-  </div>
-  <h2 class='big-text'>Description:</h2> <br> <h3><%= @project.description %></h3>
+  <h2 class='big-text'>Description:</h2> <br> <h3 class='span8' style='margin:auto; float:none;'><%= @project.description %></h3>
 </div>

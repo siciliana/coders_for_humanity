@@ -13,70 +13,31 @@
 <!-- PAGE HEADER -->
 <div class="container">
   <div class="row-fluid">
-    <div class="span10 offset1">
+    <div class="span9" style='margin:auto; float:none;'>
       <%= render 'shared/project' %>
       <div class="row-fluid">
         <div class="line2 center">
           <a name="discussion">
             <h5 class="standart-h3title"><span>Project Discussion: </span></h5></a>
           </div>
-          <ul class="media-list span9 offset1">
-           <li class="media">
-             <a class="pull-left " href="#">
-               <div class="media-body">
-                 <!-- Nested media object -->
-                 <div class="media">
-                  <a class="pull-left " href="#">
-                    <noscript>&lt;img class="media-object" src="images/ava1.jpg" alt=""&gt;</noscript>
-                  </a>
-                  <div class="media-body">
-                   <div class="media-heading comment-info"> Posted by <i class="fa-icon-user"></i> <a href="#">Anna Smith</a> <span>|</span> 25 apr 2019 <span>|</span> <i class="fa-icon-reply"></i> <a href="#">Reply</a></div>
-                   <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-                 </div>
-               </div>
-             </div>
-           </li>
-           <li class="media">
-             <a class="pull-left " href="#">
-              <noscript>&lt;img class="media-object" src="images/ava1.jpg" alt=""&gt;</noscript>
-            </a>
-            <div class="media-body">
-              <div class="media-heading comment-info"> Posted by <i class="fa-icon-user"></i> <a href="#">Anna Smith</a> <span>|</span> 25 apr 2019 <span>|</span> <i class="fa-icon-reply"></i> <a href="#">Reply</a></div>
-              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-            </div>
-          </li>
-        </ul>
+        </div>
+        <div class="well span10" style='margin:auto; float:none;'>
+        <!-- COMMENTS FORM -->
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'codersforhumanitydevelopment'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <!-- END COMMENTS FORM -->
       </div>
-      <div class="line2 center">
-        <h5 class="standart-h3title"><span>Post your comment</span></h5>
-      </div>
-      <!-- COMMENTS FORM -->
-      <div class="well span9 offset1">
-
-        <form accept-charset="UTF-8"  method="POST" class="comments-form">
-
-         <p class="span3">
-          <label for="comment-name"><strong>Name</strong> <span class="label">required</span></label>
-          <input class="span12" type="text" name="name" placeholder="Name" value="" >
-        </p>
-
-        <p class="span3">
-          <label for="comment-name"><strong>Email</strong> <span class="label">required</span></label>
-          <input class="span12" type="text" name="name" placeholder="Email" value=""  required="" >
-        </p>
-
-        <p class="span3">
-          <label for="comment-name"><strong>Website</strong></label>
-          <input class="span12" type="text" name="name" placeholder="Website" value="" id="comment-name" required="" >
-        </p>
-
-
-        <textarea class="span12" id="new_message" name="new_message" placeholder="Type in your comment" rows="5" ></textarea>
-
-        <button class="btn btn-info btn-small" type="submit">Post</button>
-      </form>
     </div>
-    <!-- END COMMENTS FORM -->
   </div>
-</div>
-<!-- END CONTENT CONTAINER-->
