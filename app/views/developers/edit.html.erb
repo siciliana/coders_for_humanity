@@ -5,7 +5,7 @@
         <div class="span12">
           <div class="row-fluid">
             <div class="span12">
-              <h1 class="welcome_to_dashboard">Edit Profile</h1>
+              <h1 class="welcome_to_dashboard">Developer Profile</h1>
             </div>
           </div>
         </div>
@@ -16,15 +16,19 @@
 
 <div class="well" style="width:760px; margin: 20px auto;">
   <div id="rootwizard">
+    <p>Please edit the fields below and click update to save the changes.</p>
     <ul class="bwizard-steps" data-start="1">
-      <li><a href="#tab1" data-toggle="tab" class="lead"> Edit your profile</a></li>
+      <li><a href="#tab1" data-toggle="tab" class="lead"> <%= @user.name %>'s Profile</a></li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane" id="tab1">
-          <br><p class="lead">
-          Please edit the fields below, and click update to save the changes.</p>
-          <%= form_for @user, :url => developer_path, :method => "PUT" do |f| %>
+        
+        <%= image_tag(@user.gravatar_url) %></li></br>
+        <br>
+        
+
+        <%= form_for @user, :url => developer_path, :method => "PUT" do |f| %>
               <%=fields_for @account do |a|%>
+
                 <%= a.label :name, "Name" %>
                 <%= a.text_field :name %>
                 <%= a.label :email, "Email" %>
@@ -33,6 +37,7 @@
                 <%= a.text_field :organization%>
                 <%= a.label :location, "Location"%>
                 <%= a.text_field :location%>
+                
               <%end%>
               <%= f.label :password, "Password" %>
               <%= f.password_field :password, :placeholder => "New password"%>
@@ -42,3 +47,8 @@
     </div>  
   </div>
 </div>
+
+
+
+
+
