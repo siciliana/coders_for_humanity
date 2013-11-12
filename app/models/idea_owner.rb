@@ -8,21 +8,17 @@ class IdeaOwner < ActiveRecord::Base
   has_many :received_feedbacks, :as => :receiver, :class_name => "Feedback"
   has_many :given_feedbacks, :as => :author, :class_name => "Feedback"
 
+  
   def name
-    acc = account
-    "#{acc.first_name} #{acc.last_name}"
+    account.name
   end
 
   def email
     account.email
   end
 
-  def city
-    account.city
-  end
-
-  def country
-    account.country
+  def location
+    account.location
   end
 
   def organization

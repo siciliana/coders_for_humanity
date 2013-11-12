@@ -26,7 +26,7 @@
               <li><%= link_to 'About us', '#about_us', :class => "about_us_navbar" %></li>
               <li><%= link_to 'Projects', '#projects_home', :class => "projects_navbar" %></li>
               <% if current_user %>
-                <li><%= link_to 'My Dashboard', user_path(current_user) %></li>
+                <li><%= link_to 'My Dashboard', idea_owner? ? user_path(current_user) : developer_path(current_user) %></li>
               <% else %>
                 <li><%= link_to 'Get started', new_wizard_path %></li>
               <% end %>
@@ -49,9 +49,9 @@
                       <label style="text-align:center;margin-top:5px">Dont Have an Account?</label>
                       <input class="btn btn-info btn-block" type="submit" id="sign-up" value="Sign Up">
                     </form>
-                    <form>
+                    <form method="get" action="/auth/github">
                       <label style="text-align:center;margin-top:5px">Are you a Developer?</label>
-                      <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Github">
+                      <input class="btn btn-primary btn-block" type="submit" id="sign-in-google" value="Sign In with Github">
                     </form>
                   </div>
                 </li>

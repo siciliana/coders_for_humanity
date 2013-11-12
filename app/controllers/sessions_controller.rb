@@ -26,5 +26,14 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  def github_auth
+    auth = env["omniauth.auth"]
+    developer = Developer.from_omniauth(auth)
+    session[:developer_id] = developer.id
+    session[:developer_token] = auth["credentials"]
+
+    redirect_to root_path
+  end
+
 
 end

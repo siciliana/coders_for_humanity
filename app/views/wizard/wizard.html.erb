@@ -32,10 +32,8 @@
           </p>
           <%= form_for @user, :url => wizard_create_user_path, :method => 'POST' do |f| %>
             <%= fields_for @account do |a| %>
-              <%= a.label :first_name, "First name" %>
-              <%= a.text_field :first_name, :class => "required" %>
-              <%= a.label :last_name, "Last name" %>
-              <%= a.text_field :last_name, :class => 'required' %>
+              <%= a.label :name, "Name" %>
+              <%= a.text_field :name, :class => 'required' %>
               <%= a.label :email, "Email" %>
               <%= a.text_field :email, :class => "required email" %>
             <%end%>

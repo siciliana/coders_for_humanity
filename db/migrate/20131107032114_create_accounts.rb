@@ -1,12 +1,11 @@
 class CreateAccounts < ActiveRecord::Migration
   def change
     create_table :accounts do |t|
-      t.string :first_name
-      t.string :last_name
+      t.string :name
       t.string :email
       t.string :organization
-      t.string :city
-      t.string :country
+      t.string :location
+      t.string :gravatar_url
 
       t.timestamps
     end

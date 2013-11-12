@@ -25,18 +25,14 @@
         Please edit the fields below, and click update to save the changes.</p>
         <%= form_for @user, :url => user_path, :method => "PUT" do |f| %>
             <%=fields_for @account do |a|%>
-              <%= a.label :first_name, "First name" %>
-              <%= a.text_field :first_name%>
-              <%= a.label :last_name, "Last name" %>
-              <%= a.text_field :last_name %>
+              <%= a.label :name, "Name" %>
+              <%= a.text_field :name %>
               <%= a.label :email, "Email" %>
               <%= a.text_field :email, :class => "email"%>
               <%= a.label :organization, "Organization/Company"%>
               <%= a.text_field :organization%>
-              <%= a.label :city, "City"%>
-              <%= a.text_field :city%>
-              <%= a.label :country, "Country"%>
-              <%= a.text_field :country%>
+              <%= a.label :location, "Location"%>
+              <%= a.text_field :location%>
             <%end%>
             <%= f.label :password, "Password" %>
             <%= f.password_field :password, :placeholder => "New password"%>
