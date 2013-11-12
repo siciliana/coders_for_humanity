@@ -1,143 +1,118 @@
-<%= render 'shared/header' %>
-<!-- ################-->
-<!-- END TOP MENU -->
-<!-- ################-->
-
-
 <!-- PAGE HEADER IMAGE BACKGROUND -->
 <div class="page-header"> 
   <div class="shine">
     <div class="container">
       <div class="row-fluid">
         <div class="span12">
+          <h1 class="large-text">Current projects</h1>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <!-- PAGE HEADER -->
-<div class="span12">
+<div class="span10">
   <div class="container">
     <div class="row-fluid blog">
     </div>
   </div>
 </div>
 </div>
-
-<div class="container">
-  <!--###################-->
-  <!-- FILTERS-->
-  <!--###################-->
-
-  <div class="large-text center"> Open Projects </div>
-
-
-  <div class="blog-line">     
-    <div class="line-proj center">
-      <div class="proj">           
-        <div id="filters-blog">
-          <ul id="Grid">
-
-          <% @categories.each do |category| %>
-          <li class="btn btn-link active filter" data-filter="<%= category.id %>" ><%= category.name %></li>
-          <% end  %>
-        </ul>
-        </div>
-      </div>  
-    </div>
+<!-- END PAGE HEADER -->
+<!-- TOP LINKS -->
+<div class="blog-line">    
+  <div class="line-proj center">
+    <div class="proj">          
+      <ul id="tab-navigation" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"> <a href="#all" data-toggle="tab"> All projects </a> </li>
+        <% @categories.each do |category| %>
+        <% unless category.projects.empty? %>
+        <li> <a href="#<%= category.id %>" data-toggle="tab"> <%= category.name.humanize %> </a> </li>
+        <% end %>
+        <% end  %>
+        <li> <a href="#complete" data-toggle="tab"> Completed projects </a> </li>
+      </ul>
+    </div>  
   </div>
-
-
-  <!--###################-->
-  <!--END: FILTERS-->
-  <!--###################-->
-  <!--###################-->
-  <!-- START PORTFOLIO -->
-  <!--###################-->
-  <div id="container-folio" class="row ufilter"><!-- !important! => DONT REMOVE class="ufilter"--> 
-    <!-- START MAIN CONTENT DIV -->
+</div>
+<!-- END TOP LINKS -->
+<!-- ALL PROJECTS -->
+<div id='all' class='container tab-pane active'>
+  <div class="large-text center">All projects</div>
+  <hr class="half">
+  <div id="container-folio" class="row ufilter">
     <div class="span9 offset3">
       <div id="portfolio" class="row">
-        <!-- portfolio item // THIS ITEM COMMENTED -->
         <ul id="projects">
-        <% @projects.each do |project| %>
-          <% if project.complete? != true %>
-          <li class="span3 mix <%= project.category.id %> box pint-blog popular" >
+          <% @projects.each do |project| %>
+          <% unless project.complete? %>
+          <li class="span3 mix box pint-blog popular">
             <h4 class="single-title">
-              <%= link_to project.title, project_path(project) %></a>
+              <b><%= link_to project.title, project_path(project) %></b>
             </h4>
-    
-            <%= project.creator.name %> <br>
-
-            <%= project.category.name %><br>
-
-            <%= project.status %>
-          </li>                    
+            Creator: <%= project.creator.name %> <br>
+            Category: <%= project.category.name %><br>
+            Status: <%= project.status %>
+          </li>                   
           <% end %>
-
-        <% end %>
+          <% end %>
         </ul>
-
       </div>
     </div>
   </div>
-
-    <hr class="half">
-
-    <div class="large-text center"> Completed Projects </div>
-
-
-  <div class="blog-line">     
-    <div class="line-proj center">
-      <div class="proj">           
-        <div id="filters-blog">
-          <ul id="Grid">
-
-          <% @categories.each do |category| %>
-          <li class="btn btn-link active filter" data-filter="<%= category.id %>" ><%= category.name %></li>
-          <% end  %>
-        </ul>
-        </div>
-      </div>  
-    </div>
-  </div>
-
-  <div id="container-folio" class="row ufilter"><!-- !important! => DONT REMOVE class="ufilter"--> 
-    <!-- START MAIN CONTENT DIV -->
+</div>
+<!-- END ALL PROJECTS -->
+<!-- EACH CATEGORY -->
+<% @categories.each do |category| %>
+<div id='<%= category.id %>' class='container tab-pane'>
+  <div class="large-text center"> <%= category.name.humanize %> </div>
+  <hr class="half">
+  <div id="container-folio" class="row ufilter">
     <div class="span9 offset3">
       <div id="portfolio" class="row">
-        <!-- portfolio item // THIS ITEM COMMENTED -->
         <ul id="projects">
-        <% @projects.each do |project| %>
-          <% if project.complete? == true %>
-          <li class="span3 mix <%= project.category.id %> box pint-blog popular" >
+          <% category.projects.each do |project| %>
+          <% unless project.complete? %>
+          <li class="span3 mix box pint-blog popular">
             <h4 class="single-title">
-              <%= link_to project.title, project_path(project) %></a>
+              <b><%= link_to project.title, project_path(project) %></b>
             </h4>
-    
-            <%= project.creator.name %> <br>
-
-            <%= project.category.name %><br>
-
-            <%= project.status %>
-          </li>                    
+            Creator: <%= project.creator.name %> <br>
+            Category: <%= project.category.name %><br>
+            Status: <%= project.status %>
+          </li>                   
           <% end %>
-
-        <% end %>
+          <% end %>
         </ul>
-
       </div>
     </div>
   </div>
-  <!--###################-->
-  <!-- END PORTFOLIO -->
-  <!--###################-->
-
-<!-- END CONTAINER -->
-
-<!-- Footer
-  ================================================== -->
-  
-  <%= render 'shared/footer' %>
-  <!-- END FOOTER -->
+</div>
+<% end %>
+<!-- END EACH CATEGORY -->
+<!-- ALL COMPLETED -->
+<div id='complete' class='container tab-pane'>
+  <div class="large-text center">Comepleted projects</div>
+  <hr class="half">
+  <div id="container-folio" class="row ufilter">
+    <div class="span9 offset3">
+      <div id="portfolio" class="row">
+        <ul id="projects">
+          <% @projects.each do |project| %>
+          <% if project.complete? %>
+          <li class="span3 mix box pint-blog popular">
+            <h4 class="single-title">
+              <b><%= link_to project.title, project_path(project) %></b>
+            </h4>
+            Creator: <%= project.creator.name %> <br>
+            Category: <%= project.category.name %><br>
+            Status: <%= project.status %>
+          </li>                   
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END ALL COMPLETED -->

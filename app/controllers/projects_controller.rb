@@ -18,11 +18,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    if current_user
-      @project = current_user.project
-    else
-      @project = Project.find_by_id(params[:id])
-    end 
+    @project = Project.find_by_id(params[:id])
     @category = @project.category.name
   end
 
@@ -39,5 +35,4 @@ class ProjectsController < ApplicationController
 
     redirect_to user_path(current_user)
   end
-
 end
