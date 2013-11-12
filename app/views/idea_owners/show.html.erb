@@ -137,20 +137,20 @@
         <div id="project-area">
         <p>
           PROJECT DESCRIPTION: <br>
-          <%= @project_description %>
+          <%= @project.description.humanize %>
         </p>
 
         <p>
           CATEGORY: <br>
           <span class="project_category">
-            Small Business
+            <%= @project.category.name.humanize %>
           </span>
         </p>
 
         <p>
           STATUS: <br>
           <span class="project_status">
-           <%= @project_status  %>
+           <%= @project.status.humanize  %>
          </span>
         </p>
 
