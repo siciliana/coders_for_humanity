@@ -304,14 +304,6 @@ input.btn-large.btn-warning.first {
 input.btn-large.btn-warning.second {
   background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
 }
-
-.span2.offset5 {
-  padding-right: 140px;
-}
-
-.span2.offset7 {
-  padding-right: 40px;
-}
 .bwizard-steps {
   display: inline-block;
   margin: 0; padding: 0;
@@ -388,10 +380,6 @@ input.btn-large.btn-warning.second {
   border-left-color: #ccc }
 .bwizard-steps li:hover:not(.active) a {
   color: #333 }
-
-.submit_button {
-  float: right;
-}
 
 @media (max-width: 480px) {
   /* badges only on small screens */
