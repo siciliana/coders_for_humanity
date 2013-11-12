@@ -4,12 +4,9 @@
   </div>
   <p class="meta-blog clearfix" style='text-transform: capitalize' >
     <i class="icon-user"></i> Posted By: <%= @project.creator.name %> |  
-    <i class="icon-envelope"></i> <a href="mailto:<%= current_user.email %>?Subject=Hello%20again" target="_top">Contact</a>  |
+    <i class="icon-envelope"></i> <a href="mailto:<%= @project.creator.email %>?Subject=Hello">Contact by Email</a>  |
     <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> |
     <i class="icon-user"></i> Project status: <%= @project.status %>
-    <% if current_user && current_user.id == @project.creator.id %> 
-     | <i class="icon-edit"></i> <%= link_to 'Edit this Project', edit_project_path(@project) %>
-    <% end %>
   </p>
   <div class="dd_buttons clearfix">
   </div>
