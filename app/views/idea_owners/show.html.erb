@@ -102,6 +102,14 @@
 
     <!-- END:  ASIDE -->
     <!-- PROJECT SHOW AREA --> 
+
+    <% if @project.pending_collaborations.any? %>
+        <div class="alert alert-info span6 offset1">
+          <p class="large-text">
+            Your project has pending requests from developers
+          </p>
+        </div>
+    <% end %>
     <div class="span8">
       <div class="blog-post">
         <div class="">
@@ -123,14 +131,20 @@
 
        <!-- ACTION BUTTON -->
 
-        <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span2", :method => :get %><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
-          <p class="meta-blog clearfix">
+       <%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
+       <hr class="half">
       <!-- END ACTION BUTTON -->
 
           </p>
         </div>
 
-        <div id="project-area">
+      <div id="project-area">
+        <ul id="tab-navigation" class="nav nav-tabs" data-tabs="tabs">
+          <li class="active"><a href="#details" data-toggle="tab"> Details</a> </li>
+          <li><a href="#team" data-toggle="tab"> Team </a> </li>
+          <li><a href="#feedback" data-toggle="tab"> Feedback </a> </li>
+        </ul>
+      <div id="details" class="tab-pane active">
         <p>
           PROJECT DESCRIPTION: <br>
           <%= @project.description.humanize %>
@@ -149,7 +163,44 @@
            <%= @project.status.humanize  %>
          </span>
         </p>
+         <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span2", :method => :get %>
+        </div>
 
+        <div id="team" class="tab-pane">
+
+          <% if @project.pending_collaborations.any? %>
+            <% @project.pending_collaborations.each do |collaboration| %>
+              <div class="pending-collab alert alert-info">
+                <%= link_to collaboration.developer.name, developer_path(collaboration.developer) %> is interested in your project
+                <% if @project.not_yet_assigned? %>
+                  <%= link_to "Promote to team lead", assign_project_collaboration_path(@project,collaboration), :class => "btn btn-inverse" %>
+                <% end %>
+                <%= link_to "Contact", '/', :class => "btn btn-inverse" %>
+              </div>
+            <% end %>
+          <% end %>
+
+          <% if @project.assigned_collaborations.any? %>
+          <div class="assigned-collab clearfix">
+            <h1 class="large-text">Assigned developers</h1>
+            <ul class="list-group">
+            <% @project.assigned_collaborations.each do |collaboration| %>
+            <li class="developer">
+             <span class="idea_owners_organization">
+              <%= link_to "Contact", '/', :class => "btn btn-inverse btn-mini" %>
+              <b><%= link_to collaboration.developer.name, developer_path(collaboration.developer) %></b>(<%= collaboration.role.description %>)
+            </span>
+              </li>
+            <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+        </div>
+
+        <div id="feedback" class="tab-pane">
+          FEEDBACK STUFF
+        </div>
         </div>
 
     </div>

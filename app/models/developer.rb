@@ -10,6 +10,7 @@ class Developer < ActiveRecord::Base
 
 
   def self.from_omniauth(auth)
+    p auth
     dev = where(auth.slice("provider", "uid")).first_or_initialize.tap do |developer|
       developer.uid = auth["uid"]
       developer.github_url = auth['info']['urls']['GitHub']

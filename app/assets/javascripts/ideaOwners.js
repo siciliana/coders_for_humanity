@@ -5,7 +5,7 @@ $(document).ready(function(){
     var url = $(this).closest('form').attr('action');
     
     $.get(url, function(response){
-      $('#project-area').html(response);
+      $('.tab-pane#details').html(response);
     });
 
   });

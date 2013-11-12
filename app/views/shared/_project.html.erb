@@ -11,4 +11,9 @@
   <div class="dd_buttons clearfix">
   </div>
   <h2 class='big-text'>Description:</h2> <br> <h3><%= @project.description %></h3>
+  <% if developer? %>
+    <%= form_for [@project, Collaboration.new] do |f| %>
+      <input type="submit" class="btn btn-lg btn-warning" value="Collaborate">
+    <% end %>
+  <% end %>
 </div>
