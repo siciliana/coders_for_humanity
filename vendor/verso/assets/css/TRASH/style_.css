@@ -16,12 +16,12 @@ overflow:hidden;
 
 #toTop {
 	
-	background:#2790B0 url(../../assets/img/totop.png) top left no-repeat;
+	background:#2790B0 url('assets/img/totop.png') top left no-repeat;
 	
 }
 
 #toTop:hover {
-	background:#0085BD url(../../assets/img/totop.png) top left no-repeat;
+	background:#0085BD url('assets/img/totop.png') top left no-repeat;
 	-webkit-box-shadow: 6px 6px 4px rgba(50, 50, 50, 0.22);
 -moz-box-shadow: 6px 6px 4px rgba(50, 50, 50, 0.22);
 box-shadow: 6px 6px 4px rgba(50, 50, 50, 0.22);
@@ -1681,7 +1681,7 @@ color:#fff;
 background:transparent url(../img/pixel.png) top left repeat;
 }
 .shine{
-background: url(../../assets/img/header-shine.png) top left no-repeat;
+background: url('assets/img/header-shine.png'') top left no-repeat;
 width:100%;
 height:100%;
 display:block;

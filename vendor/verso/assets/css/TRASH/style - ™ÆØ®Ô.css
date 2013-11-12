@@ -1403,7 +1403,7 @@ padding-left:20px;
 background:url(../img/pixel.png) top left repeat
 }
 .shine{
-background: url(../../assets/img/header-shine.png) top left no-repeat;
+background: url('assets/img/header-shine.png'') top left no-repeat;
 width:100%;
 height:100%;
 display:block;

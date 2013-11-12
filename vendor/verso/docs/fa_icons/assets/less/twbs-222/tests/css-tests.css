@@ -20,7 +20,7 @@ body {
 .type-test {
   margin-bottom: 20px;
   padding: 0 20px 20px;
-  background: url(../../docs/assets/img/grid-baseline-20px.png);
+  background: url('assets/img/grid-baseline-20px.png'');
 }
 .type-test h1,
 .type-test h2,

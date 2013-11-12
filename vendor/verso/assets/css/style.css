@@ -119,7 +119,7 @@ body
 }
 .shine
 {
-	background: url(../../assets/img/header-shine.png) top left no-repeat;
+	background: url('assets/img/header-shine.png'') top left no-repeat;
 	display: block;
 	height: 100%;
 	padding-bottom: 20px;

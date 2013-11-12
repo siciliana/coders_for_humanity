@@ -7558,7 +7558,7 @@ padding-left:20px;
 background:url(../img/pixel.png) top left repeat
 }
 .shine{
-background: url(../../assets/img/header-shine.png) top left no-repeat;
+background: url('assets/img/header-shine.png'') top left no-repeat;
 width:100%;
 height:100%;
 display:block;
@@ -10191,7 +10191,7 @@ color:#fff;
 background:transparent url(../img/pixel.png) top left repeat;
 }
 .shine{
-background: url(../../assets/img/header-shine.png) top left no-repeat;
+background: url('assets/img/header-shine.png'') top left no-repeat;
 width:100%;
 height:100%;
 display:block;
@@ -20473,7 +20473,7 @@ width: 100%;
 height: 100%;
 min-height: 100%;
 min-width: 100%;
-/*background: url(../../assets/img/header-shine.png) top left no-repeat;*/
+/*background: url('assets/img/header-shine.png'') top left no-repeat;*/
 background-size:100% 100%;
 padding:20px 0px;
 display:block;
@@ -20510,7 +20510,7 @@ margin:0px;
 
 .pricing-table-space { height: 10px; 
 width:100%;
-/*background: url(../../assets/img/shadow-header.png) top center no-repeat;
+/*background: url('assets/img/shadow-header.png'') top center no-repeat;
 background-size:100% 100%;*/
 
 
@@ -21961,40 +21961,40 @@ margin:0px;
   background-position: 0 -32px;
 }
 
-.vimeo.normal {background: url(../../assets/img/social_icons/main_content/vimeo.png) no-repeat;}
-.facebook.normal {background: url(../../assets/img/social_icons/main_content/facebook.png) no-repeat;}
-.linkedin.normal {background: url(../../assets/img/social_icons/main_content/linkedin.png) no-repeat;}
-.twitter.normal {background: url(../../assets/img/social_icons/main_content/twitter1.png) no-repeat;}
-.twitter2.normal{background: url(../../assets/img/social_icons/main_content/twitter2.png) no-repeat;}
-.pinterest.normal {background: url(../../assets/img/social_icons/main_content/pinterest.png) no-repeat;}
-.flickr.normal {background: url(../../assets/img/social_icons/main_content/flickr.png) no-repeat;}
-.digg.normal {background: url(../../assets/img/social_icons/main_content/digg.png) no-repeat;}
-.yahoo1.normal {background: url(../../assets/img/social_icons/main_content/yahoo1.png) no-repeat;}
-.yahoo2.normal {background: url(../../assets/img/social_icons/main_content/yahoo2.png) no-repeat;}
-.reddit.normal {background: url(../../assets/img/social_icons/main_content/reddit.png) no-repeat;}
-.googleplus.normal{background: url(../../assets/img/social_icons/main_content/googleplus.png) no-repeat;}
-.stumbleupon.normal {background: url(../../assets/img/social_icons/main_content/stumbleupon.png) no-repeat;}
-.skype.normal {background: url(../../assets/img/social_icons/main_content/skype.png) no-repeat;}
-.deviantart.normal {background: url(../../assets/img/social_icons/main_content/deviantart.png) no-repeat;}
-.delicious.normal {background: url(../../assets/img/social_icons/main_content/delicious.png) no-repeat;}
-.tumblr.normal {background: url(../../assets/img/social_icons/main_content/tumblr.png) no-repeat;}
-.lastfm.normal {background: url(../../assets/img/social_icons/main_content/lastfm.png) no-repeat;}
-.youtube.normal{background: url(../../assets/img/social_icons/main_content/youtube.png) no-repeat;}
-.friendfeed.normal {background: url(../../assets/img/social_icons/main_content/friendfeed.png) no-repeat;}
-.myspace.normal {background: url(../../assets/img/social_icons/main_content/myspace.png) no-repeat;}
-.rss.normal {background: url(../../assets/img/social_icons/main_content/rss.png) no-repeat;}
-.badoo.normal {background: url(../../assets/img/social_icons/main_content/badoo.png) no-repeat;}
-.dribble.normal {background: url(../../assets/img/social_icons/main_content/dribble.png) no-repeat;}
-.blogger.normal {background: url(../../assets/img/social_icons/main_content/blogger.png) no-repeat;}
-.homeicon.normal{background: url(../../assets/img/social_icons/main_content/home.png) no-repeat;}
-.phone.normal {background: url(../../assets/img/social_icons/main_content/phone.png) no-repeat;}
-.picassa.normal {background: url(../../assets/img/social_icons/main_content/picassa.png) no-repeat;}
-.livejournal.normal {background: url(../../assets/img/social_icons/main_content/livejournal.png) no-repeat;}
-.bebo.normal {background: url(../../assets/img/social_icons/main_content/bebo.png) no-repeat;}
-.technorati.normal {background: url(../../assets/img/social_icons/main_content/technorati.png) no-repeat;}
-.newsvine.normal{background: url(../../assets/img/social_icons/main_content/newsvine.png) no-repeat;}
-.wordpress.normal {background: url(../../assets/img/social_icons/main_content/wordpress.png) no-repeat;}
-.yelp.normal {background: url(../../assets/img/social_icons/main_content/yelp.png) no-repeat;}
+.vimeo.normal {background: url('assets/img/social_icons/main_content/vimeo.png'') no-repeat;}
+.facebook.normal {background: url('assets/img/social_icons/main_content/facebook.png'') no-repeat;}
+.linkedin.normal {background: url('assets/img/social_icons/main_content/linkedin.png'') no-repeat;}
+.twitter.normal {background: url('assets/img/social_icons/main_content/twitter1.png'') no-repeat;}
+.twitter2.normal{background: url('assets/img/social_icons/main_content/twitter2.png'') no-repeat;}
+.pinterest.normal {background: url('assets/img/social_icons/main_content/pinterest.png'') no-repeat;}
+.flickr.normal {background: url('assets/img/social_icons/main_content/flickr.png'') no-repeat;}
+.digg.normal {background: url('assets/img/social_icons/main_content/digg.png'') no-repeat;}
+.yahoo1.normal {background: url('assets/img/social_icons/main_content/yahoo1.png'') no-repeat;}
+.yahoo2.normal {background: url('assets/img/social_icons/main_content/yahoo2.png'') no-repeat;}
+.reddit.normal {background: url('assets/img/social_icons/main_content/reddit.png'') no-repeat;}
+.googleplus.normal{background: url('assets/img/social_icons/main_content/googleplus.png'') no-repeat;}
+.stumbleupon.normal {background: url('assets/img/social_icons/main_content/stumbleupon.png'') no-repeat;}
+.skype.normal {background: url('assets/img/social_icons/main_content/skype.png'') no-repeat;}
+.deviantart.normal {background: url('assets/img/social_icons/main_content/deviantart.png'') no-repeat;}
+.delicious.normal {background: url('assets/img/social_icons/main_content/delicious.png'') no-repeat;}
+.tumblr.normal {background: url('assets/img/social_icons/main_content/tumblr.png'') no-repeat;}
+.lastfm.normal {background: url('assets/img/social_icons/main_content/lastfm.png'') no-repeat;}
+.youtube.normal{background: url('assets/img/social_icons/main_content/youtube.png'') no-repeat;}
+.friendfeed.normal {background: url('assets/img/social_icons/main_content/friendfeed.png'') no-repeat;}
+.myspace.normal {background: url('assets/img/social_icons/main_content/myspace.png'') no-repeat;}
+.rss.normal {background: url('assets/img/social_icons/main_content/rss.png'') no-repeat;}
+.badoo.normal {background: url('assets/img/social_icons/main_content/badoo.png'') no-repeat;}
+.dribble.normal {background: url('assets/img/social_icons/main_content/dribble.png'') no-repeat;}
+.blogger.normal {background: url('assets/img/social_icons/main_content/blogger.png'') no-repeat;}
+.homeicon.normal{background: url('assets/img/social_icons/main_content/home.png'') no-repeat;}
+.phone.normal {background: url('assets/img/social_icons/main_content/phone.png'') no-repeat;}
+.picassa.normal {background: url('assets/img/social_icons/main_content/picassa.png'') no-repeat;}
+.livejournal.normal {background: url('assets/img/social_icons/main_content/livejournal.png'') no-repeat;}
+.bebo.normal {background: url('assets/img/social_icons/main_content/bebo.png'') no-repeat;}
+.technorati.normal {background: url('assets/img/social_icons/main_content/technorati.png'') no-repeat;}
+.newsvine.normal{background: url('assets/img/social_icons/main_content/newsvine.png'') no-repeat;}
+.wordpress.normal {background: url('assets/img/social_icons/main_content/wordpress.png'') no-repeat;}
+.yelp.normal {background: url('assets/img/social_icons/main_content/yelp.png'') no-repeat;}
 
 
 /* #Footer Social icons
@@ -22037,41 +22037,41 @@ footer .socialIcons li:hover {
   background-position: 0 -32px;
 }
 
-.vimeo {background: url(../../assets/img/social_icons/footer/vimeo.png) no-repeat;}
-.facebook {background: url(../../assets/img/social_icons/footer/facebook.png) no-repeat;}
-.linkedin {background: url(../../assets/img/social_icons/footer/linkedin.png) no-repeat;}
-.twitter{background: url(../../assets/img/social_icons/footer/twitter1.png) no-repeat;}
-.twitter2{background: url(../../assets/img/social_icons/footer/twitter2.png) no-repeat;}
-.pinterest {background: url(../../assets/img/social_icons/footer/pinterest.png) no-repeat;}
-.flickr {background: url(../../assets/img/social_icons/footer/flickr.png) no-repeat;}
+.vimeo {background: url('assets/img/social_icons/footer/vimeo.png'') no-repeat;}
+.facebook {background: url('assets/img/social_icons/footer/facebook.png'') no-repeat;}
+.linkedin {background: url('assets/img/social_icons/footer/linkedin.png'') no-repeat;}
+.twitter{background: url('assets/img/social_icons/footer/twitter1.png'') no-repeat;}
+.twitter2{background: url('assets/img/social_icons/footer/twitter2.png'') no-repeat;}
+.pinterest {background: url('assets/img/social_icons/footer/pinterest.png'') no-repeat;}
+.flickr {background: url('assets/img/social_icons/footer/flickr.png'') no-repeat;}
 
-.digg {background: url(../../assets/img/social_icons/footer/digg.png) no-repeat;}
-.yahoo1 {background: url(../../assets/img/social_icons/footer/yahoo1.png) no-repeat;}
-.yahoo2 {background: url(../../assets/img/social_icons/footer/yahoo2.png) no-repeat;}
-.reddit {background: url(../../assets/img/social_icons/footer/reddit.png) no-repeat;}
-.googleplus{background: url(../../assets/img/social_icons/footer/googleplus.png) no-repeat;}
-.stumbleupon {background: url(../../assets/img/social_icons/footer/stumbleupon.png) no-repeat;}
-.skype {background: url(../../assets/img/social_icons/footer/skype.png) no-repeat;}
-.deviantart {background: url(../../assets/img/social_icons/footer/deviantart.png) no-repeat;}
-.delicious {background: url(../../assets/img/social_icons/footer/delicious.png) no-repeat;}
-.tumblr {background: url(../../assets/img/social_icons/footer/tumblr.png) no-repeat;}
-.lastfm {background: url(../../assets/img/social_icons/footer/lastfm.png) no-repeat;}
-.youtube{background: url(../../assets/img/social_icons/footer/youtube.png) no-repeat;}
-.friendfeed {background: url(../../assets/img/social_icons/footer/friendfeed.png) no-repeat;}
-.myspace {background: url(../../assets/img/social_icons/footer/myspace.png) no-repeat;}
-.rss {background: url(../../assets/img/social_icons/footer/rss.png) no-repeat;}
-.badoo {background: url(../../assets/img/social_icons/footer/badoo.png) no-repeat;}
-.dribble {background: url(../../assets/img/social_icons/footer/dribble.png) no-repeat;}
-.blogger {background: url(../../assets/img/social_icons/footer/blogger.png) no-repeat;}
-.homeicon{background: url(../../assets/img/social_icons/footer/home.png) no-repeat;}
-.phone {background: url(../../assets/img/social_icons/footer/phone.png) no-repeat;}
-.picassa {background: url(../../assets/img/social_icons/footer/picassa.png) no-repeat;}
-.livejournal {background: url(../../assets/img/social_icons/footer/livejournal.png) no-repeat;}
-.bebo {background: url(../../assets/img/social_icons/footer/bebo.png) no-repeat;}
-.technorati {background: url(../../assets/img/social_icons/footer/technorati.png) no-repeat;}
-.newsvine{background: url(../../assets/img/social_icons/footer/newsvine.png) no-repeat;}
-.wordpress {background: url(../../assets/img/social_icons/footer/wordpress.png) no-repeat;}
-.yelp {background: url(../../assets/img/social_icons/footer/yelp.png) no-repeat;}
+.digg {background: url('assets/img/social_icons/footer/digg.png'') no-repeat;}
+.yahoo1 {background: url('assets/img/social_icons/footer/yahoo1.png'') no-repeat;}
+.yahoo2 {background: url('assets/img/social_icons/footer/yahoo2.png'') no-repeat;}
+.reddit {background: url('assets/img/social_icons/footer/reddit.png'') no-repeat;}
+.googleplus{background: url('assets/img/social_icons/footer/googleplus.png'') no-repeat;}
+.stumbleupon {background: url('assets/img/social_icons/footer/stumbleupon.png'') no-repeat;}
+.skype {background: url('assets/img/social_icons/footer/skype.png'') no-repeat;}
+.deviantart {background: url('assets/img/social_icons/footer/deviantart.png'') no-repeat;}
+.delicious {background: url('assets/img/social_icons/footer/delicious.png'') no-repeat;}
+.tumblr {background: url('assets/img/social_icons/footer/tumblr.png'') no-repeat;}
+.lastfm {background: url('assets/img/social_icons/footer/lastfm.png'') no-repeat;}
+.youtube{background: url('assets/img/social_icons/footer/youtube.png'') no-repeat;}
+.friendfeed {background: url('assets/img/social_icons/footer/friendfeed.png'') no-repeat;}
+.myspace {background: url('assets/img/social_icons/footer/myspace.png'') no-repeat;}
+.rss {background: url('assets/img/social_icons/footer/rss.png'') no-repeat;}
+.badoo {background: url('assets/img/social_icons/footer/badoo.png'') no-repeat;}
+.dribble {background: url('assets/img/social_icons/footer/dribble.png'') no-repeat;}
+.blogger {background: url('assets/img/social_icons/footer/blogger.png'') no-repeat;}
+.homeicon{background: url('assets/img/social_icons/footer/home.png'') no-repeat;}
+.phone {background: url('assets/img/social_icons/footer/phone.png'') no-repeat;}
+.picassa {background: url('assets/img/social_icons/footer/picassa.png'') no-repeat;}
+.livejournal {background: url('assets/img/social_icons/footer/livejournal.png'') no-repeat;}
+.bebo {background: url('assets/img/social_icons/footer/bebo.png'') no-repeat;}
+.technorati {background: url('assets/img/social_icons/footer/technorati.png'') no-repeat;}
+.newsvine{background: url('assets/img/social_icons/footer/newsvine.png'') no-repeat;}
+.wordpress {background: url('assets/img/social_icons/footer/wordpress.png'') no-repeat;}
+.yelp {background: url('assets/img/social_icons/footer/yelp.png'') no-repeat;}
 /*
 "VERSO" v 1.0 
 premium template 
@@ -22194,7 +22194,7 @@ body
 }
 .shine
 {
-	background: url(../../assets/img/header-shine.png) top left no-repeat;
+	background: url('assets/img/header-shine.png'') top left no-repeat;
 	display: block;
 	height: 100%;
 	padding-bottom: 20px;
