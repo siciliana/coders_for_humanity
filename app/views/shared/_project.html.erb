@@ -7,7 +7,7 @@
     <i class="icon-envelope"></i> <%= link_to 'Contact' %> | 
     <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> | 
     <i class="icon-user"></i> Project status: <%= @project.status %>
-    <% if current_user.id == @project.creator.id %> 
+    <% if current_user && current_user.id == @project.creator.id %> 
      | <i class="icon-edit"></i> <%= link_to 'Edit this Project', edit_project_path(@project) %>
     <% end %>
   </p>

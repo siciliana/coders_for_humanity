@@ -13,3 +13,19 @@
 .box.pint-blog.popular {
 	height: 150px;
 }
+
+.tab-pane {
+  display:none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+#tab-navigation {
+  margin: 0;
+}
+
+.proj {
+  padding:0!important;
+}

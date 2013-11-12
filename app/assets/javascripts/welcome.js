@@ -21,6 +21,4 @@ $(document).ready(function(){
         scrollTop: $("#featured").offset().top
     }, 1000);
   })
-  
 });
-
