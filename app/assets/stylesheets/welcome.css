@@ -133,3 +133,11 @@ input.btn-large.btn-warning.first {
 input.btn-large.btn-warning.second {
   background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
 }
+
+.span2.offset5 {
+  padding-right: 140px;
+}
+
+.span2.offset7 {
+  padding-right: 40px;
+}
