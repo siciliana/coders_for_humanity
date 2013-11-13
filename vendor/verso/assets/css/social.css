@@ -128,7 +128,7 @@ footer .socialIcons li:hover {
 }
 
 .vimeo {background: url(../../assets/img/social_icons/footer/vimeo.png) no-repeat;}
-.facebook {background: url(/assets/img/social_icons/footer/facebook.png) no-repeat;}
+.facebook {background: url('assets/img/social_icons/footer/facebook.png') no-repeat;}
 .linkedin {background: url(../../assets/img/social_icons/footer/linkedin.png) no-repeat;}
 .twitter{background: url(../../assets/img/social_icons/footer/twitter1.png) no-repeat;}
 .twitter2{background: url(../../assets/img/social_icons/footer/twitter2.png) no-repeat;}
