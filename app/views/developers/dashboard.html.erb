@@ -33,8 +33,8 @@
 
           <p class="idea_owners_name">
             <b>Name:</b> <%= current_user.name %>
-
           </p><br>
+
           <p class="idea_owners_organization">
             <b>Organization:</b> <%= current_user.organization %>
           </p><br>
@@ -54,6 +54,7 @@
           <p class="idea_owners_organization">
             <%= link_to "Change Password", edit_user_path(current_user) %>
           </p>
+
           <hr class="half">
 
           <div class="row-fluid">
@@ -61,41 +62,26 @@
               <a name="feedback_comments"><h5 class="standart-h3title"></a>
               <span class="idea_owners_feedback">
                 Your Project Feedback
+                
               </span>
             </h5>
           </div>
+          <%@feedbacks.each do |feedback|%>
 
           <ul class="media-list">
             <li class="media">
               <div class="media-body">
                 <div class="media-heading comment-info">
-                  Posted by Developer
+                  Posted by <%=IdeaOwner.find(feedback.author_id).name%>
                   <i class="fa-icon-user"></i>
-                  <a href="#">
-                    Anna Smith
-                  </a>
                   <span>|</span>
-                  25 apr 2019
+                  <%=feedback.created_at%>
                 </div>
+                
                 <p></p>
                 <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                </p>
-              </div>
-            </li>
-            <li class="media">
-              <div class="media-body">
-                <div class="media-heading comment-info">
-                  Posted by Developer
-                  <i class="fa-icon-user"></i>
-                  <a href="#">
-                    Anna Smith
-                  </a>
-                  <span>|</span>
-                  25 apr 2019
-                </div>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  <%=feedback.comment%>
+                  <%end%>
                 </p>
               </div>
             </li>
@@ -105,7 +91,7 @@
       </div>
     </div>
 
-
+</div>
     <!-- END:  ASIDE -->
     <!-- PROJECT SHOW AREA --> 
     <div class="span8">
