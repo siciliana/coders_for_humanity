@@ -140,9 +140,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#sample_project").on("click", function(event) {
-    $node = '<div id="sample_project" style="width:500px; margin: 20px auto; font-size:1.2em;"><br><h3>Project Example</h3><p><strong>Title:</strong><br>Build me a system I can use to catalogue and display the plants in my nursery</p><br><p><strong>Description:</strong><br>My current process involves taking a photo of each plant, printing the photo, and displaying it in a folder with a hand-written description.  Each time I stock a new plant I have to rearrange the order of the folder. Printing is expensive so I only have one folder to show my customers.</p></div>'
-    $('#sample_div').append($node)
-  })
-
+    $(document).on("click", "#sample_project_button", function() {
+      $('#sample_div').slideToggle();
+    })
 });

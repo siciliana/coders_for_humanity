@@ -79,6 +79,10 @@
   float: right;
 }
 
+#sample_div{
+  display: none;
+}
+
 @media (max-width: 480px) {
   /* badges only on small screens */
   .bwizard-steps li:after,
