@@ -78,6 +78,8 @@ project_descriptions.push("I currently use a clipboard and pen to conduct the ho
 project_categories = [2, 1, 2, 1, 3, 1, 2, 2, 4, 3]
 
 
+all_statuses = Project::STATUSES.values
+seed_selection = all_statuses - ['under review']
 creator_id_counter = 0
 project_counter = -1
 10.times do
@@ -87,7 +89,7 @@ project_counter = -1
                   creator_id: creator_id_counter,
                   description: project_descriptions[project_counter],
                   category_id: project_categories[project_counter],
-                  status: Project::STATUSES.values.sample
+                  status: seed_selection.sample
 end
 
 
