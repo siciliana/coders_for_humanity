@@ -1,0 +1,21 @@
+.span4.side_bar {
+	border: 1px solid #C8DAE0;
+	background-color: #def1f7
+}
+
+.label.label-info.label-xl.span4 {
+	font-size: 20px;
+}
+
+p.lead a{
+	color: #2790b0;
+	font-weight: bold;
+}
+
+ul#nav2.l_tinynav2.widget-archive a {
+	border: none;
+}
+
+.link{
+	margin-right: 30px;
+}

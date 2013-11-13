@@ -26,7 +26,7 @@
               <li><%= link_to 'About us', '#about_us', :class => "about_us_navbar" %></li>
               <li><%= link_to 'Projects', '#projects_home', :class => "projects_navbar" %></li>
               <% if current_user %>
-                <li><%= link_to 'My Dashboard', idea_owner? ? user_path(current_user) : developer_path(current_user) %></li>
+                <li><%= link_to 'My Dashboard', idea_owner? ? user_path(current_user) : dashboard_path(current_user) %></li>
               <% else %>
                 <li><%= link_to 'Get started', new_wizard_path %></li>
               <% end %>
