@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(:version => 20131113210152) do
     t.integer  "creator_id"
     t.text     "description"
     t.integer  "category_id"
-    t.string   "status",      :default => "not yet assigned"
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
   end
