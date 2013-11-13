@@ -32,19 +32,6 @@ Category.create name: 'social enterprise'
 Category.create name: 'education'
 
 
-30.times do
-  Collaboration.create  developer_id: rand(1..20),
-                        project_id: rand(1..10),
-                        role_id: rand(1..3)
-end
-
-
-Role.create description: 'lead developer'
-Role.create description: 'collaborating developer'
-Role.create description: 'designer'
-Role.create description: 'pending'
-
-
 developer_counter = 10
 20.times do
   developer_counter += 1
@@ -92,10 +79,10 @@ project_categories = [2, 1, 2, 1, 3, 1, 2, 2, 4, 3]
 
 
 creator_id_counter = 0
-project_counter = 0
+project_counter = -1
 10.times do
-creator_id_counter += 1
-project_counter += 1
+  creator_id_counter += 1
+  project_counter += 1
   Project.create  title: project_titles[project_counter],
                   creator_id: creator_id_counter,
                   description: project_descriptions[project_counter],
@@ -104,18 +91,68 @@ project_counter += 1
 end
 
 
-# Seed feedbacks
+Role.create description: 'lead developer'
+Role.create description: 'collaborating developer'
+Role.create description: 'designer'
+Role.create description: 'pending'
+
+
 projects = Project.all
+
 projects.each do |project|
+  # Seed collaborations
+  if project.assigned? || project.complete?
+
+    developer_ids = (1..20).to_a
+    collaborator_ids = developer_ids.sample(3)
+
+    Collaboration.create  developer_id: collaborator_ids.shift,
+                          project_id: project.id,
+                          role_id: 1
+    (0..2).to_a.sample.times do
+      Collaboration.create developer_id: collaborator_ids.shift,
+                           project_id: project.id,
+                           role_id: [2, 3].sample
+    end
+  end
+
+  # Seed feedbacks
   if project.complete?
-    idea_owner = IdeaOwner.find(project.creator_id)
-    idea_owners_project = idea_owner.project
-    feedback_receiver = idea_owners_project.developers.first
-    Feedback.create author_id: idea_owner.id,
-                    author_type: 'IdeaOwner',
-                    receiver_id: feedback_receiver.id,
-                    receiver_type: 'Developer',
-                    comment: Faker::Lorem.sentences(sentence_count = 3, supplemental = false)
+    idea_owner_id = project.creator_id
+    project_collaborations = project.collaborations
+    developer_ids = []
+    feedback_comments = ["We had a great working relationship.",
+                         "Thorough, pleasant and answered all emails promptly.",
+                         "Communicated in a clear and concise way.",
+                         "Nothing was too much trouble!",
+                         "Gave clear direction thoughout the process.",
+                         "The channels of communication were always open.",
+                         "Amiable and friendly!",
+                         "A clear vision, yet open to suggestions"]
+
+    project_collaborations.each do |collaboration|
+      developer_ids << collaboration.developer_id
+    end
+
+    idea_owner_to_developer_feedback = feedback_comments.sample(developer_ids.length)
+    developer_to_idea_owner_feedback = feedback_comments - idea_owner_to_developer_feedback
+
+    # Feedback from idea owner to developer
+    developer_ids.each do |developer_id|
+
+      Feedback.create author_id: idea_owner_id,
+                      author_type: 'IdeaOwner',
+                      receiver_id: developer_id,
+                      receiver_type: 'Developer',
+                      comment: idea_owner_to_developer_feedback.shift
+
+      Feedback.create author_id: developer_id,
+                      author_type: 'Developer',
+                      receiver_id: idea_owner_id,
+                      receiver_type: 'IdeaOwner',
+                      comment: developer_to_idea_owner_feedback.shift
+    end
+
   end
 end
 
