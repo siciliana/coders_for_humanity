@@ -12,3 +12,10 @@ p.lead a{
 	font-weight: bold;
 }
 
+ul#nav2.l_tinynav2.widget-archive a {
+	border: none;
+}
+
+.link{
+	margin-right: 30px;
+}

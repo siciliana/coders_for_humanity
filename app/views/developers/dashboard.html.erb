@@ -50,7 +50,7 @@
             </span>
           </p>
           <%else %>
-          <p class="lead">It looks like you haven't collaborated on any projects yet.  Have a look at all of the wonderful ideas we have on Coders for Humanity here: <%= link_to "projects", projects_path %>.</p>
+          <p class="lead">It looks like you haven't collaborated on any projects yet.  Have a look at all of the wonderful ideas we have on Coders for Humanity on the <%= link_to "projects", projects_path %> page.</p>
           <%end%>
         </div>
         
@@ -74,11 +74,11 @@
 				</div>
         <%=image_tag(current_user.gravatar_url)%>
         <ul class="l_tinynav2 widget-archive" id="nav2">
-									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li>
-									  <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li>
-									  <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li>
-									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li>
-									  <li style="margin-left:0px;"><b>Github URL:</b> <%= link_to current_user.github_url, current_user.github_url%></li>
+									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
+									  <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li><br>
+									  <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li><br>
+									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>
+									  <li style="margin-left:0px;"><b>Github URL:</b> <%= link_to current_user.github_url, current_user.github_url%></li><br>
 									  <li style="margin-left:0px;"><%= link_to "Change Password", edit_user_path(current_user) %></li>										  
 									</ul>
         </div>
