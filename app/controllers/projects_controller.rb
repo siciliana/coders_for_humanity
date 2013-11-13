@@ -1,12 +1,10 @@
 class ProjectsController < ApplicationController
   protect_from_forgery
 
-  include ApplicationHelper 
-
   def index
     @project = Project.find_by_id(params[:id])
     @projects = Project.all
-    @categories = Category.all 
+    @categories = Category.all
 
     render :index
   end
@@ -17,7 +15,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = current_user.project 
+    @project = current_user.project
     @categories = Category.all
 
     render layout: !request.xhr?

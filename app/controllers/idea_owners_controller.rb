@@ -1,7 +1,5 @@
 class IdeaOwnersController < ApplicationController
 
-  include ApplicationHelper 
-
   def show
     @project = current_user.project
     @feedbacks = current_user.received_feedbacks
