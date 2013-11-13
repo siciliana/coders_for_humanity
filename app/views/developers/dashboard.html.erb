@@ -21,6 +21,9 @@
   <div class="row-fluid blog">
     <div class="span8">
       <div class="blog-post">
+        <% if flash[:notice] %>
+          <div class="alert alert-warning large-text"><%= flash[:notice].html_safe %></div>
+        <% end %>
         <div class="">
 		<span class="label label-info label-xl span4">Current Projects </span>
           <div class="dd_buttons clearfix">
