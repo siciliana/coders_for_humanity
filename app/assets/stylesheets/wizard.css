@@ -8,7 +8,7 @@
   .bwizard-steps .active:after {
     border-left-color: #2790B0 }
   .bwizard-steps .active a {
-    color: #fff;
+    color: #77CC62;
     cursor: default }
   .bwizard-steps .label {
     position: relative;
@@ -79,6 +79,10 @@
   float: right;
 }
 
+#sample_div{
+  display: none;
+}
+
 @media (max-width: 480px) {
   /* badges only on small screens */
   .bwizard-steps li:after,
@@ -89,5 +93,6 @@
   .bwizard-steps li:first-child,
   .bwizard-steps li:last-child {
     margin-right: 0;
+    color: ##77CC62;
     padding: 0;
     background-color: transparent }

@@ -26,10 +26,10 @@ require 'faker'
 end
 
 
-Category.create name: 'not for profit'
-Category.create name: 'community organization'
-Category.create name: 'social enterprise'
-Category.create name: 'education'
+Category.create name: 'Not for profit'
+Category.create name: 'Community organization'
+Category.create name: 'Social enterprise'
+Category.create name: 'Education'
 
 
 developer_counter = 10

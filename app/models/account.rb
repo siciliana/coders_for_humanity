@@ -4,6 +4,7 @@ class Account < ActiveRecord::Base
   validates_presence_of :name
   # validates_presence_of :last_name
   validates_presence_of :email
+  validates :email, uniqueness: true 
   validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
 end
