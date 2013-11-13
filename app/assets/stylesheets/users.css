@@ -70,3 +70,12 @@ ul.list-group {
   color: #2790b0;
   font-weight: bold;
 }
+
+.breadcrumb.span3.lead{
+  font-size: 30px;
+  padding-top: 7px;
+  text-align: left;
+}
+.breadcrumb{
+  height: 80px;
+}
