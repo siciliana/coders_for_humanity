@@ -42,7 +42,7 @@ div.span5.large-text h2 {
  text-align: center;
  margin:auto;
  padding-top: 10px;
- margin-bottom: 75px; 
+ margin-bottom: 75px;
 }
 
 .videoratio {
@@ -58,19 +58,23 @@ div.span5.large-text h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: teal; 
+  background: teal;
 }
+
+a.btn-large.btn-warning {
+  font-weight: normal;
+}
+
 
 a.btn-large.btn-warning:hover {
   font-weight: bold;
-  text-decoration: none;
 }
 
 a.click-here {
   color: #0088cc;
 }
 
-#featured, 
+#featured,
 #developers {
   background-color: #DEF1F7;
 }
@@ -80,9 +84,9 @@ a.click-here {
   margin-left: auto;
 }
 
-#about_us, 
-#featured, 
-#creators, 
+#about_us,
+#featured,
+#creators,
 #developers {
   padding-top:100px;
   padding-bottom: 100px;
