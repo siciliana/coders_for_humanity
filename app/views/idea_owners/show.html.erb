@@ -21,124 +21,24 @@
 <!-- ################ -->
 <!-- CONTENT CONTAINER-->
 <!-- ################ -->
+<!-- PAGE HEADER -->
 <div class="container">
-  <div class="row-fluid">
-    <!-- ASIDE -->
-    <div class="span4">
-      <div class="well">
-        <h1 class="standart-h2 line2">My Profile <%= link_to edit_user_path(current_user) do %>
-          <i class = "icon-edit"></i></h1>
-          <% end %>
-          <p class="idea_owners_name">
-            <b>Name:</b> <%= current_user.name %>
-
-          </p><br>
-          <p class="idea_owners_organization">
-            <b>Organization:</b> <%= current_user.organization %>
-          </p><br>
-
-          <p class="idea_owners_email">
-            <b>Email:</b> <%= current_user.email %>
-          </p><br>
-
-          <p class="idea_owners_city">
-            <b>Location:</b> <%= current_user.location %>
-          </p><br>
-
-          <p class="idea_owners_organization">
-            <%= link_to "Change Password", edit_user_path(current_user) %>
-          </p>
-          <hr class="half">
-
-          <div class="row-fluid">
-            <div class="line2 center">
-              <a name="feedback_comments"><h5 class="standart-h3title"></a>
-              <span class="idea_owners_feedback">
-                Your Project Feedback
-              </span>
-            </h5>
-          </div>
-
-          <ul class="media-list">
-            <li class="media">
-              <div class="media-body">
-                <div class="media-heading comment-info">
-                  Posted by Developer
-                  <i class="fa-icon-user"></i>
-                  <a href="#">
-                    Anna Smith
-                  </a>
-                  <span>|</span>
-                  25 apr 2019
-                </div>
-                <p></p>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                </p>
-              </div>
-            </li>
-            <li class="media">
-              <div class="media-body">
-                <div class="media-heading comment-info">
-                  Posted by Developer
-                  <i class="fa-icon-user"></i>
-                  <a href="#">
-                    Anna Smith
-                  </a>
-                  <span>|</span>
-                  25 apr 2019
-                </div>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div><br>
-        <a href="#"><span class="label label-info">Give Feedback to your Developer</span></a>
-      </div>
-    </div>
-
-
-    <!-- END:  ASIDE -->
-    <!-- PROJECT SHOW AREA --> 
-
-    <% if @project.pending_collaborations.any? %>
-        <div class="alert alert-info span6 offset1">
-          <p class="large-text">
-            Your project has pending requests from developers
-          </p>
-        </div>
-    <% end %>
+  <div class="row-fluid blog">
     <div class="span8">
       <div class="blog-post">
         <div class="">
-          <span class="label label-info label-xl span2 center">
-            <span class="date-blog">
-              <p class="project_flag">
-                Current<br><br>Project
-              </p>
-            </span>
-          </span>
+		<span class="label label-info label-xl span4">Current Project </span>
+            <br>
+            <div class="project-title"> <%=@project.title%> </div>
+           <div class="dd_buttons clearfix">
 
-          <div class="span10">
-            <h2 class="standart-h2title">
-              <div class="project_title">
-                <br><%= @project_title %><br>
-              </div>
-            </h2>
-          </div>
-
-       <!-- ACTION BUTTON -->
-
-       <%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
+           <%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
        <hr class="half">
-      <!-- END ACTION BUTTON -->
-
-          </p>
+          </div>
         </div>
-
-      <div id="project-area">
+       
+         <div id="project-area" class="span10">
+         <br><br>
         <ul id="tab-navigation" class="nav nav-tabs" data-tabs="tabs">
           <li class="active"><a href="#details" data-toggle="tab"> Details</a> </li>
           <li><a href="#team" data-toggle="tab"> Team </a> </li>
@@ -201,66 +101,55 @@
         <div id="feedback" class="tab-pane">
           FEEDBACK STUFF
         </div>
+
+
+        
+
+
+         
         </div>
+      </div><!--span 8-->
 
-    </div>
-
-
-
-<!--           <div class="line2 center">
-            <h5 class="standart-h3title"><span>Give Feedback</span></h5>
-          </div> -->
-          <!-- FEEDBACK FORM -->
-          <!-- <div class="well">
-            <form accept-charset="UTF-8"  method="POST" class="comments-form">
-
-              <p class="span3">
-                <label for="comment-name">
-                  <strong>
-                    Name
-                  </strong>
-                  <span class="label">
-                    required
-                  </span>
-                </label>
-                <input class="span12" type="text" name="name" placeholder="Name" value="" >
-              </p>
-
-              <p class="span3">
-                <label for="comment-name">
-                  <strong>
-                    Email
-                  </strong>
-                  <span class="label">
-                    required
-                  </span>
-                </label>
-                <input class="span12" type="text" name="name" placeholder="Email" value=""  required="" >
-              </p>
-
-              <p class="span3">
-                <div class="feedback_subject">
-                  <label for="comment-name">
-                    <strong>
-                      Who would you like to give feedback about?
-                    </strong>
-                  </label>
-                  <select class="span12" type="text" name="name" placeholder="Website" value="" id="comment-name" required="" >
-                </div>
-              </p>
-
-              <textarea class="span12" id="new_message" name="new_message" placeholder="Type in your comment" rows="5" ></textarea>
-
-              <button class="btn btn-info btn-large" type="submit">Post</button>
-            </form>
-          </div> -->
-          <!-- END FEEDBACK FORM -->
+      <hr class="soften">
+    </div><!--fluid blog-->
+	<!-- END CONTENT SIDE -->
+	<!-- SIDEBAR-->
+    <div class="span4 side_bar">
+		
+	  <div class="row-fluid">
+				<div class="line2 center">
+					<h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %>
+          <i class = "icon-edit"></i>
+          <% end %></span></h5>
+				</div>
+        <ul class="l_tinynav2 widget-archive" id="nav2">
+									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
+									  <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li><br>
+									  <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li><br>
+									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>
+									  <li style="margin-left:0px;"><%= link_to "Change Password", edit_user_path(current_user) %></li>										  
+									</ul>
         </div>
-        <!-- END PROJECT SHOW AREA -->
-      </div>
+        <BR><BR>
+        <div class="row-fluid">
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>YOUR PROJECT FEEDBACK</span></h5>
+        </div>
+        <%@feedbacks.each do |feedback|%>
+        <ul class="l_tinynav2 widget-archive" id="nav2">
+
+                    <li>Posted by <%=IdeaOwner.find(feedback.author_id).name%>
+                  <i class="fa-icon-user"></i>
+                  <span>|</span> <%=feedback.created_at%><br><%=feedback.comment%><br><br></li><%end%>
+                    
+                  </ul>
+        </div>
+	
     </div>
-    <!-- ################ -->
-    <!--END: CONTENT CONTAINER-->
-    <!-- ################ -->
+	<!-- END SIDEBAR-->
   </div>
-  <!-- END MAIN-WRAPPER -
+  <!-- END INNER ROW-FLUID -->
+</div>
+<!-- END CONTENT CONTAINER-->
+</div>
+<!-- END: MAIN-WRAPPER-->
