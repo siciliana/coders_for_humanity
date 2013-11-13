@@ -23,4 +23,9 @@ class DevelopersController < ApplicationController
     @account.update_attributes(params[:account])
     redirect_to developer_path
   end
+
+  def dashboard
+    @projects = current_user.projects
+    @feedbacks = current_user.received_feedbacks
+  end
 end

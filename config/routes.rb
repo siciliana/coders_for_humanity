@@ -16,6 +16,7 @@ CodersFh::Application.routes.draw do
  get '/wizard', :to => 'wizard#new', :as => "new_wizard"
 
  resources :developers
+ get 'dashboard/:id', :to => 'developers#dashboard', :as => "dashboard"
 
  resources :projects do
    resources :collaborations do

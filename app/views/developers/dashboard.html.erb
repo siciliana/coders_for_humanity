@@ -1,0 +1,158 @@
+
+<!-- ################-->
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="shine">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="row-fluid">
+            <div class="span12">
+              <h1 class="welcome_to_dashboard">Developer Dashboard</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PAGE HEADER -->
+
+<!-- ################ -->
+<!-- CONTENT CONTAINER-->
+<!-- ################ -->
+<div class="container">
+  <div class="row-fluid">
+    <!-- ASIDE -->
+    <div class="span4">
+      <div class="well">
+       <h1 class="standart-h2 line2">My Profile <%= link_to edit_user_path(current_user) do %>
+          <i class = "icon-edit"></i></h1>
+          <% end %>
+          <%=image_tag(current_user.gravatar_url)%>
+
+          <p class="idea_owners_name">
+            <b>Name:</b> <%= current_user.name %>
+
+          </p><br>
+          <p class="idea_owners_organization">
+            <b>Organization:</b> <%= current_user.organization %>
+          </p><br>
+
+          <p class="idea_owners_email">
+            <b>Email:</b> <%= current_user.email %>
+          </p><br>
+
+          <p class="idea_owners_city">
+            <b>Location:</b> <%= current_user.location %>
+          </p><br>
+
+          <p class="idea_owners_city">
+            <b>Github URL:</b> <%= link_to current_user.github_url, current_user.github_url%>
+          </p><br>
+
+          <p class="idea_owners_organization">
+            <%= link_to "Change Password", edit_user_path(current_user) %>
+          </p>
+          <hr class="half">
+
+          <div class="row-fluid">
+            <div class="line2 center">
+              <a name="feedback_comments"><h5 class="standart-h3title"></a>
+              <span class="idea_owners_feedback">
+                Your Project Feedback
+              </span>
+            </h5>
+          </div>
+
+          <ul class="media-list">
+            <li class="media">
+              <div class="media-body">
+                <div class="media-heading comment-info">
+                  Posted by Developer
+                  <i class="fa-icon-user"></i>
+                  <a href="#">
+                    Anna Smith
+                  </a>
+                  <span>|</span>
+                  25 apr 2019
+                </div>
+                <p></p>
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </p>
+              </div>
+            </li>
+            <li class="media">
+              <div class="media-body">
+                <div class="media-heading comment-info">
+                  Posted by Developer
+                  <i class="fa-icon-user"></i>
+                  <a href="#">
+                    Anna Smith
+                  </a>
+                  <span>|</span>
+                  25 apr 2019
+                </div>
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div><br>
+        <a href="#"><span class="label label-info">Give Feedback to your Developer</span></a>
+      </div>
+    </div>
+
+
+    <!-- END:  ASIDE -->
+    <!-- PROJECT SHOW AREA --> 
+    <div class="span8">
+      <div class="blog-post">
+      
+         <span class="label label-info label-xl span4 center">
+            <span class="date-blog">
+              <p class="project_flag">
+                Current Projects
+              </p>
+            </span>
+          </span>
+
+          <br><br><br><br><br><br>
+        <div id="project-area">
+          <% @projects.each do |project|%>
+          <p class= "project-title lead"><%=project.title%></p>
+          <p>
+            PROJECT DESCRIPTION: <br>
+            <%= project.description.humanize %>
+          </p>
+
+          <p>
+            CATEGORY: <br>
+            <span class="project_category">
+               <%= project.category.name.humanize %>
+            </span>
+          </p>
+
+          <p>
+            STATUS: <br>
+            <span class="project_status">
+                <%= project.status.humanize  %>
+                <hr class="status">
+                <%end%>
+            </span>
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+        <!-- END PROJECT SHOW AREA -->
+  </div>
+</div>
+    <!-- ################ -->
+    <!--END: CONTENT CONTAINER-->
+    <!-- ################ -->
+  </div>
+  <!-- END MAIN-WRAPPER -
