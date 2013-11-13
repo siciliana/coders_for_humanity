@@ -28,11 +28,9 @@
       <div class="blog-post">
         <div class="">
 		<span class="label label-info label-xl span4">Current Project </span>
-            <br>
-            <div class="project-title"> <%=@project.title%> </div>
            <div class="dd_buttons clearfix">
 
-           <%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span2", :method => :get %></li>
+           
        <hr class="half">
           </div>
         </div>
@@ -45,6 +43,7 @@
           <li><a href="#feedback" data-toggle="tab"> Feedback </a> </li>
         </ul>
       <div id="details" class="tab-pane active">
+        <p><div class="lead"><%=@project.title%></div> </p>
         <p>
           PROJECT DESCRIPTION: <br>
           <%= @project.description.humanize %>
@@ -63,7 +62,11 @@
            <%= @project.status.humanize  %>
          </span>
         </p>
-         <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span2", :method => :get %>
+        <p><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span3", :method => :get, :style => "color:black;" %>
+        </p>
+        <p>
+         <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span3", :method => :get, :style => "color:black;" %>
+         </p>
         </div>
 
         <div id="team" class="tab-pane">
@@ -118,9 +121,10 @@
 		
 	  <div class="row-fluid">
 				<div class="line2 center">
-					<h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %>
-          <i class = "icon-edit"></i>
-          <% end %></span></h5>
+					<h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %></span>
+					<div class="edit-profile"><br>
+          			<i class = "icon-edit"></i>Edit your profile</div>
+          			<% end %></h5>
 				</div>
         <ul class="l_tinynav2 widget-archive" id="nav2">
 									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
