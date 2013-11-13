@@ -30,3 +30,11 @@ ul#nav2.l_tinynav2.widget-archive a {
 .breadcrumb{
   height: 80px;
 }
+
+.new-feedback {
+	padding-top: 30px;
+}
+
+.new-feedback.button {
+	padding: 30px;
+}
