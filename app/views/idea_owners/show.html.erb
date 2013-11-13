@@ -43,7 +43,7 @@
           <li><a href="#feedback" data-toggle="tab"> Feedback </a> </li>
         </ul>
       <div id="details" class="tab-pane active">
-        <p><div class="lead"><%=@project.title%></div> </p>
+        <p><div class="lead"><%=@project.title.humanize%></div> </p>
         <p>
           PROJECT DESCRIPTION: <br>
           <%= @project.description.humanize %>
@@ -62,15 +62,19 @@
            <%= @project.status.humanize  %>
          </span>
         </p>
-        <p><%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small span3", :method => :get, :style => "color:black;" %>
-        </p>
-        <p>
-         <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small span3", :method => :get, :style => "color:black;" %>
-         </p>
+        <div class="button1">
+        <%= button_to "Project Public View", project_path(current_user.project), :class => "btn btn-warning btn-small", :method => :get, :style => "color:black;" %>
+      
+        </div>
+        <div class="button2">
+        
+         <%= button_to "Edit Your Project", edit_project_path(current_user.project),:id => 'edit-project', :class => "btn btn-warning btn-small", :method => :get, :style => "color:black;" %>
+        
+         </div>
         </div>
 
         <div id="team" class="tab-pane">
-
+          <% if @project.pending_collaborations.any? || @project.assigned_collaborations.any? %>
           <% if @project.pending_collaborations.any? %>
             <% @project.pending_collaborations.each do |collaboration| %>
               <div class="pending-collab alert alert-info">
@@ -93,16 +97,32 @@
               <%= link_to "Contact", '/', :class => "btn btn-inverse btn-mini" %>
               <b><%= link_to collaboration.developer.name, developer_path(collaboration.developer) %></b>(<%= collaboration.role.description %>)
             </span>
-              </li>
+              </li>  
             <% end %>
               </ul>
             </div>
           <% end %>
+          <%else%>
+          It looks like you don't have any collaborators yet.  <br>
+          In mean time, why don't you take a look at all of our <%=link_to "Developers", root_path, :class => "dev_link"%>, and contact one!
+          <%end%>
 
         </div>
 
         <div id="feedback" class="tab-pane">
-          FEEDBACK STUFF
+          <div class="row-fluid">
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>YOUR FEEDBACK</span></h5>
+        </div>
+        <%@feedbacks.each do |feedback|%>
+        <ul class="l_tinynav2 widget-archive" id="nav2">
+
+                    <li>Posted by <%=IdeaOwner.find(feedback.author_id).name%>
+                  <i class="fa-icon-user"></i>
+                  <span>|</span> <%=feedback.created_at%><br><%=feedback.comment%><br><br></li><%end%>
+                    
+                  </ul>
+        </div>
         </div>
 
 
@@ -130,24 +150,11 @@
 									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
 									  <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li><br>
 									  <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li><br>
-									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>
-									  <li style="margin-left:0px;"><%= link_to "Change Password", edit_user_path(current_user) %></li>										  
+									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>									  
 									</ul>
         </div>
         <BR><BR>
-        <div class="row-fluid">
-        <div class="line2 center">
-          <h5 class="standart-h3title"><span>YOUR PROJECT FEEDBACK</span></h5>
-        </div>
-        <%@feedbacks.each do |feedback|%>
-        <ul class="l_tinynav2 widget-archive" id="nav2">
-
-                    <li>Posted by <%=IdeaOwner.find(feedback.author_id).name%>
-                  <i class="fa-icon-user"></i>
-                  <span>|</span> <%=feedback.created_at%><br><%=feedback.comment%><br><br></li><%end%>
-                    
-                  </ul>
-        </div>
+        
 	
     </div>
 	<!-- END SIDEBAR-->
