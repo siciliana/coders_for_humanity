@@ -4,6 +4,7 @@ class IdeaOwnersController < ApplicationController
 
   def show
     @project = current_user.project
+    @feedbacks = current_user.received_feedbacks
   end
 
   def edit

@@ -14,8 +14,10 @@ p.lead a{
 
 ul#nav2.l_tinynav2.widget-archive a {
 	border: none;
+	margin: auto;
+	color: #2790B0;
 }
 
-.link{
-	margin-right: 30px;
+.edit-profile {
+  font-size: 10px;
 }
