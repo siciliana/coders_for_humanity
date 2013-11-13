@@ -26,3 +26,38 @@
 .dashboard_button ul li {
   display: inline;
 }
+
+.pending-collab{
+  float:left;
+  margin:20px;
+}
+
+.pending-collab .btn{
+  margin-left:10px;
+}
+
+.assigned-collab {
+  display:block;
+  clear:both;
+}
+
+.assigned-collab .large-text{
+  float:left;
+  margin-left: 25px;
+}
+
+ul.list-group {
+  margin:20px;
+  display:block;
+  clear:both;
+  float:left;
+}
+
+.developer{
+  margin:10px;
+  font-size: 20px;
+  float:left;
+  display: block;
+}
+
+

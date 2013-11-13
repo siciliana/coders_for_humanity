@@ -42,6 +42,7 @@ end
 Role.create description: 'lead developer'
 Role.create description: 'collaborating developer'
 Role.create description: 'designer'
+Role.create description: 'pending'
 
 
 developer_counter = 10

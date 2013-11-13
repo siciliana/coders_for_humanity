@@ -8,5 +8,13 @@
     <i class="icon-list"></i> Category: <%= link_to "#{@category}" %> |
     <i class="icon-user"></i> Project status: <%= @project.status %>
   </p>
+  <div class="dd_buttons clearfix">
+  </div>
+  <h2 class='big-text'>Description:</h2> <br> <h3><%= @project.description %></h3>
+  <% if developer? %>
+    <%= form_for [@project, Collaboration.new] do |f| %>
+      <input type="submit" class="btn btn-lg btn-warning" value="Collaborate">
+    <% end %>
+  <% end %>
   <h2 class='big-text'>Description:</h2> <br> <h3 class='span8' style='margin:auto; float:none;'><%= @project.description %></h3>
 </div>

@@ -4,4 +4,8 @@ class Collaboration < ActiveRecord::Base
   belongs_to :project
   belongs_to :developer
   belongs_to :role
+
+  def pending?
+    role.description == 'pending'
+  end
 end

@@ -36,4 +36,16 @@ class Project < ActiveRecord::Base
   def self.statuses
     STATUSES
   end
+
+  def pending_collaborations
+    collaborations.joins(:role).where(:roles => {:description => 'pending'})
+  end
+
+  def assigned_developers
+    assigned_collaborations.map(&:developer)
+  end
+
+  def assigned_collaborations
+    collaborations.includes(:developer) - pending_collaborations
+  end
 end

@@ -17,7 +17,13 @@ CodersFh::Application.routes.draw do
 
  resources :developers
 
- resources :projects
+ resources :projects do
+   resources :collaborations do
+    member do
+      get '/assign' => 'collaborations#assign'
+    end
+   end
+ end
 
  root :to => 'welcome#index'
 
