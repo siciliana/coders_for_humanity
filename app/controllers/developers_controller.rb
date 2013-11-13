@@ -1,13 +1,11 @@
 class DevelopersController < ApplicationController
 
-  include ApplicationHelper 
-
   def show
     @user = current_user
     @user_id = Account.find(current_user.account_id)
     @user_github_url = @user.github_url.to_s
     @user_email = Account.find(@user_id).email
-    @user_location = Account.find(@user_id).location 
+    @user_location = Account.find(@user_id).location
     @user_organization = Account.find(@user_id).organization
   end
 
@@ -23,7 +21,7 @@ class DevelopersController < ApplicationController
     @account.update_attributes(params[:account])
 
     session[:developer_id] = @user.id
-    
+
     redirect_to developer_path
   end
 

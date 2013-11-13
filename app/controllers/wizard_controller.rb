@@ -1,6 +1,5 @@
 class WizardController < ApplicationController
-  include ApplicationHelper
-  
+
   def new
     @user = IdeaOwner.new
     @account = Account.new
