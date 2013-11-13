@@ -122,11 +122,13 @@
                   <span>|</span> <%=feedback.created_at%><br><%=feedback.comment%><br><br></li><%end%>
                     
                   </ul>
+            <div class="new-feedback">
+              <%if @project.complete? %>
+              <%=button_tag "Give your developer feedback", :class=> "btn btn-warning btn-small feedback-btn", :method=>:get, :style => "color:black;" %>
+              <%end%>
+            </div>
         </div>
         </div>
-
-
-        
 
 
          
