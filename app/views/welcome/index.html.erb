@@ -108,7 +108,9 @@
         </div>
         <br>
         <div class='span2 offset7'>
-          <%=button_to "Sign Up with Github", '/', :class => "btn btn-primary btn-block", :method => :get %>
+          <form method="get" action="/auth/github">
+            <input class="btn btn-primary btn-block" type="submit" id="sign-in-google" value="Sign In with Github">
+          </form>
         </div>
       </div> <!-- end row-fluid div -->
     </div> <!-- end developers div -->
