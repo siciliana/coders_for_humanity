@@ -67,5 +67,7 @@ module CodersFh
 
     config.assets.paths << "#{Rails.root}/vendor/verso"
 
+    config.assets.initialize_on_precompile = false
+
   end
 end
