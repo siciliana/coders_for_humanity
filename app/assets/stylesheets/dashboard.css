@@ -21,3 +21,20 @@ ul#nav2.l_tinynav2.widget-archive a {
 .edit-profile {
   font-size: 10px;
 }
+
+.breadcrumb.span3.lead{
+  font-size: 30px;
+  padding-top: 7px;
+  text-align: left;
+}
+.breadcrumb{
+  height: 80px;
+}
+
+.new-feedback {
+	padding-top: 30px;
+}
+
+.new-feedback.button {
+	padding: 30px;
+}

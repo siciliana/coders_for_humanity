@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131107232849) do
+ActiveRecord::Schema.define(:version => 20131113210152) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -69,9 +69,8 @@ ActiveRecord::Schema.define(:version => 20131107232849) do
     t.integer  "creator_id"
     t.text     "description"
     t.integer  "category_id"
-    t.string   "status",      :default => "Not Assigned"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
   end
 
   create_table "roles", :force => true do |t|
