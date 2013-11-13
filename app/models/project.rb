@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
   attr_accessible  :category_id, :creator_id, :description, :status, :story, :title
 
   STATUSES = {
-    under_review: 'under review'
+    under_review: 'under review',
     not_yet_assigned: 'not yet assigned',
     assigned: 'assigned',
     complete: 'complete'
