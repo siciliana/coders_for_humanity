@@ -1,19 +1,16 @@
 <!-- VIDEO HEADER -->
-  <div class='space'></div>
-<div class= 'video-bar'>
-  <div class='span5 offset2 large-text'>
-
-    <h2>Build beautiful and meaningful things together</h2>
-    <br>
-    <div class="buttons span5">
-      <%=link_to "I need a solution", "#idea_creator", :class => "btn-large btn-warning", :id => "solution_button", :style => "color:black", :data => {:filter => ".graphics"} %>
-      <%=link_to "I'm a developer", "#for_devs", :class => "btn-large btn-warning", :id => "dev_button", :style => "color:black", :data => {:filter => ".graphics"}%>
+<div class='space'></div>
+<div class= 'container' style="width: 1300px; margin:auto;">
+  <div id='span' class='span6 xlarge-text' style='min-width:465px'>
+    <b><h2>Build beautiful and meaningful things together</h2><b>
+      <br>
+        <%=link_to "I need a solution", "#idea_creator", :class => "btn-large btn-warning", :id => "solution_button", :style => "color:black", :data => {:filter => ".graphics"} %>
+        <%=link_to "I'm a developer", "#for_devs", :class => "btn-large btn-warning", :id => "dev_button", :style => "color:black", :data => {:filter => ".graphics"}%>
     </div>
+    <div id='video' class="span6 videoratio" style='min-width:465px'>
+      <iframe class="stretch" width="640" height="360" src="//www.youtube.com/embed/1Wxzy1wYNYw?rel=0&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+    </div> 
   </div>
-  <div class="span6 offset1 videoratio">
-    <iframe class="stretch" width="640" height="360" src="//www.youtube.com/embed/1Wxzy1wYNYw?rel=0&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-  </div>
- </div> 
 </div>
 
 <!-- ABOUT US -->
@@ -58,16 +55,16 @@
       </div>
       <div class="span12">
         <p>To see a full list of current projects, please <%=link_to "click here.", projects_path, class: "click-here"%>
-      </div>
-    </div> <!-- end row-fluid div -->
-  </div> <!-- end featured div -->
+        </div>
+      </div> <!-- end row-fluid div -->
+    </div> <!-- end featured div -->
     <!-- END FEATURED PROJECTS -->
 
     <!-- VALUE FOR CREATORS -->
     <div id= "creators">
       <a name="idea_creator"></a>
       <div class="row-fluid">
-        
+
         <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">VALUE</span> FOR CREATORS</span></h2>
         <br>
         <div class='span3 large-text'>
@@ -85,37 +82,37 @@
           <br>
         </div>
         <div class='span2 offset5'>
-            <%=button_to "Get Started", new_wizard_path, :class => "btn-large btn-warning first", :method => :get, :style => "color:black"%>
+          <%=button_to "Get Started", new_wizard_path, :class => "btn-large btn-warning first", :method => :get, :style => "color:black"%>
         </div>
       </div> <!-- end row-fluid div -->
     </div> <!-- end creators div -->
-      <!-- END VALUE FOR CREATORS-->
+    <!-- END VALUE FOR CREATORS-->
 
-      <!-- VALUE FOR DEVS -->
-      <div id="developers">
-        <div class="row-fluid">
-          <a name="for_devs"></a>
-          <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Value</span> For Developers</span>
-          </h2>
+    <!-- VALUE FOR DEVS -->
+    <div id="developers">
+      <div class="row-fluid">
+        <a name="for_devs"></a>
+        <h2 class="center standart-h2title "> <span class="large-text"><span class="main-color">Value</span> For Developers</span>
+        </h2>
+        <br>
+        <div class='span6'>
+          <img src='https://drupal.org/files/x-all-the-things-template.png'>  
+        </div>
+        <div class='span4 offset5 large-text xspace'> 
+          <p>Find a real-world problem to help solve</p>
           <br>
-          <div class='span6'>
-            <img src='https://drupal.org/files/x-all-the-things-template.png'>  
-          </div>
-          <div class='span4 offset5 large-text xspace'> 
-            <p>Find a real-world problem to help solve</p>
-            <br>
-            <p>Join a team or work solo</p>
-            <br>
-            <p>Challenge and build your coding skills and learn new concepts</p>
-            <br>
-          </div>
+          <p>Join a team or work solo</p>
           <br>
-          <div class='span2 offset7'>
-            <%=button_to "Sign Up with Github", '/', :class => "btn btn-primary btn-block", :method => :get %>
-          </div>
-        </div> <!-- end row-fluid div -->
-      </div> <!-- end developers div -->
+          <p>Challenge and build your coding skills and learn new concepts</p>
+          <br>
+        </div>
+        <br>
+        <div class='span2 offset7'>
+          <%=button_to "Sign Up with Github", '/', :class => "btn btn-primary btn-block", :method => :get %>
+        </div>
+      </div> <!-- end row-fluid div -->
+    </div> <!-- end developers div -->
   </div><!--  end marketing div? -->
-<!-- END VALUE FOR DEVS-->
+  <!-- END VALUE FOR DEVS-->
 
 
