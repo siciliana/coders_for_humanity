@@ -80,9 +80,9 @@
               <div class="pending-collab alert alert-info">
                 <%= link_to collaboration.developer.name, developer_path(collaboration.developer) %> is interested in your project
                 <% if @project.not_yet_assigned? %>
-                  <%= link_to "Promote to team lead", assign_project_collaboration_path(@project,collaboration), :class => "btn btn-inverse" %>
+                  <%= link_to "Promote to team lead", assign_project_collaboration_path(@project,collaboration), :class => "btn btn-warning", :style => "color:black" %>
                 <% end %>
-                <%= link_to "Contact", '/', :class => "btn btn-inverse" %>
+                <%= mail_to "#{collaboration.developer.email}", 'Contact', subject: "Question Regarding #{@project.title}", :class => "btn btn-warning", :style => "color:black" %>
               </div>
             <% end %>
           <% end %>
@@ -94,7 +94,7 @@
             <% @project.assigned_collaborations.each do |collaboration| %>
             <li class="developer">
              <span class="idea_owners_organization">
-              <%= link_to "Contact", '/', :class => "btn btn-inverse btn-mini" %>
+              <%= mail_to "#{collaboration.developer.email}", 'Contact', subject: "Question Regarding #{@project.title}", :class => "btn btn-warning", :style => "color:black" %>
               <b><%= link_to collaboration.developer.name, developer_path(collaboration.developer) %></b>(<%= collaboration.role.description %>)
             </span>
               </li>  
