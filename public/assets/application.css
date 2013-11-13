@@ -1,4 +1,4 @@
-ƒ/*
+/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -1113,27 +1113,27 @@ footer .copyright {
 	top: 1px;
 }
 .footer_facebook {
-	background: url('footer_facebook.png') no-repeat 50% 50% #0d0d0d;
+	background: url('../img/footer_facebook.png') no-repeat 50% 50% #0d0d0d;
 }
 .footer_facebook:hover {
 	background-color: #37589f;
 }
 .footer_twitter {
-	background: url('footer_twitter.png') no-repeat 50% 50% #0d0d0d;
+	background: url('../img/footer_twitter.png') no-repeat 50% 50% #0d0d0d;
 }
 .footer_twitter:hover {
 	background-color: #1bd7ed;
 	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6);
 }
 .footer_googleplus {
-	background: url('footer_google.png') no-repeat 50% 50% #0d0d0d;
+	background: url('../img/footer_google.png') no-repeat 50% 50% #0d0d0d;
 }
 .footer_googleplus:hover {
 	background-color: #b70000;
 	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6);
 }
 .footer_rss {
-	background: url('footer_youtube.png') no-repeat 50% 50% #0d0d0d;
+	background: url('../img/footer_rss.png') no-repeat 50% 50% #0d0d0d;
 }
 .footer_rss:hover {
 	background-color: #ff9c00;
