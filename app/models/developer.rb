@@ -1,7 +1,7 @@
 class Developer < ActiveRecord::Base
   attr_accessible :account_id, :uid, :github_url, :gravatar_url
 
-  belongs_to :account
+  belongs_to :account, :dependent => :destroy
   has_many :collaborations
   has_many :projects, :through => :collaborations
   has_many :roles, :through => :collaborations
@@ -10,7 +10,6 @@ class Developer < ActiveRecord::Base
 
 
   def self.from_omniauth(auth)
-    p auth
     dev = where(auth.slice("provider", "uid")).first_or_initialize.tap do |developer|
       developer.uid = auth["uid"]
       developer.github_url = auth['info']['urls']['GitHub']
@@ -21,13 +20,16 @@ class Developer < ActiveRecord::Base
                        :email => auth['info']['email'],
                        :location => auth['extra']['raw_info']['location']}
 
-    if dev.account
-      dev.account.update_attributes(account_details)
-    else
-      dev.create_account(account_details)
-    end
+
+    dev.create_account(account_details) unless dev.account
     dev.save!
     return dev
+  end
+
+  def missing_details?
+    dev_account = account
+
+    dev_account.name.blank? || dev_account.email.blank? || dev_account.location.blank?
   end
 
   def name

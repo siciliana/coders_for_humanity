@@ -14,6 +14,9 @@
 <div class="container">
   <div class="row-fluid">
     <div class="span9" style='margin:auto; float:none;'>
+      <% if flash[:notice] %>
+          <div class="alert alert-warning large-text"><%= flash[:notice].html_safe %></div>
+        <% end %>
       <%= render 'shared/project' %>
       <div class="row-fluid">
         <div class="line2 center">

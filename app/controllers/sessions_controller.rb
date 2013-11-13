@@ -30,9 +30,14 @@ class SessionsController < ApplicationController
     auth = env["omniauth.auth"]
     developer = Developer.from_omniauth(auth)
     session[:developer_id] = developer.id
-    session[:developer_token] = auth["credentials"]
 
-    redirect_to root_path
+
+    if developer.missing_details?
+      flash[:notice] = "You need to fill in your details before using this website"
+      redirect_to edit_developer_path(developer) and return
+    else
+      redirect_to root_path and return
+    end
   end
 
 
