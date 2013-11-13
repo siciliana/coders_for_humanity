@@ -9,6 +9,7 @@ class CollaborationsController < ApplicationController
     collaboration.developer = current_user
 
     collaboration.save!
+    UserMailer.collaboration_request_notice(:idea_owner => project.creator, :developer => current_user).deliver
     redirect_to developer_path(current_user)
   end
 
@@ -20,6 +21,8 @@ class CollaborationsController < ApplicationController
     collaboration.save!
 
     project.update_attribute :status, Project.statuses[:assigned]
+
+    UserMailer.notify_assignment_to_developer(:idea_owner => current_user, :developer => collaboration.developer).deliver
 
     redirect_to user_path(current_user)
   end
