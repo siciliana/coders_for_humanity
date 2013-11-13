@@ -11,10 +11,13 @@
   <div class="dd_buttons clearfix">
   </div>
   <h2 class='big-text'>Description:</h2> <br> <h3><%= @project.description %></h3>
-  <% if developer? %>
+  <% if developer?%>
+    <% if @project.pending_collaborations.map(&:developer).include?(current_user) %>
+      <p style="color:tomato;text-align:center;">You have already requested to join this project</p>
+    <% else %>
     <%= form_for [@project, Collaboration.new] do |f| %>
       <input type="submit" class="btn btn-lg btn-warning" value="Collaborate">
     <% end %>
+    <% end %>
   <% end %>
-  <h2 class='big-text'>Description:</h2> <br> <h3 class='span8' style='margin:auto; float:none;'><%= @project.description %></h3>
 </div>
