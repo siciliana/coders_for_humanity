@@ -57,6 +57,10 @@
   padding-top: 40px;
 }
 
+.span3.large-text {
+  font-weight: normal;
+}
+
 .span4.offset5.large-text.xspace {
   display:inline;
   margin-left: auto;
