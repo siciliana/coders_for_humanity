@@ -21,9 +21,10 @@ class DevelopersController < ApplicationController
     @user.update_attributes(params[@user])
     @account = @user.account
     @account.update_attributes(params[:account])
-
     session[:developer_id] = @user.id
     
+    flash[:notice] = "Your profile has been edited."
+
     redirect_to developer_path
   end
 

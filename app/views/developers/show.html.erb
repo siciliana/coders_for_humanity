@@ -21,7 +21,9 @@
       <%= link_to edit_developer_path(@user) do %>
           <i class = "icon-edit"></i></h1></a></li>
           <% end %>
+           <%=flash[:notice]%>
   </ul>
+
   <div class="tab-content">
     <ul>
       <li><%= image_tag(@user.gravatar_url) %></li></br>
