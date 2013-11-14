@@ -100,7 +100,6 @@
         </div>
       </div><!--span 8-->
 
-      <hr class="soften">
     </div><!--fluid blog-->
 	<!-- END CONTENT SIDE -->
 	<!-- SIDEBAR-->
@@ -108,9 +107,8 @@
     
     <div class="row-fluid">
         <div class="line2 center">
-          <h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %>
-          <i class = "icon-edit"></i>
-          <% end %></span></h5>
+          <h5 class="standart-h3title"><span><%=link_to "My Profile", developer_path%> <%= link_to edit_developer_path(current_user) do %>
+          </span><div class="edit-profile"><br><i class="icon-edit"></i>Edit your profile</div><%end%></h5>
         </div>
         <%=image_tag(current_user.gravatar_url)%>
         <ul class="l_tinynav2 widget-archive" id="nav2">
