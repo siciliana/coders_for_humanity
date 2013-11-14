@@ -14,8 +14,11 @@ class CollaborationsController < ApplicationController
     collaboration.developer = current_user
 
     collaboration.save!
-    UserMailer.collaboration_request_notice(:idea_owner => project.creator, :developer => current_user).deliver
     
+    Thread.new do
+      UserMailer.collaboration_request_notice(:idea_owner => project.creator, :developer => current_user).deliver
+    end
+
     flash[:notice] = "Your request to join the project has been sent"
     redirect_to dashboard_path(current_user)
   end
