@@ -1,0 +1,46 @@
+
+<!-- ################-->
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="shine">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="row-fluid">
+            <div class="span12">
+              <h1 class="welcome_to_dashboard">Our Community of Developers</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PAGE HEADER -->
+
+
+<div class="span8 row ufilter" style='margin:auto; float:none;'>
+    <!-- START MAIN CONTENT DIV -->
+
+<div id='all' class='container tab-pane active'>
+  <hr class="half">
+  <div id="container-folio" class="row ufilter">
+    <div class='span9' style='margin:auto; float:none;'>
+      <div id="portfolio" class="row">
+        <ul id="projects">
+          <% @developers.each do |developer| %>
+          <li class="span3 mix box pint-blog popular">
+            <h4 class="single-title">
+              <b><%= link_to developer.name, developer.github_url %></b>
+            </h4>
+            <%= image_tag developer.gravatar_url %> <br>
+            <%=  %>
+          </li>                   
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

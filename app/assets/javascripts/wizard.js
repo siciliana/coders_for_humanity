@@ -55,6 +55,7 @@ $(document).ready(function() {
       } else if(index == 4){
         $.get('/wizard/review/' + projectId , function(response){
           $('#tab5').html(response)
+          $('#next_button').hide();
         })
       }
     },
