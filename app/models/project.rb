@@ -26,6 +26,10 @@ class Project < ActiveRecord::Base
     status == 'under review'
   end
 
+  def public?
+    status != 'under review'
+  end
+
 
   def assigned?
     status == 'assigned'

@@ -31,6 +31,9 @@
         <% end %>
         <% end  %>
         <li> <a href="#complete" data-toggle="tab"> Completed projects </a> </li>
+        <% if developer? %>
+          <li> <a href="#under_review" data-toggle="tab"> Under review </a> </li>
+        <% end %>
       </ul>
     </div>  
   </div>
@@ -72,7 +75,7 @@
       <div id="portfolio" class="row">
         <ul id="projects">
           <% category.projects.each do |project| %>
-          <% unless project.complete? %>
+          <% unless project.complete? || project.under_review? %>
           <li class="span3 mix box pint-blog popular">
             <h4 class="single-title">
               <b><%= link_to project.title, project_path(project) %></b>
@@ -116,3 +119,29 @@
   </div>
 </div>
 <!-- END ALL COMPLETED -->
+
+<!-- UNDER REVIEW -->
+<div id='under_review' class='container tab-pane'>
+  <div class="large-text center">Projects under review</div>
+  <hr class="half">
+  <div id="container-folio" class="row ufilter">
+    <div class="span9" style='margin:auto; float:none;'>
+      <div id="portfolio" class="row">
+        <ul id="projects">
+          <% @projects.each do |project| %>
+          <% if project.under_review? %>
+          <li class="span3 mix box pint-blog popular">
+            <h4 class="single-title">
+              <b><%= link_to project.title, project_path(project) %></b>
+            </h4>
+            Creator: <%= project.creator.name.titleize %> <br>
+            Category: <%= project.category.name.humanize %><br>
+            Status: <%= project.status.humanize %>
+          </li>                   
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,14 +2,14 @@ class SessionsController < ApplicationController
 
   def new
     account = Account.find_by_email(params[:email])
-    
-    if account  
+
+    if account
       idea_owner = IdeaOwner.find_by_account_id(account.id)
       if idea_owner.authenticate(params[:password])
         session[:idea_owner_id] = idea_owner.id
-        
+
         redirect_to user_path(account)
-      
+
       else
         flash[:error] = "Password Incorrect"
         redirect_to root_path
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       flash[:error] = "Email incorrect"
       redirect_to root_path
     end
-    
+
   end
 
   def destroy
@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "You need to fill in your details before using this website"
       redirect_to edit_developer_path(developer) and return
     else
-      redirect_to root_path and return
+      redirect_to dashboard_path(current_user) and return
     end
   end
 
