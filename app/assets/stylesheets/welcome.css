@@ -57,6 +57,8 @@ div.span1.arrow-right2{
   padding-right: 40px;
 }
 
+
+
 .span2.offset9 {
   padding-top: 40px;
 }
@@ -69,6 +71,8 @@ div.span1.arrow-right2{
   display:inline;
   margin-left: auto;
   font-weight: normal;
+  margin-top: 50px;
+  margin-bottom: -40px;
 }
 
 .span6.center.lead{
