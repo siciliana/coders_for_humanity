@@ -16,14 +16,15 @@
 
 <div class="well" style="width:760px; margin: 20px auto;">
 <div id="rootwizard">
+ <%= flash[:notice].html_safe%>
+
   <ul class="bwizard-steps" data-start="1">
     <li><a href="#tab1" data-toggle="tab" class="lead"> <%= @user.name %>'s Profile  <br>
       <%= link_to edit_developer_path(@user) do %>
           <i class = "icon-edit"></i></h1></a></li>
           <% end %>
-           <%=flash[:notice]%>
   </ul>
-
+           
   <div class="tab-content">
     <ul>
       <li><%= image_tag(@user.gravatar_url) %></li></br>
