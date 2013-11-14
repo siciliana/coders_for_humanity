@@ -23,7 +23,7 @@
         <div class="tab-pane" id="tab1">
           <br><p class="lead">
           Please edit the fields below, and click update to save the changes.</p>
-          <%= form_for @user, :url => developer_path, :method => "PUT" do |f| %>
+          <%= form_for @user, :url => user_path, :method => "PUT" do |f| %>
               <%=fields_for @account do |a|%>
                 <%= a.label :name, "Name" %>
                 <%= a.text_field :name %>
