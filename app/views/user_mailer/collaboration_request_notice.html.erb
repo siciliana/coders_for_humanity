@@ -1,13 +1,169 @@
-<h1>Collaboration request from <%= @developer.name %></h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <link href="http://fonts.googleapis.com/css?family=Coda" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>square gallery | Newsletter</title>
 
-<p> <%= @developer.name %> has submitted a request to join your project <em><%= @idea_owner.project.title %></em> </p>
+       <style type="text/css">
 
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+/*////// RESET STYLES //////*/
+      body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+      table{border-collapse:collapse;}
+      img, a img{border:0; outline:none; text-decoration:none;}
+      h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+      p{margin: 1em 0;}
 
-<p> <%= link_to "Go to your dashboard", user_path(@idea_owner, :host => 'localhost:3000') %> </p>
-<p> <%= link_to "Contact #{@developer.name}", @developer.email %> </p>
+      /*////// CLIENT-SPECIFIC STYLES //////*/
+      .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+      table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+      #outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+      img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+      body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+      /*////// MOBILE STYLES //////*/
+
+      /*
+        CSS selectors are written in attribute
+        selector format to prevent Yahoo Mail
+        from rendering media query styles on
+        desktop.
+      */
+
+      @media only screen and (max-width: 480px){
+        /*////// RESET STYLES //////*/
+        td[id="introductionContainer"], td[id="callToActionContainer"], td[id="eventContainer"], td[id="merchandiseContainer"], td[id="footerContainer"]{padding-right:10px !important; padding-left:10px !important;}
+        table[id="introductionBlock"], table[id="callToActionBlock"], table[id="eventBlock"], table[id="merchandiseBlock"], table[id="footerBlock"]{max-width:480px !important; width:100% !important;}
+        
+        /*////// CLIENT-SPECIFIC STYLES //////*/
+        body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+        
+        /*////// GENERAL STYLES //////*/
+        h1{font-size:34px !important;}
+        h2{font-size:30px !important;}
+        h3{font-size:24px !important;}
+        
+        img[id="heroImage"]{height:auto !important; max-width:520px !important; width:100% !important;}
+        
+        td[class="introductionLogo"], td[class="introductionHeading"]{display:block !important;}
+        td[class="introductionHeading"]{padding:40px 0 0 0 !important;}
+        td[class="introductionContent"]{padding-top:20px !important;}
+        
+        td[class="callToActionContent"]{text-align:left !important;}
+        table[class="callToActionButton"]{width:100% !important;}
+        
+        td[id="eventBlockCell"]{padding-right:20px !important; padding-left:20px !important;}
+        table[class="eventBlockCalendar"]{width:100px !important;}
+        
+        td[id="merchandiseBlockCell"]{padding-right:20px !important; padding-left:20px !important;}
+        td[class="merchandiseBlockHeading"] h2{text-align:center !important;}
+        td[class="merchandiseBlockLeftColumn"], td[class="merchandiseBlockRightColumn"]{display:block !important; padding:0 0 20px 0 !important; width:100% !important;}
+
+        td[class="footerContent"]{font-size:15px !important;}
+        td[class="footerContent"] a{display:block;}
+      }
+    </style>
+
+<body style="margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #424145;height: 100%;width: 100%;">
+
+
+<center>
+          <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;background-color: #424145;height: 100%;width: 100%;">
+              <tr>
+                  <td align="center" valign="top" id="bodyCell" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;height: 100%;width: 100%;">
+                      <!-- // BEGIN EMAIL -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;width: 100%;">
+                          <tr>
+                              <td align="center" valign="top" id="heroImageContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #F0F0F0;">
+
+
+                                    <!-- // BEGIN HERO BLOCK -->
+                                    <a href="http://www.codersforhumanity.org"><img src="http://sdwild.files.wordpress.com/2013/11/harvard_collaboration.jpg" alt="Me, Us, You Collaboration" height="415" width="520" id="heroImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a> 
+                                    <!-- END HERO BLOCK // -->
+
+</td>
+                            </tr>
+                          <tr>
+                              <td align="center" valign="top" id="introductionContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #F0F0F0;padding: 40px;">
+
+                                    <!-- // BEGIN INTRO BLOCK -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="520" id="introductionBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #F0F0F0;">
+                                        <tr>
+                                            <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td align="center" valign="top" class="introductionLogo" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                        </td>
+                                                        <td align="left" valign="middle" class="introductionHeading" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #808080;font-size: 14px;font-weight: bold;line-height: 150%;padding-left: 40px;">
+                                                            
+                                                            <br>
+                                                            <h1 style="margin: 0;padding: 0;font-family: 'Coda', normal;, Helvetica, Arial, sans-serif;color: #2790B0;font-size: 44px;font-weight: 100;line-height: 115%;text-align: left;"><center>Coders for Humanity collaboration request from <%= @developer.name %></h1></title><center><br><br>
+
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- END INTRO BLOCK // -->
+
+                                    <!-- // BEGIN CALL-TO-ACTION BLOCK -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="520" id="callToActionBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #D83826;">
+                                        <tr>
+                                            <td align="center" valign="top" class="callToActionContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #FFFFFF;font-size: 12px;line-height: 150%;padding-bottom: 40px;text-align: center;">
+                                                <h3 style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #FFFFFF;font-size: 20px;font-weight: 100;line-height: 115%;text-align: center;"><p> Developer <%= @developer.name %> has submitted a request to join your project <em><%= @idea_owner.project.title %></em> </p>
+                                                            <br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <table border="0" cellpadding="0" cellspacing="0" class="callToActionButton" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #F0F0F0;border-radius: 4px;box-shadow: 0 5px 0 #A22A1C;">
+                                                    <tr>
+                                                        <td align="center" valign="top" class="callToActionButtonContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;padding-top: 20px;padding-right: 40px;padding-bottom: 20px;padding-left: 40px;color: #D83826;display: block;font-size: 24px;font-weight: bold;line-height: 100%;letter-spacing: -1px;text-align: center;text-decoration: none;">
+                                                            <a href="#" target="_blank" title="square gallery" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #D83826;display: block;font-size: 24px;font-weight: bold;line-height: 100%;letter-spacing: -1px;text-align: center;text-decoration: none;"><a href=mailto:'<%= @developer.email %>'>Contact <%= @developer.name %></a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //END CALL-TO-ACTION BLOCK -->
+
+
+
+
+                                    <!-- // BEGIN FOOTER BLOCK -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="footerBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align="center" valign="top" class="footerContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #AAAAAA;font-size: 13px;line-height: 150%;padding-bottom: 40px;">
+                                              <br>
+                                                <strong>Build beautiful and meaningful
+                                                <br>
+                                                things together</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" class="footerContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #AAAAAA;font-size: 13px;line-height: 150%;padding-bottom: 40px;">
+                                                &copy; 2013 Coders for Humanity. &bull; 351 West Hubbard Street &bull; Chicago, Il 60654
+                                                <br>
+                                                <br>
+                                                <a href="#" target="_blank" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2790B0;text-decoration: none;">view in browser</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- END FOOTER BLOCK // -->
+
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- END EMAIL // -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
+
