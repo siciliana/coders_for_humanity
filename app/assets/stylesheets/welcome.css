@@ -37,6 +37,10 @@
   border-left: 50px solid #2790B0;
 }
 
+/*div.span1.arrow-right1, 
+div.span1.arrow-right2{
+  margin-left: 60px;
+}*/
 .span1.arrow-right2{
   width:0;
   height:0;
@@ -64,6 +68,7 @@
 .span4.offset5.large-text.xspace {
   display:inline;
   margin-left: auto;
+  font-weight: normal;
 }
 
 .span6.center.lead{
@@ -148,5 +153,9 @@ input.btn-large.btn-warning.first {
 
 input.btn-large.btn-warning.second {
   background-image: linear-gradient(to bottom, #fa9f1e, #e07500)
+}
+
+.span3.large-text.second {
+  margin-left: 55px;
 }
 
