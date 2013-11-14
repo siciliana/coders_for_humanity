@@ -2,6 +2,10 @@ class DevelopersController < ApplicationController
 
   include ApplicationHelper 
 
+  def index
+    @developers = Developer.all 
+  end
+
   def show
     @user = current_user
     @user_id = Account.find(current_user.account_id)
