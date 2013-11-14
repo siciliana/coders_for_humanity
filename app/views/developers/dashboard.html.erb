@@ -17,20 +17,34 @@
   </div>
 </div>
 <!-- PAGE HEADER -->
+
+<!-- ################ -->
+<!-- CONTENT CONTAINER-->
+<!-- ################ -->
+<!-- PAGE HEADER -->
 <div class="container">
   <div class="row-fluid blog">
     <div class="span8">
       <div class="blog-post">
-        <% if flash[:notice] %>
+      <% if flash[:notice] %>
           <div class="alert alert-warning large-text"><%= flash[:notice].html_safe %></div>
         <% end %>
         <div class="">
-		<span class="label label-info label-xl span4">Current Projects </span>
-          <div class="dd_buttons clearfix">
+		<span class="breadcrumb span3 lead">Current <br>Project </span>
+           <div class="dd_buttons clearfix">
+
+           
+       <hr class="half">
           </div>
         </div>
        
          <div id="project-area" class="span10">
+         <br><br>
+        <ul id="tab-navigation" class="nav nav-tabs" data-tabs="tabs">
+          <li class="active"><a href="#details" data-toggle="tab"> Your Projects</a> </li>
+          <li><a href="#feedback" data-toggle="tab"> Feedback </a> </li>
+        </ul>
+      <div id="details" class="tab-pane active">
           <%if @projects.length > 0%>
           <% @projects.each do |project|%>
           <p class= "project-title lead"><%= link_to project.title, project_path(project.id)%></p>
@@ -56,39 +70,11 @@
           <p class="lead">It looks like you haven't collaborated on any projects yet.  Have a look at all of the wonderful ideas we have on Coders for Humanity on the <%= link_to "projects", projects_path %> page.</p>
           <%end%>
         </div>
-        
 
-
-         
-        
-      </div>
-
-      <hr class="soften">
-    </div>
-	<!-- END CONTENT SIDE -->
-	<!-- SIDEBAR-->
-    <div class="span4 side_bar">
-		
-	  <div class="row-fluid">
-				<div class="line2 center">
-					<h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %>
-          <i class = "icon-edit"></i>
-          <% end %></span></h5>
-				</div>
-        <%=image_tag(current_user.gravatar_url)%>
-        <ul class="l_tinynav2 widget-archive" id="nav2">
-									  <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
-									  <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li><br>
-									  <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li><br>
-									  <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>
-									  <li style="margin-left:0px;"><b>Github URL:</b> <%= link_to current_user.github_url, current_user.github_url%></li><br>
-									  <li style="margin-left:0px;"><%= link_to "Change Password", edit_user_path(current_user) %></li>										  
-									</ul>
-        </div>
-        <BR><BR>
-        <div class="row-fluid">
+        <div id="feedback" class="tab-pane">
+          <div class="row-fluid">
         <div class="line2 center">
-          <h5 class="standart-h3title"><span>YOUR PROJECT FEEDBACK</span></h5>
+          <h5 class="standart-h3title"><span>YOUR FEEDBACK</span></h5>
         </div>
         <%@feedbacks.each do |feedback|%>
         <ul class="l_tinynav2 widget-archive" id="nav2">
@@ -98,34 +84,54 @@
                   <span>|</span> <%=feedback.created_at%><br><%=feedback.comment%><br><br></li><%end%>
                     
                   </ul>
-        </div>
-		
-  <!--       
-		<div class="row-fluid">
-		<hr class="half" />
-				<div class="line2 center">
-					<h5 class="standart-h3title"><span>Tabs</span></h5>
-				</div>
-          <div class="tabbable">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#1" data-toggle="tab">News</a></li>
-              <li><a href="#2" data-toggle="tab">Freebies</a></li>
-              <li><a href="#2" data-toggle="tab">WordPress</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="1">
-                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-              </div>
-              <div class="tab-pane" id="2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl orci, condimentum ultrices consequat eu. Aenean nisl orci, cosequat eu.</p>
-              </div>
-              <div class="tab-pane" id="3">
-                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-              </div>
+                  <div class="new-feedback">
+              <%@projects.each do |project|%>
+                <%if project.complete? %>
+                 <%=button_tag "Give your developer feedback", :class=> "btn btn-warning btn-small feedback-btn", :method=>:get, :style => "color:black;" %>
+                <%end%>
+              <%end%>  
+             
             </div>
-          </div>
-		  </div> -->
-    </div>
+        </div>
+        </div>
+
+
+         
+        </div>
+      </div><!--span 8-->
+
+      <hr class="soften">
+    </div><!--fluid blog-->
+	<!-- END CONTENT SIDE -->
+	<!-- SIDEBAR-->
+    <div class="span4 side_bar">
+    
+    <div class="row-fluid">
+        <div class="line2 center">
+          <h5 class="standart-h3title"><span>My Profile <%= link_to edit_user_path(current_user) do %>
+          <i class = "icon-edit"></i>
+          <% end %></span></h5>
+        </div>
+        <%=image_tag(current_user.gravatar_url)%>
+        <ul class="l_tinynav2 widget-archive" id="nav2">
+                    <li style="margin-left:0px;"> <b>Name:</b> <%= current_user.name %></li><br>
+                    <li style="margin-left:0px;"><b>Organization:</b> <%= current_user.organization %></li><br>
+                    <li style="margin-left:0px;"><b>Email:</b> <%= current_user.email %></li><br>
+                    <li style="margin-left:0px;"><b>Location:</b> <%= current_user.location %></li><br>
+                    <li style="margin-left:0px;"><b>Github URL:</b> <%= link_to current_user.github_url, current_user.github_url%></li><br>
+                                   
+                  </ul>
+        </div>
+        <BR><BR>
+        <div class="row-fluid">
+        <div class="line2 center">
+        </div>
+     
+  
+      
+
+        </div>
+    
 	<!-- END SIDEBAR-->
   </div>
   <!-- END INNER ROW-FLUID -->
