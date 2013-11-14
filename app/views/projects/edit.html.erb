@@ -11,7 +11,7 @@
 
   <p>
     <%= f.label :category_id, 'Select a category' %>
-    <%= f.select :category_id, @categories.map{|cat| [cat.name, cat.id]}%>
+    <%= f.select :category_id, @categories.map{|cat| [cat.name.humanize, cat.id]}%>
   </p>
 
   <p>
