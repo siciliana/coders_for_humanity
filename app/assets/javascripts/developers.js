@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     e.preventDefault();
 
-    var $valid = $(".edit_developer").valid();
+    var $valid = $("#edit_developer").valid();
     if(!$valid) {
       $accountValidator.focusInvalid();
       return false;
@@ -11,9 +11,9 @@ $(document).ready(function(){
       $(".edit_developer").submit();
     }
   });
-});
 
-var $accountValidator = $(".edit_developer").validate({
+
+var $accountValidator = $("#edit_developer").validate({
     errorClass: "alert alert-error",
     errorPlacement: function(error, element) {
       error.insertBefore(element);
@@ -31,3 +31,5 @@ var $accountValidator = $(".edit_developer").validate({
       }
     }
   });
+
+});

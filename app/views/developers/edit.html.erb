@@ -29,7 +29,7 @@
         <br>
         
 
-        <%= form_for @user, :url => developer_path(@user), :method => "PUT" do |f| %>
+        <%= form_for @user, :url => developer_path(@user), :method => "PUT", :html => {:id => "edit_developer"} do |f| %>
               <%=fields_for @account do |a|%>
 
                 <%= a.label :name, "Name*" %>
