@@ -24,6 +24,7 @@ class DevelopersController < ApplicationController
     @account = @user.account
     @account.update_attributes(params[:account])
     session[:developer_id] = @user.id
+
     flash[:notice] = "<div class='alert alert-info' >Your profile has been edited.  Click #{view_context.link_to 'here', dashboard_path(current_user)} to get back to your dashboard.</div>"
 
     redirect_to developer_path
